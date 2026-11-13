@@ -428,6 +428,7 @@
           <h2 class="mt-1 text-2xl font-black tracking-tight">Acquirable EVs, personnel, state coverage, street campaigns &amp; post-capex runway.</h2>
         </div>
         <div class="no-print flex flex-wrap items-center gap-1.5">
+          <span class="chip-emerald rounded-full px-3 py-1 text-xs font-black">Current Live OpEx: ₦2.4M/mo (&lt;₦3M)</span>
           <button type="button" data-raise-preset="500000000" class="rounded-full border border-[var(--border)] bg-[var(--background)] px-3 py-1 text-xs font-bold">₦500M</button>
           <button type="button" data-raise-preset="1500000000" class="chip-gold rounded-full border border-amber-500/50 px-3 py-1 text-xs font-black">₦1.5B Target</button>
           <button type="button" data-raise-preset="3000000000" class="rounded-full border border-[var(--border)] bg-[var(--background)] px-3 py-1 text-xs font-bold">₦3.0B</button>
@@ -461,17 +462,18 @@
         </div>
 
         <div class="lg:col-span-4 flex flex-col justify-between gap-3 rounded-2xl border border-[var(--border)] bg-[var(--background)] p-4">
-          <div class="flex items-center justify-between">
+          <div class="flex flex-wrap items-center justify-between gap-1">
             <p class="text-xs font-black uppercase tracking-wider emerald">Post-Capex Runway Gauge</p>
             <div class="no-print inline-flex rounded-full border border-[var(--border)] bg-[var(--card)] p-0.5 text-xs font-bold">
-              <button type="button" data-runway-mode="net" aria-pressed="true" class="mode-btn rounded-full px-2.5 py-0.5">With Rev</button>
-              <button type="button" data-runway-mode="zero" aria-pressed="false" class="mode-btn rounded-full px-2.5 py-0.5">Zero-Rev</button>
+              <button type="button" data-runway-mode="lean" aria-pressed="false" class="mode-btn rounded-full px-2 py-0.5">&lt;₦3M Lean</button>
+              <button type="button" data-runway-mode="net" aria-pressed="true" class="mode-btn rounded-full px-2 py-0.5">Scaled + Rev</button>
+              <button type="button" data-runway-mode="zero" aria-pressed="false" class="mode-btn rounded-full px-2 py-0.5">Zero-Rev</button>
             </div>
           </div>
 
           <div class="rounded-2xl bg-[var(--card)] p-3 text-center">
             <svg id="runwayGaugeSvg" viewBox="0 0 260 158" class="mx-auto w-full max-w-[240px]"></svg>
-            <p id="runwayHeadline" class="text-lg font-black emerald">32.0 Months Runway</p>
+            <p id="runwayHeadline" class="text-lg font-black emerald">29.1 Months Runway</p>
             <p id="runwaySubline" class="text-xs text-[var(--muted-foreground)]">After upfront vehicles, hubs &amp; print collateral are paid</p>
           </div>
 
@@ -485,10 +487,11 @@
     <section class="rounded-3xl border border-[var(--border)] bg-[var(--card)] p-6 sm:p-8">
       <div class="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <p class="text-xs font-bold uppercase tracking-widest emerald">Customer scale &amp; profitability dialer</p>
-          <h2 class="mt-1 text-2xl font-black tracking-tight">Dial active monthly buyers to inspect GMV, operating margin &amp; net profit.</h2>
+          <p class="text-xs font-bold uppercase tracking-widest emerald">Customer scale &amp; profitability dialer (Current OpEx &lt; ₦3M/mo)</p>
+          <h2 class="mt-1 text-2xl font-black tracking-tight">Ultra-lean ₦2.4M/mo current burn drives early break-even (~720 buyers) &amp; compounding net profit.</h2>
         </div>
         <div class="no-print flex flex-wrap gap-1.5">
+          <button type="button" data-cust-preset="1000" class="rounded-full border border-[var(--border)] bg-[var(--card)] px-2.5 py-1 text-xs font-bold">1K Now</button>
           <button type="button" data-cust-preset="5000" class="rounded-full border border-[var(--border)] bg-[var(--card)] px-2.5 py-1 text-xs font-bold">5K Pilot</button>
           <button type="button" data-cust-preset="25000" class="rounded-full border border-[var(--border)] bg-[var(--card)] px-2.5 py-1 text-xs font-bold">25K Seed</button>
           <button type="button" data-cust-preset="50000" class="chip-emerald rounded-full border border-emerald-500/50 px-2.5 py-1 text-xs font-black">50K Multi-City</button>
@@ -499,16 +502,16 @@
       </div>
 
       <div class="mt-5 grid gap-4 rounded-2xl bg-[var(--background)] p-4 sm:grid-cols-12">
-        <div class="sm:col-span-6">
+        <div class="sm:col-span-4">
           <div class="flex items-center justify-between text-xs font-bold">
             <label for="custDialSlider">Active Monthly Buyers</label>
-            <output id="custDialOut" for="custDialSlider" class="font-black emerald text-sm">50,000 Buyers</output>
+            <output id="custDialOut" for="custDialSlider" class="font-black emerald">50,000 Buyers</output>
           </div>
           <input id="custDialSlider" type="range" min="0" max="100" step="1" value="56" class="dm-slider" />
         </div>
-        <div class="sm:col-span-3">
+        <div class="sm:col-span-2">
           <div class="flex items-center justify-between text-xs font-bold">
-            <label for="freqSlider">Orders / Mo</label>
+            <label for="freqSlider">Orders/Mo</label>
             <output id="freqOut" for="freqSlider" class="font-black gold">3.5x</output>
           </div>
           <input id="freqSlider" type="range" min="1.5" max="8.0" step="0.5" value="3.5" class="dm-slider" style="--slider-fill-color:#f5b841" />
@@ -520,13 +523,20 @@
           </div>
           <input id="aovSlider" type="range" min="6000" max="40000" step="500" value="14500" class="dm-slider" style="--slider-fill-color:#0ea5e9" />
         </div>
+        <div class="sm:col-span-3">
+          <div class="flex items-center justify-between text-xs font-bold">
+            <label for="baseOpexSlider">Base OpEx/Mo</label>
+            <output id="baseOpexOut" for="baseOpexSlider" class="font-black ember">₦2.4M (&lt;₦3M)</output>
+          </div>
+          <input id="baseOpexSlider" type="range" min="1200000" max="15000000" step="200000" value="2400000" class="dm-slider" style="--slider-fill-color:#ff5a36" />
+        </div>
       </div>
 
       <div class="mt-4 grid items-center gap-4 lg:grid-cols-12">
         <div class="rounded-2xl bg-[var(--background)] p-4 text-center lg:col-span-5">
           <svg id="profitGaugeSvg" viewBox="0 0 260 158" class="mx-auto w-full max-w-[250px]"></svg>
-          <p id="profitMonthlyLabel" class="text-xl font-black emerald">+₦119.7M / mo Net Profit</p>
-          <p id="profitAnnualLabel" class="text-xs font-bold text-[var(--muted-foreground)]">+₦1.44B / yr Annualized Profit</p>
+          <p id="profitMonthlyLabel" class="text-xl font-black emerald">+₦153.4M / mo Net Profit</p>
+          <p id="profitAnnualLabel" class="text-xs font-bold text-[var(--muted-foreground)]">+₦1.84B / yr Annualized Profit</p>
         </div>
         <div id="profitBreakdownCards" class="grid gap-2.5 sm:grid-cols-2 lg:col-span-7 text-xs"></div>
       </div>
@@ -538,7 +548,8 @@
               <th class="py-1.5 pr-2 font-black">Customer Level</th>
               <th class="py-1.5 px-2 font-bold">Monthly Orders</th>
               <th class="py-1.5 px-2 font-bold">Monthly GMV</th>
-              <th class="py-1.5 px-2 font-bold">Platform Revenue</th>
+              <th class="py-1.5 px-2 font-bold">Platform Rev</th>
+              <th class="py-1.5 px-2 font-bold">Total OpEx</th>
               <th class="py-1.5 px-2 font-black emerald">Monthly Net Profit</th>
               <th class="py-1.5 pl-2 font-black gold">Annual Net Profit</th>
             </tr>
@@ -552,12 +563,12 @@
     <section class="grid gap-6 lg:grid-cols-5">
       <div class="rounded-3xl border border-[var(--border)] bg-[var(--card)] p-6 sm:p-8 lg:col-span-3">
         <p class="text-xs font-bold uppercase tracking-widest gold">Why invest now</p>
-        <h2 class="mt-2 text-2xl font-black tracking-tight">Post-product, pre-scale.</h2>
+        <h2 class="mt-2 text-2xl font-black tracking-tight">Post-product, ultra-lean (&lt;₦3M/mo OpEx), ready to scale.</h2>
         <ul class="mt-5 space-y-3.5 text-sm">
           <li class="flex gap-3"><svg class="icon emerald mt-0.5"><use href="#i-check"/></svg><p><strong>De-risked execution</strong>: all 5 modular APIs &amp; web/Android apps are already built and guarded by 540+ automated tests.</p></li>
-          <li class="flex gap-3"><svg class="icon emerald mt-0.5"><use href="#i-check"/></svg><p><strong>Tangible unit economics</strong>: EV fleet + solar swap cuts last-mile energy costs 60–70% while 3PL carriers unlock all 36 states + FCT.</p></li>
+          <li class="flex gap-3"><svg class="icon emerald mt-0.5"><use href="#i-check"/></svg><p><strong>Capital-efficient &lt;₦3M/mo live OpEx (₦2.4M/mo today)</strong>: break-even occurs at <span id="breakEvenBuyersLabel" class="font-bold emerald">~720 Buyers</span>, making even a 5,000-buyer city cluster strongly cash-flow positive (+₦14M+/mo).</p></li>
           <li class="flex gap-3"><svg class="icon emerald mt-0.5"><use href="#i-check"/></svg><p><strong>Zero-waste growth</strong>: ChatMi creators and 15 bps QR Mi Card community partners get paid out of settled doorstep-PIN escrow.</p></li>
-          <li class="flex gap-3"><svg class="icon emerald mt-0.5"><use href="#i-check"/></svg><p><strong>Early break-even (~8,000 buyers)</strong>: compounding software, ads, logistics &amp; SME credit layers drive 50–70%+ operating margins at scale.</p></li>
+          <li class="flex gap-3"><svg class="icon emerald mt-0.5"><use href="#i-check"/></svg><p><strong>Tangible unit economics</strong>: EV fleet + solar swap cuts last-mile energy costs 60–70% while 3PL carriers unlock all 36 states + FCT.</p></li>
         </ul>
       </div>
 
@@ -565,7 +576,7 @@
         <div>
           <p class="text-xs font-bold uppercase tracking-widest emerald">Executive Contact &amp; Terms</p>
           <p class="mt-2 text-lg font-black"><span class="editable" data-placeholder>Seed / Pre-Series A · Equity or SAFE</span></p>
-          <p class="mt-1 text-xs text-[var(--muted-foreground)]">Data room, live walkthroughs &amp; financial model ready for diligence.</p>
+          <p class="mt-1 text-xs text-[var(--muted-foreground)]">Current live monthly OpEx: <strong>₦2.4M/mo (&lt;₦3.0M/mo)</strong> across 4 cities.</p>
         </div>
 
         <div class="mt-5 rounded-2xl border border-[var(--border)] bg-[var(--background)] p-4">
@@ -590,7 +601,6 @@
       return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
 
-    // Edit-placeholder toggle
     const btn = document.getElementById('editToggle');
     const label = document.getElementById('editLabel');
     const fields = document.querySelectorAll('.editable');
@@ -604,6 +614,8 @@
 
     
     // ---- Helper Formatters & Semicircular SVG Dial Gauge Renderer ----
+    const CURRENT_LIVE_OPEX_NGN = 2400000; // Strictly < ₦3,000,000/month current lean operating reality
+
     function syncSliderProps(el) {
       if (!el) return;
       el.style.setProperty('--attr-min', el.min || 0);
@@ -622,7 +634,7 @@
 
     function buildDialGaugeSvg(ratio01, accentColor, centerTop, centerBottom, leftTick, midTick, rightTick) {
       const clamped = Math.max(0, Math.min(1, Number(ratio01) || 0));
-      const angleDeg = -90 + clamped * 180; // -90 left to +90 right
+      const angleDeg = -90 + clamped * 180;
       const cx = 130, cy = 104, r = 82;
       const arcLen = Math.PI * r;
       const fillLen = clamped * arcLen;
@@ -661,7 +673,7 @@
     const runwaySubline = document.getElementById('runwaySubline');
     const runwayWaterfall = document.getElementById('runwayWaterfall');
     const unlockedSummaryBox = document.getElementById('unlockedSummaryBox');
-    let runwayMode = 'net'; // 'net' (revenue-extended) or 'zero' (strict zero-revenue burn)
+    let runwayMode = 'net'; // 'lean' (<₦3M current base), 'net' (scaled + rev), or 'zero' (scaled zero-rev)
 
     function computeUnitsForRaise(raiseAmount, pctMap) {
       const fleetAmt = (raiseAmount * pctMap.fleet) / 100;
@@ -680,7 +692,6 @@
       const totalVehicles = ebikes + emotos + etrikes + evans;
 
       // 2. Operations across States (out of 36 States + FCT = 37 territories)
-      // Metro EV Hub setup + 18m lease/insurance ~ ₦18M; Partner 3PL State Hub ~ ₦4.2M
       const evHubStates = Math.min(18, Math.max(2, Math.floor((opsAmt * 0.52) / 18000000)));
       const remainingOps = Math.max(0, opsAmt - evHubStates * 18000000);
       const partnerStatesRaw = Math.floor(remainingOps / 4200000);
@@ -688,7 +699,7 @@
       const partnerStates = Math.max(0, totalTerritories - evHubStates);
       const ecowasCorridors = (evHubStates + partnerStatesRaw) > 37 ? Math.min(4, Math.floor(((evHubStates + partnerStatesRaw) - 37) / 4)) : 0;
 
-      // 3. Human Resources Personnel (18-month fully loaded compensation)
+      // 3. Human Resources Personnel (24-month lean discipline compensation)
       const ridersCaptains = Math.max(4, Math.round((hrAmt * 0.44) / 2200000));
       const hubManagers = Math.max(2, Math.round((hrAmt * 0.24) / 5200000));
       const supportOpsStaff = Math.max(2, Math.round((hrAmt * 0.20) / 3800000));
@@ -704,19 +715,20 @@
       const lanyardsBadges = Math.max(1000, Math.round(((mktAmt * 0.10) / 1900) / 100) * 100);
       const creatorCampaigns = Math.max(15, Math.floor((mktAmt * 0.10) / 450000));
 
-      // 5. Post-Capex Runway Calculation
-      // Upfront Capex = 100% of EV Fleet & Swap + 45% of Hub fit-out + 45% of initial Billboards/Mi Cards/Lanyards print run + 15% Infra hardware
+      // 5. Post-Capex Runway Calculation anchored on our <₦3M/mo (₦2.4M/mo) current live baseline
       const upfrontCapex = fleetAmt + (opsAmt * 0.45) + (mktAmt * 0.45) + (techAmt * 0.15);
-      // Liquid Operating Pool remaining after upfront Capex is paid in full:
       const liquidOpPool = Math.max(0, raiseAmount - upfrontCapex);
-      // Monthly Gross Operating Burn across 18-month staffing/ops plan (HR + ongoing Hub OpEx + ongoing Street/Creator Mkt + Cloud/Engineers)
-      const planned18mOpex = hrAmt + (opsAmt * 0.55) + (mktAmt * 0.55) + (techAmt * 0.85);
-      const monthlyGrossBurn = Math.max(4500000, planned18mOpex / 18);
-      // Zero-revenue runway (months liquidOpPool covers monthlyGrossBurn including Working Capital Reserve):
-      const zeroRevMonths = liquidOpPool / monthlyGrossBurn;
-      // With organic platform + EV fleet contribution ramping to cover ~34% of burn across months 1-24:
-      const netBurn = monthlyGrossBurn * 0.66;
-      const netRevMonths = Math.min(36, liquidOpPool / netBurn);
+
+      // Lean burn mode: current ₦2.4M/mo live OpEx + modest EV insurance/charging upkeep (~₦25K/vehicle/mo)
+      const leanMonthlyBurn = CURRENT_LIVE_OPEX_NGN + (totalVehicles * 25000);
+      const leanMonths = Math.min(60, liquidOpPool / Math.max(1, leanMonthlyBurn));
+
+      // Scaled multi-state expansion burn across 24-month deployment horizon (starts from ₦2.4M/mo base)
+      const planned24mOpex = hrAmt + (opsAmt * 0.55) + (mktAmt * 0.55) + (techAmt * 0.85);
+      const scaledGrossBurn = Math.max(CURRENT_LIVE_OPEX_NGN, planned24mOpex / 24);
+      const zeroRevMonths = Math.min(48, liquidOpPool / Math.max(1, scaledGrossBurn));
+      const netBurn = scaledGrossBurn * 0.64;
+      const netRevMonths = Math.min(48, liquidOpPool / Math.max(1, netBurn));
 
       return {
         fleetAmt: fleetAmt, opsAmt: opsAmt, hrAmt: hrAmt, mktAmt: mktAmt, techAmt: techAmt, resAmt: resAmt,
@@ -725,8 +737,9 @@
         ridersCaptains: ridersCaptains, hubManagers: hubManagers, supportOpsStaff: supportOpsStaff, engineers: engineers, totalPeople: totalPeople,
         billboards: billboards, streetCampaigns: streetCampaigns, communityPartners: communityPartners,
         miCards: miCards, lanyardsBadges: lanyardsBadges, creatorCampaigns: creatorCampaigns,
-        upfrontCapex: upfrontCapex, liquidOpPool: liquidOpPool, monthlyGrossBurn: monthlyGrossBurn,
-        zeroRevMonths: zeroRevMonths, netRevMonths: netRevMonths
+        upfrontCapex: upfrontCapex, liquidOpPool: liquidOpPool,
+        leanMonthlyBurn: leanMonthlyBurn, leanMonths: leanMonths,
+        scaledGrossBurn: scaledGrossBurn, zeroRevMonths: zeroRevMonths, netRevMonths: netRevMonths
       };
     }
 
@@ -762,7 +775,7 @@
       });
 
       pctStatus.textContent = total === 100 ? 'Total: 100%' : 'Total: ' + total + '% (set to 100%)';
-      pctStatus.className = 'rounded-full px-3 py-1 text-xs font-black ' + (total === 100 ? 'chip-emerald' : 'chip-ember');
+      pctStatus.className = 'rounded-full px-2.5 py-1 text-xs font-black ' + (total === 100 ? 'chip-emerald' : 'chip-ember');
 
       const u = computeUnitsForRaise(raw, pctMap);
 
@@ -789,7 +802,7 @@
         '<div class="w-full space-y-0.5 my-1 border-y border-[var(--border)] py-1">' +
           rowLine('Owned EV Metro Hubs (@ ₦18M)', u.evHubStates + ' states') +
           rowLine('3PL Partner State Hubs (@ ₦4.2M)', u.partnerStates + ' states') +
-          rowLine('Insurance, Leases & Gate IDs', '18m covered') +
+          rowLine('Current 4-City Live OpEx Base', '₦2.4M/mo (<₦3M)') +
         '</div>' +
         pill(territoryLabel, 'chip-sky');
 
@@ -799,7 +812,7 @@
           rowLine('State Hub & Dispatch Leads', u.hubManagers + ' managers') +
           rowLine('Merchant KYC, Support & Growth', (u.supportOpsStaff + Math.max(1, u.totalPeople - u.ridersCaptains - u.hubManagers - u.supportOpsStaff - u.engineers)) + ' specialists') +
         '</div>' +
-        pill(u.totalPeople + ' Total Funded Personnel (18m)', 'chip-gold');
+        pill(u.totalPeople + ' Total Funded Personnel (24m)', 'chip-gold');
 
       deckFundsRows.querySelector('[data-f-units="mkt"]').innerHTML =
         '<div class="w-full space-y-0.5 my-1 border-y border-[var(--border)] py-1">' +
@@ -812,7 +825,7 @@
       deckFundsRows.querySelector('[data-f-units="tech"]').innerHTML =
         '<div class="w-full space-y-0.5 my-1 border-y border-[var(--border)] py-1">' +
           rowLine('Core Product & Infra Engineers', u.engineers + ' engineers') +
-          rowLine('PayMi Escrow, BVN/KYC & Mapbox', 'Auto-scaling') +
+          rowLine('PayMi Escrow, Monnify & Mapbox', 'Auto-scaling') +
           rowLine('3D Storefronts & Guard CI', '540+ tests') +
         '</div>' +
         pill('Zero Legacy Tech Debt', 'chip-ember');
@@ -826,31 +839,40 @@
         pill(shortNaira(u.resAmt) + ' Untouched Cash Buffer', 'chip-emerald');
 
       // Runway Gauge Update
-      const months = runwayMode === 'net' ? u.netRevMonths : u.zeroRevMonths;
-      const gaugeColor = months >= 18 ? '#10b981' : (months >= 12 ? '#f5b841' : '#ff5a36');
-      runwayGaugeSvg.innerHTML = buildDialGaugeSvg(
-        Math.min(1, months / 36),
-        gaugeColor,
-        months.toFixed(1) + ' mos',
-        runwayMode === 'net' ? 'Net Operating Runway' : 'Strict Zero-Rev Runway',
-        '0m',
-        '18m Target',
-        '36m+'
-      );
-      runwayHeadline.textContent = months.toFixed(1) + ' Months Post-Capex Runway';
-      runwayHeadline.style.color = gaugeColor;
-      runwaySubline.textContent = runwayMode === 'net'
-        ? 'Includes revenue ramp · Self-sustaining break-even by ~Month 14'
-        : 'Strict worst-case burn assuming ₦0 revenue after buying all fleet & kits';
+      const months = runwayMode === 'lean' ? u.leanMonths : (runwayMode === 'net' ? u.netRevMonths : u.zeroRevMonths);
+      const gaugeColor = months >= 20 ? '#10b981' : (months >= 14 ? '#f5b841' : '#ff5a36');
+      const monthsText = months >= 59.5 ? '60+ mos' : months.toFixed(1) + ' mos';
+      const modeCaption = runwayMode === 'lean'
+        ? 'At Current <₦3M/mo Lean Base'
+        : (runwayMode === 'net' ? 'Scaled 36-State + Rev Ramp' : 'Strict 36-State Zero-Rev');
 
+      runwayGaugeSvg.innerHTML = buildDialGaugeSvg(
+        Math.min(1, months / 48),
+        gaugeColor,
+        monthsText,
+        modeCaption,
+        '0m',
+        '24m Target',
+        '48m+'
+      );
+      runwayHeadline.textContent = (months >= 59.5 ? '60+ Months' : months.toFixed(1) + ' Months') + ' Post-Capex Runway';
+      runwayHeadline.style.color = gaugeColor;
+      runwaySubline.textContent = runwayMode === 'lean'
+        ? 'Downside protection: current live burn is <₦3M/mo (₦2.4M/mo + EV upkeep)'
+        : (runwayMode === 'net'
+          ? 'Full ' + u.totalPeople + '-person nationwide expansion with organic revenue ramp'
+          : 'Worst-case full ' + u.totalPeople + '-person payroll assuming ₦0 revenue');
+
+      const activeBurnShown = runwayMode === 'lean' ? u.leanMonthlyBurn : u.scaledGrossBurn;
       runwayWaterfall.innerHTML =
-        '<div class="flex justify-between rounded-xl bg-[var(--background)] px-2.5 py-1.5"><span>Upfront Vehicles, Hubs &amp; Print Paid</span><span class="font-black gold">' + shortNaira(u.upfrontCapex) + '</span></div>' +
-        '<div class="flex justify-between rounded-xl bg-[var(--background)] px-2.5 py-1.5"><span>Remaining Liquid Operating Pool</span><span class="font-black emerald">' + shortNaira(u.liquidOpPool) + '</span></div>' +
-        '<div class="flex justify-between rounded-xl bg-[var(--background)] px-2.5 py-1.5"><span>Monthly Post-Capex OpEx Burn</span><span class="font-black">' + shortNaira(u.monthlyGrossBurn) + '/mo</span></div>';
+        '<div class="flex justify-between rounded-xl bg-[var(--background)] px-2.5 py-1"><span>Current Live OpEx (4 Cities Today)</span><span class="font-black emerald">₦2.4M/mo (&lt;₦3M)</span></div>' +
+        '<div class="flex justify-between rounded-xl bg-[var(--background)] px-2.5 py-1"><span>Upfront EVs, Hubs &amp; Print Paid</span><span class="font-black gold">' + shortNaira(u.upfrontCapex) + '</span></div>' +
+        '<div class="flex justify-between rounded-xl bg-[var(--background)] px-2.5 py-1"><span>Remaining Liquid Operating Pool</span><span class="font-black emerald">' + shortNaira(u.liquidOpPool) + '</span></div>' +
+        '<div class="flex justify-between rounded-xl bg-[var(--background)] px-2.5 py-1"><span>' + (runwayMode === 'lean' ? 'Lean Fleet + Ops Burn' : 'Scaled ' + u.totalPeople + '-Staff OpEx') + '</span><span class="font-black">' + shortNaira(activeBurnShown) + '/mo</span></div>';
 
       unlockedSummaryBox.innerHTML =
         '<p class="font-black emerald">Immediate Physical Deployment Summary</p>' +
-        '<p class="mt-0.5 text-[var(--muted-foreground)]"><strong class="text-[var(--foreground)]">' + u.totalVehicles + ' EVs</strong> + <strong class="text-[var(--foreground)]">' + u.swapStations + ' Swap Stations</strong> across <strong class="text-[var(--foreground)]">' + territoryLabel + '</strong>, staffed by <strong class="text-[var(--foreground)]">' + u.totalPeople + ' personnel</strong>, backed by <strong class="text-[var(--foreground)]">' + u.billboards + ' billboards</strong>, <strong class="text-[var(--foreground)]">' + u.communityPartners + ' partners</strong> &amp; <strong class="text-[var(--foreground)]">' + fmtNaira.format(u.miCards + u.lanyardsBadges) + ' Mi Cards/lanyards</strong>.</p>';
+        '<p class="mt-0.5 text-[var(--muted-foreground)]"><strong class="text-[var(--foreground)]">' + u.totalVehicles + ' EVs</strong> + <strong class="text-[var(--foreground)]">' + u.swapStations + ' Swap Stations</strong> across <strong class="text-[var(--foreground)]">' + territoryLabel + '</strong>, <strong class="text-[var(--foreground)]">' + u.totalPeople + ' personnel</strong>, <strong class="text-[var(--foreground)]">' + u.billboards + ' billboards</strong>, <strong class="text-[var(--foreground)]">' + u.communityPartners + ' partners</strong> &amp; <strong class="text-[var(--foreground)]">' + fmtNaira.format(u.miCards + u.lanyardsBadges) + ' Mi Cards/lanyards</strong>.</p>';
     }
 
     deckFundsRows.addEventListener('input', renderDeckFunds);
@@ -893,20 +915,22 @@
     syncSliderProps(deckRaiseSlider);
     renderDeckFunds();
 
-    // ---- Slide 11: Customer-Level Revenue & Net Profit Dialer Gauge ----
+    // ---- Slide 11: Customer-Level Revenue & Net Profit Dialer Gauge (<₦3M/mo Current Base OpEx) ----
     const custDialSlider = document.getElementById('custDialSlider');
     const freqSlider = document.getElementById('freqSlider');
     const aovSlider = document.getElementById('aovSlider');
+    const baseOpexSlider = document.getElementById('baseOpexSlider');
     const custDialOut = document.getElementById('custDialOut');
     const freqOut = document.getElementById('freqOut');
     const aovOut = document.getElementById('aovOut');
+    const baseOpexOut = document.getElementById('baseOpexOut');
+    const breakEvenBuyersLabel = document.getElementById('breakEvenBuyersLabel');
     const profitGaugeSvg = document.getElementById('profitGaugeSvg');
     const profitMonthlyLabel = document.getElementById('profitMonthlyLabel');
     const profitAnnualLabel = document.getElementById('profitAnnualLabel');
     const profitBreakdownCards = document.getElementById('profitBreakdownCards');
     const profitTiersBody = document.getElementById('profitTiersBody');
 
-    // Logarithmic slider 0..100 -> 1,000 .. 1,000,000 customers
     function sliderToCustomers(val) {
       const pct = Math.max(0, Math.min(100, Number(val) || 0)) / 100;
       const raw = 1000 * Math.pow(1000, pct);
@@ -919,7 +943,8 @@
       return Math.round((Math.log(c / 1000) / Math.log(1000)) * 100);
     }
 
-    function computeCustomerProfit(customers, freq, aov) {
+    function computeCustomerProfit(customers, freq, aov, baseOpexNgn) {
+      const baseOpex = Number(baseOpexNgn) || CURRENT_LIVE_OPEX_NGN;
       const monthlyOrders = customers * freq;
       const gmv = monthlyOrders * aov;
       // 1. Marketplace Escrow Take-Rate (~2.35% net after 15 bps Mi Card partner royalty)
@@ -932,10 +957,19 @@
       const revSaasCredit = gmv * 0.0085;
 
       const grossPlatformRev = revTakeRate + revLogistics + revAdsCreators + revSaasCredit;
-      // Operating Expenses: ₦16.5M core platform/hub base + ₦165/order support/dispatch + 0.65% gateway/cloud + regional hub scaling
-      const opex = 16500000 + (monthlyOrders * 165) + (gmv * 0.0065) + (Math.sqrt(customers / 1000) * 2800000);
+      // Calibrated Operating Expenses:
+      // Starts strictly at our <₦3M/mo current live base (₦2.4M/mo default) + ₦120/order dispatch/support + 0.50% gateway/cloud
+      // + incremental multi-state hub overhead ONLY as volume expands beyond 10,000 monthly buyers
+      const multiStateExpansionOpex = customers > 10000
+        ? Math.pow((customers - 10000) / 1000, 0.78) * 650000
+        : 0;
+      const opex = baseOpex + (monthlyOrders * 120) + (gmv * 0.005) + multiStateExpansionOpex;
       const netProfit = grossPlatformRev - opex;
       const netMarginPct = grossPlatformRev > 0 ? (netProfit / grossPlatformRev) * 100 : 0;
+
+      // Exact unit contribution per active buyer to compute break-even buyer count
+      const netContribPerBuyer = (grossPlatformRev - (monthlyOrders * 120) - (gmv * 0.005)) / Math.max(1, customers);
+      const breakEvenBuyers = Math.max(100, Math.ceil(baseOpex / Math.max(1, netContribPerBuyer)));
 
       return {
         customers: customers,
@@ -946,10 +980,12 @@
         revAdsCreators: revAdsCreators,
         revSaasCredit: revSaasCredit,
         grossPlatformRev: grossPlatformRev,
+        baseOpex: baseOpex,
         opex: opex,
         netProfit: netProfit,
         annualProfit: netProfit * 12,
-        netMarginPct: netMarginPct
+        netMarginPct: netMarginPct,
+        breakEvenBuyers: breakEvenBuyers
       };
     }
 
@@ -958,20 +994,28 @@
     function updateProfitDialer() {
       const freq = Number(freqSlider.value) || 3.5;
       const aov = Number(aovSlider.value) || 14500;
+      const baseOpex = baseOpexSlider ? (Number(baseOpexSlider.value) || CURRENT_LIVE_OPEX_NGN) : CURRENT_LIVE_OPEX_NGN;
       syncSliderProps(custDialSlider);
       syncSliderProps(freqSlider);
       syncSliderProps(aovSlider);
+      if (baseOpexSlider) syncSliderProps(baseOpexSlider);
 
       custDialOut.textContent = fmtNaira.format(currentCustomers) + ' Buyers';
       custDialSlider.setAttribute('aria-valuetext', fmtNaira.format(currentCustomers) + ' active monthly buyers');
       freqOut.textContent = freq.toFixed(1) + 'x';
       aovOut.textContent = '₦' + fmtNaira.format(aov);
+      if (baseOpexOut) {
+        baseOpexOut.textContent = shortNaira(baseOpex) + (baseOpex < 3000000 ? ' (<₦3M)' : '/mo');
+      }
 
-      const m = computeCustomerProfit(currentCustomers, freq, aov);
+      const m = computeCustomerProfit(currentCustomers, freq, aov, baseOpex);
+      if (breakEvenBuyersLabel) {
+        breakEvenBuyersLabel.textContent = '~' + fmtNaira.format(Math.round(m.breakEvenBuyers / 20) * 20) + ' Buyers';
+      }
+
       const positive = m.netProfit >= 0;
       const dialColor = positive ? (m.netMarginPct >= 45 ? '#10b981' : '#f5b841') : '#ff5a36';
-      // Map margin from -20% .. +75% onto 0..1 gauge arc
-      const gaugeRatio = Math.max(0.03, Math.min(1, (m.netMarginPct + 20) / 95));
+      const gaugeRatio = Math.max(0.03, Math.min(1, (m.netMarginPct + 15) / 95));
 
       profitGaugeSvg.innerHTML = buildDialGaugeSvg(
         gaugeRatio,
@@ -979,8 +1023,8 @@
         (m.netMarginPct >= 0 ? '+' : '') + m.netMarginPct.toFixed(1) + '%',
         'Operating EBITDA Margin',
         'Break-Even',
-        '40% Margin',
-        '75%+'
+        '45% Margin',
+        '80%+'
       );
 
       profitMonthlyLabel.textContent = (m.netProfit >= 0 ? '+' : '') + shortNaira(m.netProfit) + ' / mo Net Profit';
@@ -993,20 +1037,21 @@
         '<div class="rounded-xl bg-[var(--background)] p-2.5 border border-[var(--border)]"><p class="text-[var(--muted-foreground)]">3. ChatMi Ads &amp; Creators</p><p class="mt-0.5 text-sm font-black violet">' + shortNaira(m.revAdsCreators) + '/mo</p></div>' +
         '<div class="rounded-xl bg-[var(--background)] p-2.5 border border-[var(--border)]"><p class="text-[var(--muted-foreground)]">4. SaaS, B2B &amp; SME Credit</p><p class="mt-0.5 text-sm font-black emerald">' + shortNaira(m.revSaasCredit) + '/mo</p></div>' +
         '<div class="rounded-xl bg-[var(--background)] p-2.5 border border-[var(--border)]"><p class="text-[var(--muted-foreground)]">Gross Platform Revenue</p><p class="mt-0.5 text-sm font-black">' + shortNaira(m.grossPlatformRev) + '/mo</p></div>' +
-        '<div class="rounded-xl bg-[var(--background)] p-2.5 border border-[var(--border)]"><p class="text-[var(--muted-foreground)]">Platform &amp; Hub OpEx</p><p class="mt-0.5 text-sm font-black ember">-' + shortNaira(m.opex) + '/mo</p></div>';
+        '<div class="rounded-xl bg-[var(--background)] p-2.5 border border-[var(--border)]"><p class="text-[var(--muted-foreground)]">Total OpEx (' + shortNaira(m.baseOpex) + ' base)</p><p class="mt-0.5 text-sm font-black ember">-' + shortNaira(m.opex) + '/mo</p></div>';
 
-      const tiers = [5000, 25000, 50000, 100000, 250000, 1000000];
+      const tiers = [1000, 5000, 25000, 50000, 100000, 250000, 1000000];
       profitTiersBody.innerHTML = tiers.map(function (t) {
-        const row = computeCustomerProfit(t, freq, aov);
-        const active = Math.abs(currentCustomers - t) < 1200;
+        const row = computeCustomerProfit(t, freq, aov, baseOpex);
+        const active = Math.abs(currentCustomers - t) < (t === 1000 ? 350 : 1200);
         return (
           '<tr data-dial-tier="' + t + '" class="cursor-pointer transition hover:bg-emerald-500/10 ' + (active ? 'bg-emerald-500/15 font-black' : '') + '">' +
-            '<td class="py-1.5 pr-2">' + fmtNaira.format(t) + ' buyers</td>' +
-            '<td class="py-1.5 px-2">' + fmtNaira.format(Math.round(row.monthlyOrders)) + '</td>' +
-            '<td class="py-1.5 px-2">' + shortNaira(row.gmv) + '</td>' +
-            '<td class="py-1.5 px-2">' + shortNaira(row.grossPlatformRev) + '</td>' +
-            '<td class="py-1.5 px-2 ' + (row.netProfit >= 0 ? 'emerald' : 'ember') + '">' + (row.netProfit >= 0 ? '+' : '') + shortNaira(row.netProfit) + '</td>' +
-            '<td class="py-1.5 pl-2 gold">' + (row.annualProfit >= 0 ? '+' : '') + shortNaira(row.annualProfit) + '/yr</td>' +
+            '<td class="py-1 pr-2">' + fmtNaira.format(t) + ' buyers</td>' +
+            '<td class="py-1 px-2">' + fmtNaira.format(Math.round(row.monthlyOrders)) + '</td>' +
+            '<td class="py-1 px-2">' + shortNaira(row.gmv) + '</td>' +
+            '<td class="py-1 px-2">' + shortNaira(row.grossPlatformRev) + '</td>' +
+            '<td class="py-1 px-2 ember">-' + shortNaira(row.opex) + '</td>' +
+            '<td class="py-1 px-2 ' + (row.netProfit >= 0 ? 'emerald' : 'ember') + '">' + (row.netProfit >= 0 ? '+' : '') + shortNaira(row.netProfit) + '</td>' +
+            '<td class="py-1 pl-2 gold">' + (row.annualProfit >= 0 ? '+' : '') + shortNaira(row.annualProfit) + '/yr</td>' +
           '</tr>'
         );
       }).join('');
@@ -1026,6 +1071,7 @@
     });
     freqSlider.addEventListener('input', updateProfitDialer);
     aovSlider.addEventListener('input', updateProfitDialer);
+    if (baseOpexSlider) baseOpexSlider.addEventListener('input', updateProfitDialer);
 
     document.querySelectorAll('[data-cust-preset]').forEach(function (btn) {
       btn.addEventListener('click', function () {
