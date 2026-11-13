@@ -260,47 +260,56 @@
             </div>
           </div>
 
-          <!-- Right: Interactive Closed-Loop Orbit SVG -->
+          <!-- Right: Interactive Closed-Loop Orbit + Live Product Photo & Naira Price Preview -->
           <div class="flex h-full items-center justify-center lg:col-span-5">
-            <div class="w-full max-w-md rounded-3xl border border-[var(--border)] bg-[var(--card)]/90 p-4 shadow-sm">
+            <div class="w-full max-w-lg rounded-3xl border border-[var(--border)] bg-[var(--card)]/90 p-3.5 shadow-sm space-y-2.5">
               <div class="flex items-center justify-between text-xs font-bold text-[var(--muted-foreground)]">
                 <span>CLOSED-LOOP ARCHITECTURE</span>
-                <span class="emerald">Click any node → App Studio</span>
+                <button type="button" onclick="window.__jumpPillar('shopmi')" class="emerald font-black hover:underline">Launch Desktop / Mobile App Studio →</button>
               </div>
-              <svg viewBox="0 0 380 300" class="mt-2 w-full">
-                <circle cx="190" cy="152" r="102" fill="none" stroke="currentColor" stroke-opacity="0.14" stroke-width="2"/>
-                <circle cx="190" cy="152" r="102" fill="none" stroke="#10b981" stroke-width="2.5" class="flow-line"/>
+              <svg viewBox="0 0 380 226" class="w-full">
+                <circle cx="190" cy="115" r="84" fill="none" stroke="currentColor" stroke-opacity="0.14" stroke-width="2"/>
+                <circle cx="190" cy="115" r="84" fill="none" stroke="#10b981" stroke-width="2.5" class="flow-line"/>
                 <!-- Center Hub -->
-                <circle cx="190" cy="152" r="44" fill="#10b981" fill-opacity="0.14" stroke="#10b981" stroke-width="2"/>
-                <text x="190" y="147" text-anchor="middle" font-size="13" font-weight="900" fill="currentColor">1 Login · 1 Wallet</text>
-                <text x="190" y="164" text-anchor="middle" font-size="12" font-weight="700" fill="#10b981">Doorstep PIN</text>
+                <circle cx="190" cy="115" r="50" fill="#10b981" fill-opacity="0.14" stroke="#10b981" stroke-width="2"/>
+                <text x="190" y="111" text-anchor="middle" font-size="12" font-weight="900" fill="currentColor">1 Login · Wallet</text>
+                <text x="190" y="126" text-anchor="middle" font-size="12" font-weight="700" fill="#10b981">Doorstep PIN</text>
                 <!-- 5 Orbit Nodes -->
                 <g class="cursor-pointer" onclick="window.__jumpPillar('chatmi')">
-                  <rect x="132" y="16" width="116" height="38" rx="12" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-width="1.8"/>
-                  <text x="190" y="34" text-anchor="middle" font-size="12" font-weight="900" fill="currentColor">ChatMi Social</text>
-                  <text x="190" y="48" text-anchor="middle" font-size="12" font-weight="700" fill="#8b5cf6">Ads · Creators</text>
+                  <rect x="132" y="6" width="116" height="34" rx="11" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-width="1.8"/>
+                  <text x="190" y="22" text-anchor="middle" font-size="12" font-weight="900" fill="currentColor">ChatMi Social</text>
+                  <text x="190" y="35" text-anchor="middle" font-size="12" font-weight="700" fill="#8b5cf6">Ads · Creators</text>
                 </g>
                 <g class="cursor-pointer" onclick="window.__jumpPillar('shopmi')">
-                  <rect x="260" y="96" width="112" height="38" rx="12" fill="#f5b841" fill-opacity="0.2" stroke="#d99a1e" stroke-width="1.8"/>
-                  <text x="316" y="114" text-anchor="middle" font-size="12" font-weight="900" fill="currentColor">ShopMi + 3D</text>
-                  <text x="316" y="128" text-anchor="middle" font-size="12" font-weight="700" fill="#d99a1e">1.5–3% Take</text>
+                  <rect x="260" y="68" width="112" height="34" rx="11" fill="#f5b841" fill-opacity="0.2" stroke="#d99a1e" stroke-width="1.8"/>
+                  <text x="316" y="84" text-anchor="middle" font-size="12" font-weight="900" fill="currentColor">ShopMi + 3D</text>
+                  <text x="316" y="97" text-anchor="middle" font-size="12" font-weight="700" fill="#d99a1e">1.5–3% Take</text>
                 </g>
                 <g class="cursor-pointer" onclick="window.__jumpPillar('paymi')">
-                  <rect x="234" y="222" width="122" height="38" rx="12" fill="#10b981" fill-opacity="0.18" stroke="#10b981" stroke-width="1.8"/>
-                  <text x="295" y="240" text-anchor="middle" font-size="12" font-weight="900" fill="currentColor">PayMi Escrow</text>
-                  <text x="295" y="254" text-anchor="middle" font-size="12" font-weight="700" fill="#10b981">4-Way Split</text>
+                  <rect x="234" y="172" width="122" height="34" rx="11" fill="#10b981" fill-opacity="0.18" stroke="#10b981" stroke-width="1.8"/>
+                  <text x="295" y="188" text-anchor="middle" font-size="12" font-weight="900" fill="currentColor">PayMi Escrow</text>
+                  <text x="295" y="201" text-anchor="middle" font-size="12" font-weight="700" fill="#10b981">4-Way Split</text>
                 </g>
                 <g class="cursor-pointer" onclick="window.__jumpPillar('delivermi')">
-                  <rect x="24" y="222" width="126" height="38" rx="12" fill="#0ea5e9" fill-opacity="0.18" stroke="#0ea5e9" stroke-width="1.8"/>
-                  <text x="87" y="240" text-anchor="middle" font-size="12" font-weight="900" fill="currentColor">DeliverMi EV</text>
-                  <text x="87" y="254" text-anchor="middle" font-size="12" font-weight="700" fill="#0ea5e9">+ 3PL RiderMi</text>
+                  <rect x="24" y="172" width="126" height="34" rx="11" fill="#0ea5e9" fill-opacity="0.18" stroke="#0ea5e9" stroke-width="1.8"/>
+                  <text x="87" y="188" text-anchor="middle" font-size="12" font-weight="900" fill="currentColor">DeliverMi EV</text>
+                  <text x="87" y="201" text-anchor="middle" font-size="12" font-weight="700" fill="#0ea5e9">+ 3PL RiderMi</text>
                 </g>
                 <g class="cursor-pointer" onclick="window.__jumpPillar('erp')">
-                  <rect x="8" y="96" width="116" height="38" rx="12" fill="#ff5a36" fill-opacity="0.18" stroke="#ff5a36" stroke-width="1.8"/>
-                  <text x="66" y="114" text-anchor="middle" font-size="12" font-weight="900" fill="currentColor">Merchant ERP</text>
-                  <text x="66" y="128" text-anchor="middle" font-size="12" font-weight="700" fill="#ff5a36">POS · Credit</text>
+                  <rect x="8" y="68" width="116" height="34" rx="11" fill="#ff5a36" fill-opacity="0.18" stroke="#ff5a36" stroke-width="1.8"/>
+                  <text x="66" y="84" text-anchor="middle" font-size="12" font-weight="900" fill="currentColor">Merchant ERP</text>
+                  <text x="66" y="97" text-anchor="middle" font-size="12" font-weight="700" fill="#ff5a36">POS · Credit</text>
                 </g>
               </svg>
+
+              <!-- Live Production SKUs Preview Strip (Real Photos + Naira Prices) -->
+              <div class="border-t border-[var(--border)] pt-2">
+                <div class="mb-1.5 flex items-center justify-between text-xs">
+                  <span class="font-black text-[var(--muted-foreground)]">LIVE PRODUCTION SKUs (329 IN STOCK)</span>
+                  <button type="button" data-open-explorer="products" class="font-black gold hover:underline">Browse All →</button>
+                </div>
+                <div id="coverMiniProducts" class="grid grid-cols-3 gap-2"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -419,84 +428,84 @@
           <p class="text-xs font-semibold text-[var(--muted-foreground)]">Hover or click any pillar → toggle <strong class="text-[var(--foreground)]">Desktop</strong> &amp; <strong class="text-[var(--foreground)]">Mobile</strong> live UIs</p>
         </div>
 
-        <div class="grid min-h-0 flex-1 gap-4 lg:grid-cols-12">
-          <!-- Left: 5 Interdependent Pillars + Investment Value Thesis -->
-          <div class="flex flex-col justify-between gap-2.5 lg:col-span-5">
-            <div id="pillarList" class="grid flex-1 auto-rows-fr gap-2" role="tablist" aria-label="Ecosystem Pillars">
+        <div class="grid min-h-0 flex-1 gap-3.5 lg:grid-cols-12">
+          <!-- Left: Compact 5 Interdependent Pillars + Investment Value Thesis (4 cols so App Studio gets 8 cols!) -->
+          <div class="flex flex-col justify-between gap-2 lg:col-span-4">
+            <div id="pillarList" class="grid flex-1 auto-rows-fr gap-1.5" role="tablist" aria-label="Ecosystem Pillars">
               <button type="button" role="tab" aria-selected="true" data-pillar="chatmi"
-                class="pillar-btn flex items-start gap-3 rounded-2xl border border-[var(--border)] bg-[var(--card)] p-2.5 text-left transition">
-                <span class="chip-violet mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl"><svg class="icon"><use href="#i-chat"/></svg></span>
+                class="pillar-btn flex items-start gap-2.5 rounded-2xl border border-[var(--border)] bg-[var(--card)] p-2 text-left transition">
+                <span class="chip-violet mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl"><svg class="icon icon-sm"><use href="#i-chat"/></svg></span>
                 <div class="min-w-0 flex-1">
-                  <div class="flex items-center justify-between gap-1"><span class="text-xs font-black">1. Grow · ChatMi</span><span class="text-xs font-bold violet">chat.delivermi.ng</span></div>
-                  <p class="text-xs text-[var(--muted-foreground)]">Social feed, reels &amp; masked chat + <strong>ChatMi Ads</strong>, <strong>Creators</strong> &amp; <strong>Influencer Campaigns</strong>.</p>
+                  <div class="flex items-center justify-between gap-1"><span class="text-xs font-black">1. ChatMi Social</span><span class="text-xs font-bold violet">chat.delivermi.ng</span></div>
+                  <p class="text-xs text-[var(--muted-foreground)] leading-snug">Shoppable reels, masked DMs + <strong>Ads &amp; Creator Splits</strong>.</p>
                 </div>
               </button>
 
               <button type="button" role="tab" aria-selected="false" data-pillar="shopmi"
-                class="pillar-btn flex items-start gap-3 rounded-2xl border border-[var(--border)] bg-[var(--card)] p-2.5 text-left transition">
-                <span class="chip-gold mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl"><svg class="icon"><use href="#i-bag"/></svg></span>
+                class="pillar-btn flex items-start gap-2.5 rounded-2xl border border-[var(--border)] bg-[var(--card)] p-2 text-left transition">
+                <span class="chip-gold mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl"><svg class="icon icon-sm"><use href="#i-bag"/></svg></span>
                 <div class="min-w-0 flex-1">
-                  <div class="flex items-center justify-between gap-1"><span class="text-xs font-black">2. Sell · ShopMi &amp; Flagships</span><span class="text-xs font-bold gold">shop.delivermi.ng</span></div>
-                  <p class="text-xs text-[var(--muted-foreground)]">1.5–3% marketplace, <strong>chop-chop.ng</strong> food &amp; 3D custom flagships (<strong>teeystyles.com</strong>).</p>
+                  <div class="flex items-center justify-between gap-1"><span class="text-xs font-black">2. ShopMi &amp; 3D Stores</span><span class="text-xs font-bold gold">shop.delivermi.ng</span></div>
+                  <p class="text-xs text-[var(--muted-foreground)] leading-snug">1.5–3% marketplace, <strong>chop-chop.ng</strong> &amp; <strong>teeystyles.com</strong>.</p>
                 </div>
               </button>
 
               <button type="button" role="tab" aria-selected="false" data-pillar="paymi"
-                class="pillar-btn flex items-start gap-3 rounded-2xl border border-[var(--border)] bg-[var(--card)] p-2.5 text-left transition">
-                <span class="chip-emerald mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl"><svg class="icon"><use href="#i-lock"/></svg></span>
+                class="pillar-btn flex items-start gap-2.5 rounded-2xl border border-[var(--border)] bg-[var(--card)] p-2 text-left transition">
+                <span class="chip-emerald mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl"><svg class="icon icon-sm"><use href="#i-lock"/></svg></span>
                 <div class="min-w-0 flex-1">
-                  <div class="flex items-center justify-between gap-1"><span class="text-xs font-black">3. Settle · PayMi Escrow</span><span class="text-xs font-bold emerald">auth.delivermi.ng</span></div>
-                  <p class="text-xs text-[var(--muted-foreground)]">SSO wallet &amp; locked escrow; buyer's 4-digit doorstep PIN triggers instant 4-way split.</p>
+                  <div class="flex items-center justify-between gap-1"><span class="text-xs font-black">3. PayMi Escrow</span><span class="text-xs font-bold emerald">auth.delivermi.ng</span></div>
+                  <p class="text-xs text-[var(--muted-foreground)] leading-snug">SSO wallet; 4-digit doorstep PIN triggers 4-way split.</p>
                 </div>
               </button>
 
               <button type="button" role="tab" aria-selected="false" data-pillar="delivermi"
-                class="pillar-btn flex items-start gap-3 rounded-2xl border border-[var(--border)] bg-[var(--card)] p-2.5 text-left transition">
-                <span class="chip-sky mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl"><svg class="icon"><use href="#i-truck"/></svg></span>
+                class="pillar-btn flex items-start gap-2.5 rounded-2xl border border-[var(--border)] bg-[var(--card)] p-2 text-left transition">
+                <span class="chip-sky mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl"><svg class="icon icon-sm"><use href="#i-truck"/></svg></span>
                 <div class="min-w-0 flex-1">
-                  <div class="flex items-center justify-between gap-1"><span class="text-xs font-black">4. Deliver · DeliverMi &amp; RiderMi</span><span class="text-xs font-bold sky">delivermi.ng · rider.delivermi.ng</span></div>
-                  <p class="text-xs text-[var(--muted-foreground)]">Web + Native Android dispatch across our owned EV fleet &amp; vetted 3PL carriers.</p>
+                  <div class="flex items-center justify-between gap-1"><span class="text-xs font-black">4. DeliverMi · RiderMi</span><span class="text-xs font-bold sky">delivermi.ng</span></div>
+                  <p class="text-xs text-[var(--muted-foreground)] leading-snug">Web + Android dispatch across owned EVs &amp; 3PLs.</p>
                 </div>
               </button>
 
               <button type="button" role="tab" aria-selected="false" data-pillar="erp"
-                class="pillar-btn flex items-start gap-3 rounded-2xl border border-[var(--border)] bg-[var(--card)] p-2.5 text-left transition">
-                <span class="chip-ember mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl"><svg class="icon"><use href="#i-store"/></svg></span>
+                class="pillar-btn flex items-start gap-2.5 rounded-2xl border border-[var(--border)] bg-[var(--card)] p-2 text-left transition">
+                <span class="chip-ember mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl"><svg class="icon icon-sm"><use href="#i-store"/></svg></span>
                 <div class="min-w-0 flex-1">
-                  <div class="flex items-center justify-between gap-1"><span class="text-xs font-black">5. Run · Merchant ERP &amp; MenuVerse</span><span class="text-xs font-bold ember">vendor.delivermi.ng</span></div>
-                  <p class="text-xs text-[var(--muted-foreground)]">Walk-in POS + online stock sync, automated treasury buckets &amp; B2B auto-restock.</p>
+                  <div class="flex items-center justify-between gap-1"><span class="text-xs font-black">5. Merchant ERP</span><span class="text-xs font-bold ember">vendor.delivermi.ng</span></div>
+                  <p class="text-xs text-[var(--muted-foreground)] leading-snug">Cloud POS + online stock sync, treasury &amp; SME credit.</p>
                 </div>
               </button>
             </div>
 
             <!-- Why Interdependence = Investment Value -->
-            <div class="rounded-2xl border border-emerald-500/35 bg-[var(--card)] p-3">
+            <div class="rounded-2xl border border-emerald-500/35 bg-[var(--card)] p-2.5">
               <div class="flex items-center justify-between">
-                <p class="text-xs font-black uppercase tracking-wider emerald">Why Interdependence Creates Moat &amp; Value</p>
+                <p class="text-xs font-black uppercase tracking-wider emerald">Why Interdependence Wins</p>
                 <span class="chip-emerald rounded-full px-2 py-0.5 text-xs font-bold">5 APIs · 540+ Tests</span>
               </div>
-              <p class="mt-1 text-xs text-[var(--muted-foreground)]">
-                Each app eliminates the failure cost of the next: <strong class="text-[var(--foreground)]">ChatMi</strong> drives zero-CAC demand → <strong class="text-[var(--foreground)]">ShopMi</strong> converts at counter prices → <strong class="text-[var(--foreground)]">PayMi PIN</strong> kills fraud → <strong class="text-[var(--foreground)]">EV Fleet</strong> cuts delivery cost → <strong class="text-[var(--foreground)]">ERP</strong> locks in daily retention &amp; underwrites SME credit.
+              <p class="mt-1 text-xs text-[var(--muted-foreground)] leading-snug">
+                <strong class="text-[var(--foreground)]">ChatMi</strong> zero-CAC demand → <strong class="text-[var(--foreground)]">ShopMi</strong> counter parity → <strong class="text-[var(--foreground)]">PayMi PIN</strong> zero fraud → <strong class="text-[var(--foreground)]">EVs</strong> low delivery cost → <strong class="text-[var(--foreground)]">ERP</strong> daily retention.
               </p>
             </div>
           </div>
 
-          <!-- Right: Authentic Miniature App Interface Studio with Desktop / Mobile Switcher -->
-          <div class="flex min-h-0 flex-col rounded-3xl border border-[var(--border)] bg-[var(--card)]/75 p-3.5 lg:col-span-7">
-            <div class="mb-2.5 flex flex-wrap items-center justify-between gap-2">
+          <!-- Right: Spacious 8-Column Miniature App Interface Studio with Desktop / Mobile Switcher -->
+          <div class="flex min-h-0 flex-col rounded-3xl border border-[var(--border)] bg-[var(--card)]/85 p-3.5 lg:col-span-8">
+            <div class="mb-2 flex flex-wrap items-center justify-between gap-2">
               <div class="flex items-center gap-2">
                 <span id="studioTitle" class="text-sm font-black">ChatMi Social Commerce</span>
                 <span id="studioDomain" class="chip-violet rounded-full px-2.5 py-0.5 text-xs font-bold">chat.delivermi.ng</span>
               </div>
               <div class="flex items-center gap-1.5">
-                <div class="inline-flex rounded-full border border-[var(--border)] bg-[var(--background)] p-0.5">
+                <div class="inline-flex rounded-full border border-[var(--border)] bg-[var(--background)] p-0.5 shadow-xs">
                   <button type="button" data-device="desktop" aria-pressed="true"
-                    class="mode-btn inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold transition">
-                    <svg class="icon icon-sm"><use href="#i-desktop"/></svg><span>Desktop</span>
+                    class="mode-btn inline-flex items-center gap-1.5 rounded-full px-3.5 py-1 text-xs font-black transition">
+                    <svg class="icon icon-sm"><use href="#i-desktop"/></svg><span>Desktop Mode</span>
                   </button>
                   <button type="button" data-device="mobile" aria-pressed="false"
-                    class="mode-btn inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold transition">
-                    <svg class="icon icon-sm"><use href="#i-phone"/></svg><span>Mobile</span>
+                    class="mode-btn inline-flex items-center gap-1.5 rounded-full px-3.5 py-1 text-xs font-black transition">
+                    <svg class="icon icon-sm"><use href="#i-phone"/></svg><span>Mobile Mode</span>
                   </button>
                 </div>
               </div>
@@ -1131,20 +1140,56 @@
       return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
     function findProd(storeSub, idx) {
-      const matches = DATA.snapshot.sampleProducts.filter(function (p) {
+      const pool = (DATA && DATA.snapshot && DATA.snapshot.sampleProducts) ? DATA.snapshot.sampleProducts : [];
+      const matches = pool.filter(function (p) {
         return (p.store || '').toLowerCase().indexOf(storeSub.toLowerCase()) !== -1 && p.thumb;
       });
-      return matches[idx || 0] || DATA.snapshot.sampleProducts[idx || 0] || { name: 'Featured Item', price: 15000, store: 'Verified Store', city: 'Abuja', thumb: '' };
+      return matches[idx || 0] || pool[idx || 0] || { name: 'Featured Item', price: 15000, store: 'Verified Store', city: 'Abuja', category: 'Retail', thumb: '' };
     }
     function findLogo(storeSub) {
-      const v = DATA.snapshot.vendors.find(function (x) {
+      const vs = (DATA && DATA.snapshot && DATA.snapshot.vendors) ? DATA.snapshot.vendors : [];
+      const v = vs.find(function (x) {
         return (x.name || '').toLowerCase().indexOf(storeSub.toLowerCase()) !== -1 && x.logo;
       });
       return v ? v.logo : '';
     }
     function imgTag(src, alt, cls) {
-      if (!src) return '<div class="' + cls + ' bg-slate-200 flex items-center justify-center text-xs font-black text-slate-700">DM</div>';
+      if (!src) {
+        const initials = String(alt || 'DM').split(/\s+/).slice(0, 2).map(function (w) { return (w[0] || '').toUpperCase(); }).join('');
+        return '<div class="' + cls + ' bg-gradient-to-br from-emerald-600 to-slate-900 flex items-center justify-center text-xs font-black text-white">' + esc(initials || 'DM') + '</div>';
+      }
       return '<img src="' + src + '" alt="' + esc(alt) + '" class="' + cls + ' object-cover" loading="lazy" />';
+    }
+
+    // Crisp inline SVG icon helper (zero emojis)
+    const MINI_ICONS = {
+      home: '<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/>',
+      play: '<polygon points="6 3 20 12 6 21 6 3"/>',
+      chat: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+      bag: '<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>',
+      cart: '<circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>',
+      search: '<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',
+      shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>',
+      lock: '<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+      pin: '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>',
+      zap: '<path d="M13 2 3 14h9l-1 8 10-12h-9z"/>',
+      grid: '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
+      store: '<path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M2 7h20"/>',
+      user: '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+      heart: '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>',
+      star: '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',
+      qr: '<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM20 14v3M14 20h3"/>',
+      bike: '<circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/>',
+      moto: '<circle cx="5" cy="17" r="3"/><circle cx="19" cy="17" r="3"/><path d="M8 17h8l-3-6H9"/><path d="M13 11h3l3 6"/>',
+      truck: '<path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>',
+      chart: '<path d="M18 20V10M12 20V4M6 20v-6"/>',
+      plus: '<path d="M12 5v14M5 12h14"/>',
+      check: '<polyline points="20 6 9 17 4 12"/>',
+      wifi: '<path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/>',
+      battery: '<rect x="2" y="7" width="16" height="10" rx="2"/><line x1="22" y1="11" x2="22" y2="13"/>'
+    };
+    function mIcon(name, cls) {
+      return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="inline-block shrink-0 ' + (cls || 'h-3.5 w-3.5') + '">' + (MINI_ICONS[name] || MINI_ICONS.grid) + '</svg>';
     }
 
     const SUBVIEW_STATE = {
@@ -1154,9 +1199,26 @@
       delivermi: 'dispatch',
       erp: 'dashboard'
     };
+    const MINI_CART_STATE = {
+      count: 3,
+      total: 95500,
+      lastToast: '',
+      pinSettled: false
+    };
+
+    function refreshAllMiniStudios() {
+      if (typeof updateAppStudio === 'function') updateAppStudio();
+      if (typeof updateOnePagerStudio === 'function') updateOnePagerStudio();
+      if (typeof inspectorDialog !== 'undefined' && inspectorDialog && inspectorDialog.open && typeof renderModal === 'function') {
+        renderModal();
+      }
+    }
 
     function renderSubTabs(appKey, tabs, accentHex) {
       const current = SUBVIEW_STATE[appKey] || tabs[0][0];
+      const toastHtml = MINI_CART_STATE.lastToast
+        ? '<span class="inline-flex items-center gap-1 rounded-full bg-emerald-500/15 border border-emerald-500/40 px-2.5 py-0.5 text-xs font-black text-emerald-600">' + mIcon('check', 'h-3 w-3') + ' ' + esc(MINI_CART_STATE.lastToast) + '</span>'
+        : '<span class="inline-flex items-center gap-1.5 rounded-full border border-[var(--border)] bg-[var(--background)] px-2.5 py-0.5 text-xs font-bold text-[var(--muted-foreground)]">' + mIcon('cart', 'h-3.5 w-3.5 text-emerald-500') + ' Escrow Cart: <strong class="text-[var(--foreground)]">' + MINI_CART_STATE.count + ' items · ' + naira(MINI_CART_STATE.total) + '</strong></span>';
       return (
         '<div class="mb-2 flex flex-wrap items-center justify-between gap-1.5">' +
           '<div class="inline-flex flex-wrap gap-1 rounded-xl border border-[var(--border)] bg-[var(--background)] p-1">' +
@@ -1167,7 +1229,7 @@
                 '" style="' + (active ? 'background:' + accentHex : '') + '">' + esc(t[1]) + '</button>';
             }).join('') +
           '</div>' +
-          '<span class="text-xs font-semibold text-[var(--muted-foreground)]">Real DeliverMi Ecosystem Interface</span>' +
+          toastHtml +
         '</div>'
       );
     }
@@ -1176,18 +1238,29 @@
       return (
         '<div class="flex h-full flex-col">' +
           subTabsHtml +
-          '<div class="flex min-h-0 flex-1 flex-col overflow-hidden rounded-2xl border border-[var(--border)] shadow-sm" style="background:' + (bodyBg || 'var(--card)') + '">' +
-            '<div class="flex items-center justify-between gap-2 border-b border-black/10 bg-[#111318] px-3 py-1.5 text-white">' +
-              '<div class="flex items-center gap-1.5">' +
-                '<span class="h-2.5 w-2.5 rounded-full bg-[#ff5f57]"></span>' +
-                '<span class="h-2.5 w-2.5 rounded-full bg-[#febc2e]"></span>' +
-                '<span class="h-2.5 w-2.5 rounded-full bg-[#28c840]"></span>' +
+          '<div class="flex min-h-0 flex-1 flex-col overflow-hidden rounded-2xl border border-slate-300/80 shadow-md" style="background:' + (bodyBg || '#ffffff') + '">' +
+            '<!-- Realistic Desktop Browser Window Bar -->' +
+            '<div class="flex items-center justify-between gap-2 border-b border-white/10 bg-[#0f131a] px-3 py-1.5 text-white shrink-0">' +
+              '<div class="flex items-center gap-2">' +
+                '<div class="flex items-center gap-1.5">' +
+                  '<span class="h-2.5 w-2.5 rounded-full bg-[#ff5f57]"></span>' +
+                  '<span class="h-2.5 w-2.5 rounded-full bg-[#febc2e]"></span>' +
+                  '<span class="h-2.5 w-2.5 rounded-full bg-[#28c840]"></span>' +
+                '</div>' +
+                '<div class="hidden sm:flex items-center gap-1 text-slate-400 text-xs font-bold pl-1">' +
+                  '<span class="rounded bg-white/5 px-1.5 py-0.5">‹</span>' +
+                  '<span class="rounded bg-white/5 px-1.5 py-0.5">›</span>' +
+                '</div>' +
               '</div>' +
-              '<div class="flex flex-1 max-w-md items-center justify-center gap-1.5 rounded-lg bg-white/10 px-3 py-0.5 text-xs font-semibold text-slate-100">' +
-                '<svg class="icon icon-sm" style="width:12px;height:12px;color:#10b981"><use href="#i-lock"/></svg>' +
+              '<div class="flex flex-1 max-w-md items-center justify-center gap-1.5 rounded-lg bg-white/10 border border-white/10 px-3 py-0.5 text-xs font-semibold text-slate-100">' +
+                '<span class="text-emerald-400">' + mIcon('lock', 'h-3 w-3') + '</span>' +
                 '<span class="truncate">' + esc(url) + '</span>' +
               '</div>' +
-              '<span class="rounded-full px-2.5 py-0.5 text-xs font-bold" style="background:' + accentHex + '33;color:#ffffff">Live UI</span>' +
+              '<div class="flex items-center gap-1.5">' +
+                '<span class="hidden sm:inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-bold text-white" style="background:' + accentHex + 'cc">' +
+                  '<span class="h-1.5 w-1.5 rounded-full bg-white"></span>Live Web App' +
+                '</span>' +
+              '</div>' +
             '</div>' +
             '<div class="min-h-0 flex-1 overflow-y-auto">' + innerHtml + '</div>' +
           '</div>' +
@@ -1195,225 +1268,360 @@
       );
     }
 
-    function wrapMobilePhone(url, subTabsHtml, phoneInnerHtml, sideNotes) {
+    function wrapMobilePhone(url, subTabsHtml, topBarHtml, scrollBodyHtml, bottomDockHtml, featuredProducts, sideTitle) {
+      const prods = (featuredProducts || []).slice(0, 4);
       return (
         '<div class="flex h-full flex-col">' +
           subTabsHtml +
-          '<div class="grid min-h-0 flex-1 items-center gap-3 lg:grid-cols-12">' +
-            '<div class="mx-auto flex w-full max-w-[305px] flex-col overflow-hidden rounded-[30px] border-[4px] border-[#111318] bg-white text-slate-900 shadow-lg lg:col-span-7">' +
-              '<div class="flex items-center justify-between bg-[#111318] px-4 py-1 text-xs font-bold text-white">' +
-                '<span>9:41</span>' +
-                '<span class="h-3 w-16 rounded-full bg-black"></span>' +
-                '<span>5G · 99%</span>' +
+          '<div class="grid min-h-0 flex-1 items-stretch gap-3.5 lg:grid-cols-12">' +
+            '<!-- Realistic iPhone Frame with Pinned Status Bar, Pinned App Header, Scrollable Screen & Pinned Tab Dock -->' +
+            '<div class="lg:col-span-5 flex items-center justify-center">' +
+              '<div class="flex w-full max-w-[308px] flex-col overflow-hidden rounded-[34px] border-[5px] border-[#12161f] bg-white text-slate-900 shadow-xl ring-1 ring-black/10">' +
+                '<!-- iOS Status Bar + Dynamic Island -->' +
+                '<div class="flex items-center justify-between bg-[#12161f] px-4 py-1 text-xs font-bold text-white shrink-0">' +
+                  '<span>9:41</span>' +
+                  '<span class="flex h-3.5 w-20 items-center justify-end rounded-full bg-black px-1.5"><span class="h-1.5 w-1.5 rounded-full bg-indigo-500/70"></span></span>' +
+                  '<span class="flex items-center gap-1">' + mIcon('wifi', 'h-3 w-3') + mIcon('battery', 'h-3.5 w-3.5 text-emerald-400') + '</span>' +
+                '</div>' +
+                '<!-- Pinned App Top Bar -->' +
+                '<div class="shrink-0">' + topBarHtml + '</div>' +
+                '<!-- Scrollable Native Screen Canvas -->' +
+                '<div class="h-[310px] overflow-y-auto">' + scrollBodyHtml + '</div>' +
+                '<!-- Pinned Native Bottom Navigation Dock -->' +
+                '<div class="shrink-0 border-t border-slate-200 bg-white/95 px-2 pt-1.5 pb-1">' +
+                  bottomDockHtml +
+                  '<div class="mt-1.5 mx-auto h-1 w-24 rounded-full bg-slate-900/25"></div>' +
+                '</div>' +
               '</div>' +
-              '<div class="max-h-[370px] overflow-y-auto">' + phoneInnerHtml + '</div>' +
             '</div>' +
-            '<div class="hidden lg:flex lg:col-span-5 flex-col justify-center gap-2">' +
-              '<div class="rounded-xl border border-[var(--border)] bg-[var(--background)] px-3 py-2 text-xs font-bold">' +
-                '<span class="text-[var(--muted-foreground)]">Mobile Endpoint: </span><span class="emerald">' + esc(url.replace('https://', '')) + '</span>' +
+
+            '<!-- Right Companion: Live In-App Product Photo & Naira Price Shelf -->' +
+            '<div class="lg:col-span-7 flex flex-col justify-between rounded-2xl border border-[var(--border)] bg-[var(--background)] p-3">' +
+              '<div class="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-[var(--border)]">' +
+                '<div>' +
+                  '<p class="text-xs font-black uppercase tracking-wider emerald">' + esc(sideTitle || 'Live Products & Pricing in Mobile App') + '</p>' +
+                  '<p class="text-xs text-[var(--muted-foreground)]">Endpoint: <strong class="text-[var(--foreground)]">' + esc(url.replace('https://', '')) + '</strong> · PWA + Native Android</p>' +
+                '</div>' +
+                '<span class="chip-gold rounded-full px-2.5 py-0.5 text-xs font-black">Click + Cart to Test</span>' +
               '</div>' +
-              sideNotes.map(function (n) {
-                return '<div class="rounded-2xl border border-[var(--border)] bg-[var(--background)] p-2.5">' +
-                  '<p class="text-xs font-black">' + esc(n[0]) + '</p>' +
-                  '<p class="mt-0.5 text-xs text-[var(--muted-foreground)]">' + esc(n[1]) + '</p>' +
-                '</div>';
-              }).join('') +
+              '<div class="my-2 grid grid-cols-2 gap-2.5">' +
+                prods.map(function (p) {
+                  return (
+                    '<div class="flex flex-col justify-between rounded-xl border border-[var(--border)] bg-[var(--card)] p-2">' +
+                      '<div class="flex gap-2 items-center">' +
+                        imgTag(p.thumb, p.name, 'h-14 w-14 rounded-lg shrink-0 border border-black/5') +
+                        '<div class="min-w-0 flex-1">' +
+                          '<p class="truncate text-xs font-black" title="' + esc(p.name) + '">' + esc(p.name) + '</p>' +
+                          '<p class="truncate text-xs text-[var(--muted-foreground)]">' + esc(p.store) + ' · ' + esc(p.city) + '</p>' +
+                          '<p class="mt-0.5 text-xs font-black gold">' + naira(p.price) + '</p>' +
+                        '</div>' +
+                      '</div>' +
+                      '<div class="mt-1.5 flex items-center justify-between border-t border-[var(--border)] pt-1.5 text-xs">' +
+                        '<span class="font-semibold text-emerald-600">PayMi Escrow ✓</span>' +
+                        '<button type="button" data-mini-add="' + esc(p.name) + '|' + Number(p.price || 5000) + '" class="rounded-lg bg-slate-900 px-2 py-0.5 text-xs font-black text-white hover:bg-emerald-600 transition">+ Cart</button>' +
+                      '</div>' +
+                    '</div>'
+                  );
+                }).join('') +
+              '</div>' +
+              '<div class="flex flex-wrap items-center justify-between gap-2 rounded-xl bg-[var(--card)] border border-[var(--border)] px-3 py-2 text-xs">' +
+                '<span class="font-semibold text-[var(--muted-foreground)]">100% real merchant photos &amp; counter-parity Naira prices</span>' +
+                '<span class="font-black emerald">4-Digit PIN Protected</span>' +
+              '</div>' +
             '</div>' +
           '</div>' +
         '</div>'
       );
     }
 
+    function renderMobileDock(items, activeIdx, activeColor) {
+      return '<div class="grid grid-cols-5 text-center text-xs font-bold">' +
+        items.map(function (it, idx) {
+          const on = idx === activeIdx;
+          return '<div class="flex flex-col items-center justify-center py-0.5 ' + (on ? '' : 'text-slate-400') + '" style="' + (on ? 'color:' + activeColor : '') + '">' +
+            mIcon(it[0], 'h-3.5 w-3.5') +
+            '<span class="mt-0.5 leading-none font-bold">' + esc(it[1]) + '</span>' +
+          '</div>';
+        }).join('') +
+      '</div>';
+    }
+
     function renderMiniApp(appKey, deviceMode) {
-      const pHair = findProd('Teey Styles', 0);
-      const pHair2 = findProd('Teey Styles', 1);
-      const pPhone = findProd('0NiX Gadgets', 0);
-      const pLaptop = findProd('0NiX Gadgets', 1);
-      const pMeal = findProd('Amazing Pots', 0);
-      const pSoup = findProd('Nice Cuisine', 0);
-      const pBread = findProd('EXQUISITE EDIBLES', 0);
+      const pBob = findProd('Teey Styles', 0);          // ₦90,000 Raw Vietnamese bone straight bob
+      const pWave = findProd('Teey Styles', 1);         // ₦63,000 26" deepwave unit
+      const pClosure = findProd('Teey Styles', 2);      // ₦9,000 5x5 Swiss lace Fiero closure
+      const pPhone = findProd('0NiX Gadgets', 0);       // ₦1,850,000 iPhone 16 Pro
+      const pMac = findProd('0NiX Gadgets', 1);         // ₦4,950,000 MacBook Pro 16-inch M3 Max
+      const pKey = findProd('0NiX Gadgets', 2);         // ₦580,000 Apple Magic Keyboard
+      const pPepper = findProd('Amazing Pots', 0);      // ₦5,000 Assorted Meat Pepper Soup
+      const pOkro = findProd('Amazing Pots', 1);        // ₦5,000 Rich Seafood & Meat Okro Soup
+      const pFriedRice = findProd('Amazing Pots', 2);   // ₦4,500 Chef's Special Fried Rice Platter
+      const pJollof = findProd('3 Star Kitchen', 0);    // ₦4,200 Smokey Party Jollof & Grill Chicken
+      const pSalad = findProd('THE SALAD PLACE', 0);    // ₦7,500 Chicken Salad
+      const pBread = findProd('EXQUISITE EDIBLES', 0);  // ₦3,500 Coconut Banana Bread
+      const pZannie = findProd('Everything By Zannie', 0); // ₦23,000 Food Processor
+      const pTee = findProd('TRYBAL INK', 0);           // ₦35,000 Tribal ink warrior edition
+
       const logoTeey = findLogo('Teey Styles');
       const logoGadget = findLogo('0NiX Gadgets');
       const logoPots = findLogo('Amazing Pots');
       const logoNice = findLogo('Nice Cuisine');
+      const logoSalad = findLogo('THE SALAD PLACE');
 
       // ==================== 1. CHATMI (chat.delivermi.ng) ====================
       if (appKey === 'chatmi') {
         const sub = SUBVIEW_STATE.chatmi || 'feed';
         const tabs = [
-          ['feed', 'ChatMi Social Feed & Creators'],
-          ['directory', 'Verified Directory (Live Capture)']
+          ['feed', 'ChatMi Feed & Shoppable Reels'],
+          ['directory', 'Verified Business Directory (Live)']
         ];
-        const subHtml = renderSubTabs('chatmi', tabs, '#d97706');
+        const subHtml = renderSubTabs('chatmi', tabs, '#7c3aed');
 
         if (sub === 'directory') {
           if (deviceMode === 'mobile') {
-            const mobDir =
-              '<div class="bg-[#f6f4ec] p-2.5 text-slate-900 space-y-2">' +
-                '<div class="flex items-center justify-between border-b border-black/10 pb-2">' +
-                  '<div class="flex items-center gap-1.5"><span class="flex h-6 w-6 items-center justify-center rounded-lg text-xs font-black text-slate-900" style="background:linear-gradient(135deg,#f5b841,#10b981)">✦</span><span class="text-xs font-black">Chat<span class="text-[#d97706]">Mi</span></span></div>' +
-                  '<span class="rounded-full bg-[#e0f2fe] px-2 py-0.5 text-xs font-bold text-[#0369a1]">Business Directory</span>' +
-                '</div>' +
-                '<div class="rounded-2xl bg-white p-2.5 border border-black/5">' +
-                  '<p class="text-xs font-black">Verified Companies &amp; Teams</p>' +
-                  '<div class="mt-1.5 flex gap-1 text-xs font-bold"><span class="rounded-full bg-slate-900 px-2 py-0.5 text-white">All Hubs</span><span class="rounded-full bg-slate-100 px-2 py-0.5">Abuja</span><span class="rounded-full bg-slate-100 px-2 py-0.5">Uyo</span></div>' +
-                '</div>' +
-                '<div class="rounded-2xl bg-white p-2.5 border border-black/5 space-y-1.5">' +
-                  '<div class="flex items-center justify-between"><span class="text-xs font-black">Teey Styles</span><span class="rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-bold text-emerald-800">SLA Tier 6 · 2.5%</span></div>' +
-                  '<p class="text-xs text-slate-500">SM-STORE-0011 · Abuja (FCT) · 3 ERP-Verified Staff</p>' +
-                  '<div class="flex items-center justify-between rounded-xl bg-[#f6f4ec] px-2 py-1 text-xs"><span class="font-bold">Malcolm Etuk · Verified</span><span class="rounded-full bg-[#f6be2c] px-2 py-0.5 font-black">Visit ↗</span></div>' +
-                '</div>' +
-                '<div class="grid grid-cols-5 border-t border-black/10 pt-1.5 text-center text-xs font-bold">' +
-                  '<span>Home</span><span class="rounded-xl bg-slate-900 py-0.5 text-[#f6be2c]">Directory</span><span>Chat</span><span>Reels</span><span>Profile</span>' +
-                '</div>' +
+            const topDir =
+              '<div class="flex items-center justify-between border-b border-black/10 bg-[#f6f4ec] px-3 py-2">' +
+                '<div class="flex items-center gap-1.5"><span class="flex h-6 w-6 items-center justify-center rounded-lg text-xs font-black text-slate-900" style="background:linear-gradient(135deg,#f5b841,#10b981)">C</span><span class="text-xs font-black">Chat<span class="text-[#d97706]">Mi</span> Directory</span></div>' +
+                '<span class="rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-black text-emerald-800">12 Verified</span>' +
               '</div>';
-            return wrapMobilePhone('https://chat.delivermi.ng/directory', subHtml, mobDir, [
-              ['ERP-Verified Company Rosters', 'Displays live store SLA tiers (2.5% fee), Mi Card serials (SM-STORE-0011), and verified staff.'],
-              ['Bilateral Privacy Controls', 'Merchants toggle rosters between Public, Count Only, or Hidden in one click.']
-            ]);
+            const bodyDir =
+              '<div class="bg-[#f6f4ec] p-2.5 space-y-2 text-xs">' +
+                [
+                  ['Teey Styles', 'Abuja · SM-STORE-0011 · 21 SKUs', '2.5% SLA Tier', logoTeey, pBob],
+                  ['Amazing Pots Kitchen', 'Abuja · SM-STORE-0001 · 5 SKUs', '2.0% SLA Tier', logoPots, pPepper],
+                  ['0NiX Gadgets', 'Abuja · SM-STORE-0009 · 224 SKUs', '1.8% SLA Tier', logoGadget, pPhone]
+                ].map(function (r) {
+                  return '<div class="rounded-2xl bg-white p-2.5 border border-black/5 space-y-1.5">' +
+                    '<div class="flex items-center justify-between gap-1">' +
+                      '<div class="flex items-center gap-2 min-w-0">' + imgTag(r[3], r[0], 'h-7 w-7 rounded-full shrink-0') + '<div class="min-w-0"><p class="truncate font-black">' + esc(r[0]) + '</p><p class="truncate text-slate-500">' + esc(r[1]) + '</p></div></div>' +
+                      '<span class="rounded-full bg-emerald-50 px-2 py-0.5 font-black text-emerald-700 shrink-0">' + esc(r[2]) + '</span>' +
+                    '</div>' +
+                    '<div class="flex items-center justify-between rounded-xl bg-[#f6f4ec] p-1.5">' +
+                      '<div class="flex items-center gap-2 min-w-0">' + imgTag(r[4].thumb, r[4].name, 'h-8 w-8 rounded-lg shrink-0') + '<span class="truncate font-bold">' + esc(r[4].name) + '</span></div>' +
+                      '<span class="font-black text-[#d97706] shrink-0 pl-1">' + naira(r[4].price) + '</span>' +
+                    '</div>' +
+                  '</div>';
+                }).join('') +
+              '</div>';
+            return wrapMobilePhone(
+              'https://chat.delivermi.ng/directory',
+              subHtml,
+              topDir,
+              bodyDir,
+              renderMobileDock([['home', 'Home'], ['store', 'Directory'], ['play', 'Reels'], ['chat', 'Chat'], ['user', 'Profile']], 1, '#d97706'),
+              [pBob, pPhone, pPepper, pSalad],
+              'Directory Storefront Featured Products'
+            );
           }
           const deskDir =
             '<div class="bg-[#f6f4ec] p-2">' +
               '<img src="' + REAL_SHOTS.chatmi_dir_desktop + '" alt="ChatMi Verified Business Directory" class="w-full rounded-xl border border-black/10 object-cover" />' +
             '</div>';
-          return wrapDesktopBrowser('https://chat.delivermi.ng/directory', '#d97706', subHtml, deskDir, '#f6f4ec');
+          return wrapDesktopBrowser('https://chat.delivermi.ng/directory', '#7c3aed', subHtml, deskDir, '#f6f4ec');
         }
 
-        // Authentic ChatMiShell (#f6f4ec cream canvas, white floating left rail, #f6be2c gold For You pill, Earn 3.5% badge)
         if (deviceMode === 'mobile') {
-          const mobFeed =
-            '<div class="bg-[#f6f4ec] p-2.5 text-slate-900 space-y-2">' +
-              '<div class="flex items-center justify-between">' +
-                '<div class="flex items-center gap-1.5"><span class="flex h-7 w-7 items-center justify-center rounded-xl text-xs font-black text-slate-900" style="background:linear-gradient(135deg,#f5b841,#10b981)">✦</span><span class="text-sm font-black">Chat<span class="text-[#d97706]">Mi</span></span></div>' +
-                '<div class="flex items-center gap-1 text-xs font-bold"><span class="rounded-full bg-black/10 px-2 py-0.5">+ Post</span><span class="rounded-full bg-[#fef3c7] px-2 py-0.5 text-[#b45309]">Rewards</span></div>' +
+          const mobTop =
+            '<div class="flex items-center justify-between border-b border-black/10 bg-[#f6f4ec] px-3 py-2 text-slate-900">' +
+              '<div class="flex items-center gap-1.5">' +
+                '<span class="flex h-6 w-6 items-center justify-center rounded-lg text-xs font-black text-slate-900" style="background:linear-gradient(135deg,#f5b841,#10b981)">C</span>' +
+                '<span class="text-sm font-black">Chat<span class="text-[#d97706]">Mi</span></span>' +
               '</div>' +
-              '<div class="flex gap-1 overflow-x-auto text-xs font-bold">' +
+              '<div class="flex items-center gap-1.5 text-xs font-bold">' +
                 '<span class="rounded-full bg-[#f6be2c] px-2.5 py-0.5 font-black text-slate-900">For You</span>' +
-                '<span class="rounded-full bg-white px-2.5 py-0.5 border border-black/10">Products</span>' +
-                '<span class="rounded-full bg-white px-2.5 py-0.5 border border-black/10">Reels</span>' +
-              '</div>' +
-              '<div class="grid grid-cols-3 gap-1.5 text-xs">' +
-                '<div class="rounded-xl bg-white p-2 border border-black/5 flex flex-col justify-between h-20"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-[#f6be2c] font-black">+</span><span class="font-black leading-tight">New Post</span></div>' +
-                '<div class="relative overflow-hidden rounded-xl h-20">' + imgTag(pHair.thumb, 'Teey Styles', 'h-full w-full') + '<span class="absolute bottom-1 left-1 right-1 truncate text-xs font-black text-white drop-shadow">Teey Styles</span></div>' +
-                '<div class="relative overflow-hidden rounded-xl h-20">' + imgTag(pMeal.thumb, 'Amazing Pots', 'h-full w-full') + '<span class="absolute bottom-1 left-1 right-1 truncate text-xs font-black text-white drop-shadow">Amazing Pots</span></div>' +
-              '</div>' +
-              '<div class="rounded-2xl bg-white p-2.5 border border-black/5">' +
-                '<div class="flex items-center justify-between">' +
-                  '<div class="flex items-center gap-1.5">' + imgTag(logoGadget, '0NiX Gadgets', 'h-6 w-6 rounded-full') + '<div><p class="text-xs font-black">0nix-gadgets <span class="text-sky-500">✓</span></p><p class="text-xs text-slate-500">Tier 8 Verified · Abuja</p></div></div>' +
-                  '<span class="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-bold">Follow</span>' +
-                '</div>' +
-                '<div class="relative mt-2 overflow-hidden rounded-xl">' +
-                  imgTag(pPhone.thumb, pPhone.name, 'h-28 w-full rounded-xl') +
-                  '<span class="absolute top-2 right-2 rounded-full bg-black/80 px-2 py-0.5 text-xs font-black text-[#f6be2c]">✦ Earn 3.5%</span>' +
-                '</div>' +
-                '<div class="mt-2 flex items-center justify-between">' +
-                  '<div class="min-w-0"><p class="truncate text-xs font-black">' + esc(pPhone.name) + '</p><p class="text-xs font-black text-[#d97706]">' + naira(pPhone.price) + '</p></div>' +
-                  '<span class="rounded-xl bg-slate-900 px-2.5 py-1 text-xs font-black text-[#f6be2c]">Escrow Buy</span>' +
-                '</div>' +
-              '</div>' +
-              '<div class="grid grid-cols-5 border-t border-black/10 pt-1.5 text-center text-xs font-bold">' +
-                '<span class="rounded-xl bg-slate-900 py-0.5 text-[#f6be2c]">Home</span><span>Explore</span><span>Chat</span><span>Reels</span><span>Profile</span>' +
+                '<span class="rounded-full bg-white px-2 py-0.5 border border-black/10">Reels</span>' +
               '</div>' +
             '</div>';
-          return wrapMobilePhone('https://chat.delivermi.ng', subHtml, mobFeed, [
-            ['ChatMiShell Warm Cream & Obsidian Modes', 'Matches our live ChatMi mobile shell: For You / Products / Reels pills + 5-tab dock.'],
-            ['In-Post Creator Co-Sign (✦ Earn 3.5%)', 'Creators & buyers share verified product posts and earn automated splits on PIN delivery.'],
-            ['Masked Order Chat', 'Dedicated Chat tab keeps customer & vendor phone numbers private.']
-          ]);
+          const mobFeedBody =
+            '<div class="bg-[#f6f4ec] p-2.5 space-y-2.5 text-slate-900">' +
+              '<!-- Story / Live Reel Row -->' +
+              '<div class="grid grid-cols-3 gap-1.5 text-xs">' +
+                [
+                  [pBob, 'Teey Styles', '₦90K'],
+                  [pJollof, '3 Star Grill', '₦4.2K'],
+                  [pPhone, '0NiX Tech', '₦1.85M']
+                ].map(function (s) {
+                  return '<div class="relative h-20 overflow-hidden rounded-xl border-2 border-[#f6be2c]">' +
+                    imgTag(s[0].thumb, s[1], 'h-full w-full') +
+                    '<span class="absolute top-1 right-1 rounded bg-black/75 px-1 text-xs font-black text-[#f6be2c]">' + s[2] + '</span>' +
+                    '<span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent px-1.5 py-0.5 truncate text-xs font-bold text-white">' + esc(s[1]) + '</span>' +
+                  '</div>';
+                }).join('') +
+              '</div>' +
+
+              '<!-- Shoppable Post 1 -->' +
+              '<div class="rounded-2xl bg-white p-2.5 border border-black/5 shadow-xs">' +
+                '<div class="flex items-center justify-between">' +
+                  '<div class="flex items-center gap-1.5">' + imgTag(logoTeey, 'Teey Styles', 'h-6 w-6 rounded-full') + '<div><p class="text-xs font-black leading-none">teeystyles <span class="text-sky-500">✓</span></p><p class="text-xs text-slate-500">Creator Reel · Abuja</p></div></div>' +
+                  '<span class="rounded-full bg-violet-100 px-2 py-0.5 text-xs font-black text-violet-800">Earn 3.5%</span>' +
+                '</div>' +
+                '<div class="relative mt-2 overflow-hidden rounded-xl">' +
+                  imgTag(pWave.thumb, pWave.name, 'h-28 w-full rounded-xl') +
+                  '<span class="absolute bottom-1.5 left-1.5 rounded-lg bg-black/80 px-2 py-0.5 text-xs font-black text-white">' + naira(pWave.price) + '</span>' +
+                '</div>' +
+                '<div class="mt-2 flex items-center justify-between gap-1">' +
+                  '<p class="truncate text-xs font-black">' + esc(pWave.name) + '</p>' +
+                  '<button type="button" data-mini-add="' + esc(pWave.name) + '|' + pWave.price + '" class="rounded-lg bg-[#14161b] px-2.5 py-1 text-xs font-black text-[#f6be2c] shrink-0">Buy ' + naira(pWave.price) + '</button>' +
+                '</div>' +
+              '</div>' +
+
+              '<!-- Shoppable Post 2 -->' +
+              '<div class="rounded-2xl bg-white p-2.5 border border-black/5 shadow-xs">' +
+                '<div class="flex items-center justify-between">' +
+                  '<div class="flex items-center gap-1.5">' + imgTag(logoPots, 'Amazing Pots', 'h-6 w-6 rounded-full') + '<div><p class="text-xs font-black leading-none">amazing-pots <span class="text-sky-500">✓</span></p><p class="text-xs text-slate-500">Hot Kitchen · Maitama</p></div></div>' +
+                  '<span class="rounded-full bg-amber-100 px-2 py-0.5 text-xs font-black text-amber-800">12m EV</span>' +
+                '</div>' +
+                '<div class="mt-1.5 flex items-center justify-between gap-2 rounded-xl bg-[#f6f4ec] p-2">' +
+                  '<div class="flex items-center gap-2 min-w-0">' + imgTag(pPepper.thumb, pPepper.name, 'h-12 w-12 rounded-lg shrink-0') + '<div class="min-w-0"><p class="truncate text-xs font-black">' + esc(pPepper.name) + '</p><p class="text-xs font-black text-[#d97706]">' + naira(pPepper.price) + '</p></div></div>' +
+                  '<button type="button" data-mini-add="' + esc(pPepper.name) + '|' + pPepper.price + '" class="rounded-lg bg-emerald-700 px-2 py-1 text-xs font-black text-white shrink-0">+ Order</button>' +
+                '</div>' +
+              '</div>' +
+            '</div>';
+
+          return wrapMobilePhone(
+            'https://chat.delivermi.ng',
+            subHtml,
+            mobTop,
+            mobFeedBody,
+            renderMobileDock([['home', 'Feed'], ['play', 'Reels'], ['plus', 'Create'], ['chat', 'Masked DM'], ['bag', 'Shop']], 0, '#d97706'),
+            [pWave, pPhone, pPepper, pTee],
+            'Shoppable ChatMi Creator Posts (Live Photos + ₦)'
+          );
         }
 
+        // Desktop ChatMi: Rich 3-column social commerce studio — zero blank vertical gaps
         const deskFeed =
-          '<div class="grid h-full gap-2.5 bg-[#f6f4ec] p-2.5 text-slate-900 lg:grid-cols-12">' +
-            '<!-- Exact ChatMi Left Floating White Rail -->' +
-            '<div class="rounded-2xl bg-white p-2.5 shadow-xs border border-black/5 lg:col-span-3 flex flex-col justify-between text-xs font-semibold">' +
-              '<div class="space-y-1">' +
-                '<div class="flex items-center gap-2 pb-1.5 mb-1 border-b border-slate-100">' +
-                  '<span class="flex h-7 w-7 items-center justify-center rounded-xl font-black text-slate-900" style="background:linear-gradient(135deg,#f5b841,#10b981)">✦</span>' +
-                  '<div><p class="text-xs font-black leading-none">Chat<span class="text-[#d97706]">Mi</span></p><p class="text-xs text-slate-400">SOCIAL COMMERCE</p></div>' +
+          '<div class="grid gap-2.5 bg-[#f6f4ec] p-2.5 text-slate-900 lg:grid-cols-12 text-xs">' +
+            '<!-- Left Rail: Navigation + Live Campaign ROAS -->' +
+            '<div class="lg:col-span-3 flex flex-col gap-2">' +
+              '<div class="rounded-2xl bg-white p-2.5 border border-black/5 space-y-1 font-bold">' +
+                '<div class="flex items-center gap-2 pb-2 mb-1 border-b border-slate-100">' +
+                  '<span class="flex h-7 w-7 items-center justify-center rounded-xl font-black text-slate-900" style="background:linear-gradient(135deg,#f5b841,#10b981)">C</span>' +
+                  '<div><p class="font-black leading-none">Chat<span class="text-[#d97706]">Mi</span></p><p class="text-slate-400 font-semibold">chat.delivermi.ng</p></div>' +
                 '</div>' +
-                '<div class="rounded-xl bg-[#14161b] px-2.5 py-1.5 font-black text-[#f6be2c]">⌂ Home</div>' +
-                '<div class="rounded-xl px-2.5 py-1 text-slate-700">🎞 Reels</div>' +
-                '<div class="rounded-xl px-2.5 py-1 text-slate-700">💬 Messages</div>' +
-                '<div class="rounded-xl px-2.5 py-1 text-slate-700">＋ Create &amp; Boost</div>' +
-                '<div class="rounded-xl px-2.5 py-1 text-sky-700 font-bold">🧳 Directory</div>' +
-                '<div class="rounded-xl px-2.5 py-1 text-amber-700 font-bold">🎖 Rewards (3.5%)</div>' +
-                '<div class="rounded-xl px-2.5 py-1 text-emerald-700 font-bold">🛍 Escrow Cart</div>' +
+                '<div class="flex items-center gap-2 rounded-xl bg-[#14161b] px-2.5 py-1.5 font-black text-[#f6be2c]">' + mIcon('home') + '<span>For You Feed</span></div>' +
+                '<div class="flex items-center gap-2 rounded-xl px-2.5 py-1 text-slate-700">' + mIcon('play') + '<span>Shoppable Reels</span></div>' +
+                '<div class="flex items-center gap-2 rounded-xl px-2.5 py-1 text-slate-700">' + mIcon('chat') + '<span>Masked DMs (4)</span></div>' +
+                '<div class="flex items-center gap-2 rounded-xl px-2.5 py-1 text-violet-700">' + mIcon('star') + '<span>Creator Splits (3.5%)</span></div>' +
+                '<div class="flex items-center gap-2 rounded-xl px-2.5 py-1 text-emerald-700">' + mIcon('shield') + '<span>Directory (12)</span></div>' +
               '</div>' +
-              '<div class="rounded-xl bg-[#f6f4ec] p-2 text-xs"><span class="font-black text-emerald-700">● ChatMi Ads</span><p class="text-slate-600">PIN-settled ROAS</p></div>' +
-            '</div>' +
-
-            '<!-- Center Feed Column -->' +
-            '<div class="lg:col-span-6 flex flex-col gap-2.5">' +
-              '<div class="flex flex-wrap gap-1.5 text-xs font-bold">' +
-                '<span class="rounded-full bg-[#f6be2c] px-3 py-1 font-black text-slate-900">🧭 For You</span>' +
-                '<span class="rounded-full bg-white px-2.5 py-1 border border-black/10">🏷 Products</span>' +
-                '<span class="rounded-full bg-white px-2.5 py-1 border border-black/10">🎞 Reels</span>' +
-                '<span class="rounded-full bg-white px-2.5 py-1 border border-black/10">🔧 Services</span>' +
-                '<span class="rounded-full bg-white px-2.5 py-1 border border-black/10">🎯 Requests</span>' +
-              '</div>' +
-              '<div class="grid grid-cols-4 gap-2 text-xs">' +
-                '<div class="rounded-2xl bg-white p-2.5 border border-black/10 flex flex-col justify-between h-24"><span class="flex h-7 w-7 items-center justify-center rounded-full bg-[#f6be2c] font-black">+</span><div><p class="font-black leading-none">New Post</p><p class="text-[#d97706] font-bold">CREATE</p></div></div>' +
-                '<div class="relative overflow-hidden rounded-2xl h-24 border-2 border-emerald-600">' + imgTag(pHair.thumb, 'Teey Styles', 'h-full w-full') + '<span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-1.5 truncate text-white font-bold">Teey Styles</span></div>' +
-                '<div class="relative overflow-hidden rounded-2xl h-24 border-2 border-[#f6be2c]">' + imgTag(pMeal.thumb, 'Amazing Pots', 'h-full w-full') + '<span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-1.5 truncate text-white font-bold">Amazing Pots</span></div>' +
-                '<div class="relative overflow-hidden rounded-2xl h-24 border-2 border-emerald-600">' + imgTag(pSoup.thumb, 'Nice Cuisine', 'h-full w-full') + '<span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-1.5 truncate text-white font-bold">Nice Cuisine</span></div>' +
-              '</div>' +
-              '<div class="rounded-2xl bg-white p-3 border border-black/5 shadow-xs">' +
-                '<div class="flex items-center justify-between">' +
-                  '<div class="flex items-center gap-2">' + imgTag(logoGadget, '0NiX Gadgets', 'h-7 w-7 rounded-full border border-amber-400') + '<div><p class="text-xs font-black">0nix-gadgets <span class="text-sky-500">✓</span> · <span class="text-emerald-600">Live</span></p><p class="text-xs text-slate-500">Tier 8 Verified · Abuja, FCT</p></div></div>' +
-                  '<span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-bold">Follow</span>' +
-                '</div>' +
-                '<div class="mt-2 grid grid-cols-2 gap-2.5">' +
-                  '<div class="relative overflow-hidden rounded-xl">' + imgTag(pPhone.thumb, pPhone.name, 'h-28 w-full rounded-xl') + '<span class="absolute top-1.5 right-1.5 rounded-full bg-black/80 px-2 py-0.5 text-xs font-black text-[#f6be2c]">✦ Earn 3.5%</span></div>' +
-                  '<div class="flex flex-col justify-between rounded-xl bg-[#f6f4ec] p-2.5 text-xs"><div><p class="font-black">' + esc(pPhone.name) + '</p><p class="mt-0.5 font-black text-[#d97706] text-sm">' + naira(pPhone.price) + '</p><p class="mt-1 text-slate-500">PayMi Escrow · Same-day EV Moto</p></div><span class="rounded-lg bg-[#14161b] px-2.5 py-1.5 text-center font-black text-[#f6be2c]">1-Tap Escrow Buy →</span></div>' +
-                '</div>' +
-              '</div>' +
-              '<div class="rounded-2xl bg-white p-3 border border-black/5 shadow-xs">' +
-                '<div class="flex items-center justify-between">' +
-                  '<div class="flex items-center gap-2">' + imgTag(logoTeey, 'Teey Styles', 'h-7 w-7 rounded-full border border-emerald-500') + '<div><p class="text-xs font-black">teeystyles <span class="text-sky-500">✓</span> · <span class="text-violet-600">Creator Reel</span></p><p class="text-xs text-slate-500">Influencer Campaign · 5% Auto-Split at PIN</p></div></div>' +
-                  '<span class="rounded-full bg-[#fef3c7] px-2.5 py-0.5 text-xs font-black text-[#b45309]">Sponsored</span>' +
-                '</div>' +
-                '<div class="mt-2 grid grid-cols-2 gap-2.5">' +
-                  '<div class="relative overflow-hidden rounded-xl">' + imgTag(pHair2.thumb, pHair2.name, 'h-24 w-full rounded-xl') + '<span class="absolute top-1.5 right-1.5 rounded-full bg-black/80 px-2 py-0.5 text-xs font-black text-emerald-300">3D Studio</span></div>' +
-                  '<div class="flex flex-col justify-between rounded-xl bg-[#f6f4ec] p-2.5 text-xs"><div><p class="font-black">' + esc(pHair2.name) + '</p><p class="mt-0.5 font-black text-[#d97706] text-sm">' + naira(pHair2.price) + '</p></div><span class="rounded-lg bg-emerald-700 px-2.5 py-1 text-center font-black text-white">Customize in 3D →</span></div>' +
-                '</div>' +
+              '<div class="rounded-2xl bg-[#14161b] p-2.5 text-white space-y-1.5">' +
+                '<div class="flex items-center justify-between"><span class="font-black text-[#f6be2c]">ChatMi Ads ROAS</span><span class="rounded-full bg-emerald-500/20 px-2 py-0.5 font-black text-emerald-300">4.8x</span></div>' +
+                '<svg viewBox="0 0 160 38" class="w-full"><path d="M4 32 L34 26 L64 28 L96 16 L126 12 L156 4" fill="none" stroke="#10b981" stroke-width="2.8" stroke-linecap="round"/><circle cx="156" cy="4" r="3.5" fill="#f6be2c"/></svg>' +
+                '<p class="text-slate-300 leading-snug">Creators &amp; influencers paid <strong class="text-white">only</strong> when buyer enters doorstep PIN.</p>' +
               '</div>' +
             '</div>' +
 
-            '<!-- Right Suggested For You Card -->' +
-            '<div class="rounded-2xl bg-white p-2.5 shadow-xs border border-black/5 lg:col-span-3 flex flex-col justify-between text-xs">' +
-              '<div>' +
-                '<div class="flex items-center justify-between font-bold"><span class="text-slate-400">SUGGESTED</span><span class="text-[#d97706]">Directory</span></div>' +
-                '<div class="mt-2 space-y-2">' +
-                  '<div class="flex items-center justify-between gap-1"><div class="flex items-center gap-1.5 min-w-0">' + imgTag(logoTeey, 'Teey Styles', 'h-6 w-6 rounded-full shrink-0') + '<span class="truncate font-bold">Teey Styles ✓</span></div><span class="rounded-full bg-[#fef3c7] px-2 py-0.5 font-bold text-[#b45309]">Follow</span></div>' +
-                  '<div class="flex items-center justify-between gap-1"><div class="flex items-center gap-1.5 min-w-0">' + imgTag(logoPots, 'Amazing Pots', 'h-6 w-6 rounded-full shrink-0') + '<span class="truncate font-bold">Amazing Pots ✓</span></div><span class="rounded-full bg-[#fef3c7] px-2 py-0.5 font-bold text-[#b45309]">Follow</span></div>' +
-                  '<div class="flex items-center justify-between gap-1"><div class="flex items-center gap-1.5 min-w-0">' + imgTag(logoNice, 'Nice Cuisine', 'h-6 w-6 rounded-full shrink-0') + '<span class="truncate font-bold">Nice Cuisine ✓</span></div><span class="rounded-full bg-[#fef3c7] px-2 py-0.5 font-bold text-[#b45309]">Follow</span></div>' +
-                  '<div class="flex items-center justify-between gap-1"><div class="flex items-center gap-1.5 min-w-0"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-200 font-black">OK</span><span class="truncate font-bold">Okafor S. ✓</span></div><span class="rounded-full bg-[#fef3c7] px-2 py-0.5 font-bold text-[#b45309]">Follow</span></div>' +
+            '<!-- Center Column: Stories + 2 Graphical Shoppable Product Cards with Real Photos & Prices -->' +
+            '<div class="lg:col-span-6 space-y-2.5">' +
+              '<div class="flex items-center justify-between gap-1.5 rounded-2xl bg-white px-3 py-1.5 border border-black/5">' +
+                '<div class="flex gap-1.5 font-bold">' +
+                  '<span class="rounded-full bg-[#f6be2c] px-2.5 py-0.5 font-black text-slate-900">For You</span>' +
+                  '<span class="rounded-full bg-[#f6f4ec] px-2.5 py-0.5">Products</span>' +
+                  '<span class="rounded-full bg-[#f6f4ec] px-2.5 py-0.5">Creator Reels</span>' +
+                '</div>' +
+                '<span class="font-bold text-emerald-700">● 329 Live SKUs Tagged</span>' +
+              '</div>' +
+
+              '<!-- 4 Visual Story Tiles with Prices -->' +
+              '<div class="grid grid-cols-4 gap-2">' +
+                [
+                  [pBob, 'Teey Styles', naira(pBob.price)],
+                  [pPepper, 'Amazing Pots', naira(pPepper.price)],
+                  [pPhone, '0NiX Gadgets', naira(pPhone.price)],
+                  [pJollof, '3 Star Kitchen', naira(pJollof.price)]
+                ].map(function (st) {
+                  return '<div class="relative h-24 overflow-hidden rounded-2xl border-2 border-emerald-600 shadow-xs">' +
+                    imgTag(st[0].thumb, st[1], 'h-full w-full') +
+                    '<span class="absolute top-1.5 left-1.5 rounded-md bg-black/80 px-1.5 py-0.5 font-black text-[#f6be2c]">' + st[2] + '</span>' +
+                    '<span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-1.5 truncate font-bold text-white">' + esc(st[1]) + '</span>' +
+                  '</div>';
+                }).join('') +
+              '</div>' +
+
+              '<!-- Side-by-Side Shoppable Creator Feed Cards -->' +
+              '<div class="grid grid-cols-2 gap-2.5">' +
+                [
+                  [pWave, logoTeey, 'teeystyles', 'Creator Reel · 3.5% Split', '#7c3aed'],
+                  [pPhone, logoGadget, '0nix-gadgets', 'Verified Tech · Abuja', '#0f172a']
+                ].map(function (card) {
+                  const pr = card[0];
+                  return '<div class="flex flex-col justify-between rounded-2xl bg-white p-2.5 border border-black/5 shadow-xs">' +
+                    '<div>' +
+                      '<div class="flex items-center justify-between gap-1 mb-1.5">' +
+                        '<div class="flex items-center gap-1.5 min-w-0">' + imgTag(card[1], card[2], 'h-6 w-6 rounded-full shrink-0') + '<span class="truncate font-black">@' + esc(card[2]) + ' <span class="text-sky-500">✓</span></span></div>' +
+                        '<span class="rounded-full bg-[#fef3c7] px-2 py-0.5 font-black text-[#b45309] shrink-0">3.5%</span>' +
+                      '</div>' +
+                      '<div class="relative overflow-hidden rounded-xl">' +
+                        imgTag(pr.thumb, pr.name, 'h-28 w-full rounded-xl') +
+                        '<span class="absolute bottom-1.5 left-1.5 rounded-lg bg-black/85 px-2 py-0.5 font-black text-white">' + naira(pr.price) + '</span>' +
+                        '<span class="absolute top-1.5 right-1.5 rounded-full bg-emerald-600 px-2 py-0.5 font-bold text-white">' + esc(pr.city) + '</span>' +
+                      '</div>' +
+                      '<p class="mt-1.5 truncate font-black" title="' + esc(pr.name) + '">' + esc(pr.name) + '</p>' +
+                      '<p class="truncate text-slate-500">' + esc(card[3]) + '</p>' +
+                    '</div>' +
+                    '<div class="mt-2 flex items-center justify-between pt-1.5 border-t border-slate-100">' +
+                      '<span class="flex items-center gap-1 text-rose-500 font-bold">' + mIcon('heart', 'h-3.5 w-3.5') + ' 1.4k</span>' +
+                      '<button type="button" data-mini-add="' + esc(pr.name) + '|' + pr.price + '" class="rounded-lg bg-[#14161b] px-2.5 py-1 font-black text-[#f6be2c] hover:opacity-90">Escrow Buy →</button>' +
+                    '</div>' +
+                  '</div>';
+                }).join('') +
+              '</div>' +
+            '</div>' +
+
+            '<!-- Right Column: Masked Order Chat + Quick Product Tag -->' +
+            '<div class="lg:col-span-3 flex flex-col gap-2">' +
+              '<div class="rounded-2xl bg-white p-2.5 border border-black/5 space-y-2">' +
+                '<div class="flex items-center justify-between border-b border-slate-100 pb-1.5">' +
+                  '<span class="font-black">Masked Order DM</span>' +
+                  '<span class="rounded-full bg-emerald-100 px-2 py-0.5 font-black text-emerald-800">Protected</span>' +
+                '</div>' +
+                '<div class="rounded-xl bg-slate-100 p-2 text-slate-700">' +
+                  '<p class="font-bold text-slate-900">Buyer · Maitama</p>' +
+                  '<p>Is the 26" Deepwave ready? Calling <span class="rounded bg-rose-100 px-1 font-mono text-rose-700">[number masked]</span></p>' +
+                '</div>' +
+                '<div class="rounded-xl bg-[#fef3c7]/70 border border-amber-200 p-2">' +
+                  '<div class="flex items-center gap-2">' +
+                    imgTag(pWave.thumb, pWave.name, 'h-9 w-9 rounded-lg shrink-0') +
+                    '<div class="min-w-0"><p class="truncate font-black">' + esc(pWave.name) + '</p><p class="font-black text-[#b45309]">' + naira(pWave.price) + ' · Escrow</p></div>' +
+                  '</div>' +
+                '</div>' +
+                '<div class="rounded-xl bg-emerald-50 border border-emerald-200 p-2 text-emerald-900 font-semibold">' +
+                  '✓ Phone numbers stay hidden so 100% of repeat orders stay on-platform.' +
                 '</div>' +
               '</div>' +
-              '<div class="rounded-full border border-black/10 bg-[#f6f4ec] px-3 py-1.5 text-center font-black">🛡 Masked Messages</div>' +
+              '<div class="rounded-2xl bg-white p-2.5 border border-black/5 space-y-1.5">' +
+                '<p class="font-black text-slate-500">TRENDING FOOD IN FEED</p>' +
+                '<div class="flex items-center justify-between gap-1.5">' +
+                  '<div class="flex items-center gap-1.5 min-w-0">' + imgTag(pSalad.thumb, pSalad.name, 'h-8 w-8 rounded-lg shrink-0') + '<div class="min-w-0"><p class="truncate font-black">' + esc(pSalad.name) + '</p><p class="font-bold text-[#d97706]">' + naira(pSalad.price) + '</p></div></div>' +
+                  '<button type="button" data-mini-add="' + esc(pSalad.name) + '|' + pSalad.price + '" class="rounded-lg bg-slate-900 px-2 py-1 font-black text-white shrink-0">+ Add</button>' +
+                '</div>' +
+              '</div>' +
             '</div>' +
           '</div>';
-        return wrapDesktopBrowser('https://chat.delivermi.ng', '#d97706', subHtml, deskFeed, '#f6f4ec');
+        return wrapDesktopBrowser('https://chat.delivermi.ng', '#7c3aed', subHtml, deskFeed, '#f6f4ec');
       }
 
       // ==================== 2. SHOPMI & FLAGSHIPS (shop.delivermi.ng · teeystyles.com · chop-chop.ng) ====================
       if (appKey === 'shopmi') {
         const sub = SUBVIEW_STATE.shopmi || 'marketplace';
         const tabs = [
-          ['marketplace', 'ShopMi Marketplace'],
-          ['teeystyles', 'TeeyStyles.com (Live Capture)'],
+          ['marketplace', 'ShopMi Storefront (Photos + ₦)'],
+          ['teeystyles', 'TeeyStyles.com 3D Atelier (Live)'],
           ['chopchop', 'ChopChop.ng Food (Live)']
         ];
         const subHtml = renderSubTabs('shopmi', tabs, '#ea580c');
 
         if (sub === 'teeystyles') {
           if (deviceMode === 'mobile') {
-            return wrapMobilePhone('https://teeystyles.com', subHtml,
+            return wrapMobilePhone(
+              'https://teeystyles.com',
+              subHtml,
+              '<div class="flex items-center justify-between bg-[#1c1412] px-3 py-2 text-white text-xs"><span class="font-black tracking-wide">TEEY STYLES ATELIER</span><span class="rounded-full bg-amber-400/20 px-2 py-0.5 text-amber-300 font-bold">3D Studio</span></div>',
               '<img src="' + REAL_SHOTS.teey_mobile + '" alt="TeeyStyles.com Mobile Storefront" class="w-full object-cover" />',
-              [
-                ['Powered by ShopMi Custom Domain Engine', 'Live flagship domain (teeystyles.com) running on the exact same ShopMi inventory & PayMi escrow backend.'],
-                ['360° 3D Wig Atelier & Monthly Vault', 'Customers customize lace tint, length & cap fit in 3D or subscribe to Monthly Wig Rotation.']
-              ]
+              renderMobileDock([['home', 'Atelier'], ['grid', 'Wigs'], ['star', '3D Fit'], ['bag', 'Vault'], ['user', 'Account']], 0, '#9a3412'),
+              [pBob, pWave, pClosure, pTee],
+              'TeeyStyles.com Live Catalog & 3D Customizer SKUs'
             );
           }
           return wrapDesktopBrowser('https://teeystyles.com', '#9a3412', subHtml,
@@ -1424,23 +1632,28 @@
 
         if (sub === 'chopchop') {
           if (deviceMode === 'mobile') {
-            const mobFood =
-              '<div class="bg-white text-slate-900">' +
-                '<div class="flex items-center justify-between px-3 py-2 border-b border-slate-100"><span class="font-black text-sm">🍲 Chop<span class="text-[#ea580c]">Chop</span></span><span class="rounded-full bg-[#f59e0b] px-2.5 py-0.5 text-xs font-black text-white">2 items</span></div>' +
-                '<div class="bg-[#090d16] px-3 py-3 text-center text-white"><span class="rounded-full border border-amber-400/40 px-2 py-0.5 text-xs text-amber-300">Freshly Prepared Daily</span><p class="mt-1 text-sm font-black">Authentic Local Flavors, Delivered Fast</p></div>' +
-                '<div class="p-2.5 space-y-2">' +
-                  [pMeal, pSoup].map(function (m) {
-                    return '<div class="flex items-center justify-between gap-2 rounded-xl border border-slate-200 p-2 text-xs">' +
-                      '<div class="flex items-center gap-2 min-w-0">' + imgTag(m.thumb, m.name, 'h-12 w-12 rounded-lg shrink-0') + '<div class="min-w-0"><p class="truncate font-black">' + esc(m.name) + '</p><p class="truncate text-slate-500">' + esc(m.store) + '</p><p class="font-black text-[#ea580c]">' + naira(m.price) + '</p></div></div>' +
-                      '<span class="rounded-lg bg-slate-900 px-2 py-1 font-bold text-white shrink-0">Order</span>' +
-                    '</div>';
-                  }).join('') +
-                '</div>' +
+            const foodTop = '<div class="flex items-center justify-between bg-[#090d16] px-3 py-2 text-white text-xs"><span class="font-black">Chop<span class="text-[#ea580c]">Chop</span> Kitchens</span><span class="rounded-full bg-[#ea580c] px-2 py-0.5 font-black">Counter Prices</span></div>';
+            const foodBody =
+              '<div class="bg-white p-2.5 space-y-2 text-slate-900">' +
+                [pJollof, pPepper, pOkro, pBread].map(function (m) {
+                  return '<div class="flex items-center justify-between gap-2 rounded-xl border border-slate-200 p-2 text-xs">' +
+                    '<div class="flex items-center gap-2 min-w-0">' +
+                      imgTag(m.thumb, m.name, 'h-12 w-12 rounded-lg shrink-0') +
+                      '<div class="min-w-0"><p class="truncate font-black">' + esc(m.name) + '</p><p class="truncate text-slate-500">' + esc(m.store) + ' · ' + esc(m.city) + '</p><p class="font-black text-[#ea580c]">' + naira(m.price) + '</p></div>' +
+                    '</div>' +
+                    '<button type="button" data-mini-add="' + esc(m.name) + '|' + m.price + '" class="rounded-lg bg-slate-900 px-2.5 py-1 font-black text-white shrink-0">+ Order</button>' +
+                  '</div>';
+                }).join('') +
               '</div>';
-            return wrapMobilePhone('https://chop-chop.ng', subHtml, mobFood, [
-              ['Dedicated Consumer Food Vertical', 'chop-chop.ng streams live restaurant menus directly from ShopMi & MenuVerse partner kitchens.'],
-              ['Zero Menu Price Inflation', '1.5–3% take-rate keeps Jollof, soups & grills at walk-in counter prices.']
-            ]);
+            return wrapMobilePhone(
+              'https://chop-chop.ng',
+              subHtml,
+              foodTop,
+              foodBody,
+              renderMobileDock([['home', 'Meals'], ['search', 'Kitchens'], ['cart', 'Basket'], ['pin', 'Track'], ['user', 'Profile']], 0, '#ea580c'),
+              [pJollof, pPepper, pSalad, pBread],
+              'ChopChop.ng Hot Meals (Zero Aggregator Markup)'
+            );
           }
           return wrapDesktopBrowser('https://chop-chop.ng', '#ea580c', subHtml,
             '<img src="' + REAL_SHOTS.chopchop_desktop + '" alt="ChopChop.ng Live Food App" class="w-full object-cover" />',
@@ -1448,226 +1661,274 @@
           );
         }
 
-        // Default: Authentic ShopMi Marketplace (Terracotta-orange hero + 11 categories + Live Velocity Pulse product cards)
+        // Default ShopMi Marketplace: Packed with real product photos & Naira prices!
+        const shopCatalog8 = [pJollof, pBob, pPhone, pPepper, pSalad, pWave, pBread, pKey];
+
         if (deviceMode === 'mobile') {
-          const mobShop =
-            '<div class="bg-[#f8fafc] text-slate-900 p-2.5 space-y-2">' +
-              '<div class="flex items-center justify-between">' +
-                '<div class="flex items-center gap-1.5"><span class="flex h-7 w-7 items-center justify-center rounded-xl bg-[#ea580c] text-white text-xs font-black">🏪</span><div><p class="text-xs font-black leading-none">SHOP<span class="text-[#ea580c]">MI</span></p><p class="text-xs text-slate-400">MARKETPLACE</p></div></div>' +
-                '<div class="flex items-center gap-1"><span class="rounded-full bg-[#fff7ed] border border-orange-200 px-2 py-0.5 text-xs font-black text-[#ea580c]">SELL</span><span class="rounded-full bg-[#0f172a] px-2.5 py-0.5 text-xs font-black text-white">🛒 ₦95K</span></div>' +
+          const shopTop =
+            '<div class="flex items-center justify-between border-b border-slate-200 bg-white px-3 py-2 text-slate-900">' +
+              '<div class="flex items-center gap-1.5">' +
+                '<span class="flex h-6 w-6 items-center justify-center rounded-lg bg-[#ea580c] text-white font-black text-xs">S</span>' +
+                '<span class="text-xs font-black">SHOP<span class="text-[#ea580c]">MI</span></span>' +
               '</div>' +
-              '<div class="flex items-center justify-between rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs"><span class="text-slate-400 truncate">Search products, brands...</span><span class="rounded-full bg-[#528a56] px-2.5 py-0.5 font-bold text-white">Find</span></div>' +
-              '<div class="rounded-2xl border border-amber-200/80 bg-[#fffdf7] p-2.5 space-y-2">' +
-                '<div class="flex items-center gap-1.5"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-[#ea580c] text-white text-xs font-black">⚡</span><span class="rounded-full bg-[#fef3c7] px-2 py-0.5 text-xs font-black text-[#92400e]">● LIVE VELOCITY PULSE</span></div>' +
-                '<p class="text-xs font-black">Trending in Your City (Abuja · Uyo · Calabar · Lagos)</p>' +
-                '<div class="grid grid-cols-2 gap-2">' +
-                  [pMeal, pPhone].map(function (c, i) {
-                    return '<div class="rounded-xl border border-slate-200 bg-white p-1.5">' +
-                      '<div class="relative">' + imgTag(c.thumb, c.name, 'h-20 w-full rounded-lg') + '<span class="absolute top-1 left-1 rounded-full bg-[#f59e0b] px-1.5 text-xs font-black text-slate-900">★ #' + (i + 1) + '</span></div>' +
-                      '<p class="mt-1 truncate text-xs font-black">' + esc(c.name) + '</p>' +
-                      '<div class="mt-1 flex items-center justify-between"><span class="text-xs font-black">' + naira(c.price) + '</span><span class="rounded-md bg-[#0f172a] px-1.5 py-0.5 text-xs font-bold text-white">Order →</span></div>' +
-                    '</div>';
-                  }).join('') +
-                '</div>' +
-              '</div>' +
+              '<span class="rounded-full bg-[#0f172a] px-2.5 py-0.5 text-xs font-black text-white">' + MINI_CART_STATE.count + ' · ' + naira(MINI_CART_STATE.total) + '</span>' +
             '</div>';
-          return wrapMobilePhone('https://shop.delivermi.ng', subHtml, mobShop, [
-            ['ShopMi Live Velocity Pulse', 'Ranks real in-stock products across Abuja, Uyo, Calabar & Lagos by verified escrow orders.'],
-            ['11 Unified Retail & Food Categories', 'Groceries, Prepared Foods, Pharmacy, Beauty, Fashion, Phones/Gadgets, Home & Computers.']
-          ]);
-        }
-
-        const deskShop =
-          '<div class="bg-[#f8fafc] text-slate-900 p-2.5 space-y-2">' +
-            '<!-- Exact ShopMi Header -->' +
-            '<div class="flex items-center justify-between gap-2 rounded-xl bg-white px-3 py-1.5 border border-slate-200 text-xs">' +
-              '<div class="flex items-center gap-2">' +
-                '<span class="flex h-7 w-7 items-center justify-center rounded-xl bg-[#ea580c] text-white font-black">🏪</span>' +
-                '<div><p class="font-black leading-none">SHOP<span class="text-[#ea580c]">MI</span></p><p class="text-slate-400 text-xs">MARKETPLACE</p></div>' +
-                '<span class="rounded-full bg-slate-100 px-2.5 py-1 font-bold">☰ Categories</span>' +
+          const shopMobBody =
+            '<div class="bg-[#f8fafc] p-2.5 space-y-2 text-slate-900">' +
+              '<div class="rounded-xl px-3 py-2 text-white text-xs" style="background:linear-gradient(125deg,#b83b14,#ea580c,#d97706)">' +
+                '<p class="font-black">Counter-Price Marketplace · 1.5–3% Fee</p>' +
+                '<p class="text-orange-100">Abuja · Lagos · Uyo · Calabar · 329 SKUs</p>' +
               '</div>' +
-              '<div class="flex flex-1 max-w-sm items-center justify-between rounded-full border border-slate-200 bg-slate-50 pl-3 pr-1 py-0.5">' +
-                '<span class="truncate text-slate-400">Search items, brands, groceries...</span>' +
-                '<div class="flex items-center gap-1.5"><span class="font-semibold text-slate-700">📍 All Nigeria ▾</span><span class="rounded-full bg-[#528a56] px-2.5 py-0.5 font-bold text-white">Find</span></div>' +
-              '</div>' +
-              '<div class="flex items-center gap-1.5 font-bold">' +
-                '<span class="rounded-full bg-[#fff7ed] border border-orange-200 px-2.5 py-1 text-[#ea580c]">🏪 SELL</span>' +
-                '<span class="rounded-full bg-[#0f172a] px-3 py-1 text-white">🛒 ₦95,000</span>' +
-              '</div>' +
-            '</div>' +
-
-            '<!-- Exact ShopMi Terracotta-Orange Hero + Floating Categories -->' +
-            '<div class="rounded-2xl px-4 py-3 text-center text-white" style="background:linear-gradient(125deg,#b83b14,#ea580c,#d97706)">' +
-              '<p class="text-lg font-black tracking-tight">Your <span class="text-[#fde68a]">Everyday</span> Marketplace</p>' +
-              '<p class="text-xs text-orange-100">Premium groceries, gadgets, and fashion delivered in minutes · 329 live SKUs across 12 stores</p>' +
-              '<div class="mt-2 grid grid-cols-6 gap-1.5 rounded-xl bg-white/95 p-1.5 text-slate-800 text-xs font-bold">' +
-                '<span class="rounded-lg bg-slate-50 py-1 px-1 truncate">🛒 Groceries</span>' +
-                '<span class="rounded-lg bg-slate-50 py-1 px-1 truncate">☕ Prepared Food</span>' +
-                '<span class="rounded-lg bg-slate-50 py-1 px-1 truncate">💊 Pharmacy</span>' +
-                '<span class="rounded-lg bg-slate-50 py-1 px-1 truncate">✨ Beauty &amp; Hair</span>' +
-                '<span class="rounded-lg bg-slate-50 py-1 px-1 truncate">📱 Gadgets</span>' +
-                '<span class="rounded-lg bg-slate-50 py-1 px-1 truncate">🖥 Computers</span>' +
-              '</div>' +
-            '</div>' +
-
-            '<!-- Live Velocity Pulse Real Product Cards -->' +
-            '<div class="grid grid-cols-4 gap-2.5">' +
-              [pMeal, pPhone, pHair2, pBread].map(function (c, i) {
-                return '<div class="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-2.5 text-xs shadow-xs">' +
-                  '<div>' +
-                    '<div class="relative">' + imgTag(c.thumb, c.name, 'h-28 w-full rounded-lg') + '<span class="absolute top-1.5 left-1.5 rounded-full bg-[#f59e0b] px-2 py-0.5 text-xs font-black text-slate-900">★ #' + (i + 1) + '</span></div>' +
-                    '<p class="mt-1.5 truncate font-black">' + esc(c.name) + '</p>' +
-                    '<p class="truncate text-slate-500">' + esc(c.store) + ' · ' + esc(c.city) + '</p>' +
-                  '</div>' +
-                  '<div class="mt-1.5 flex items-center justify-between pt-1.5 border-t border-slate-100"><span class="font-black text-slate-900">' + naira(c.price) + '</span><span class="rounded-lg bg-[#0f172a] px-2 py-0.5 font-bold text-white">Quick Order →</span></div>' +
-                '</div>';
-              }).join('') +
-            '</div>' +
-
-            '<!-- Top Sellers · Featured Verified Stores Strip -->' +
-            '<div class="rounded-2xl border border-slate-200 bg-white p-3 text-xs">' +
-              '<div class="flex items-center justify-between mb-2">' +
-                '<div class="flex items-center gap-2"><span class="rounded-full bg-sky-50 px-2.5 py-0.5 font-black text-sky-700">🎖 TOP SELLERS</span><span class="font-black text-sm">Featured Verified Stores</span></div>' +
-                '<span class="rounded-full bg-[#ea580c] px-3 py-1 font-black text-white">💬 Live Support &amp; Bug Report ●</span>' +
-              '</div>' +
-              '<div class="grid grid-cols-4 gap-2">' +
-                [
-                  ['Amazing Pots Kitchen', 'Abuja · Food', logoPots],
-                  ['Teey Styles Atelier', 'Abuja · 3D Hair', logoTeey],
-                  ['0NiX Gadgets', 'Abuja · Tech', logoGadget],
-                  ['Nice Cuisine & Bakes', 'Calabar · 100 SKUs', logoNice]
-                ].map(function (st) {
-                  return '<div class="flex items-center gap-2 rounded-xl bg-slate-50 p-2 border border-slate-100">' +
-                    imgTag(st[2], st[0], 'h-8 w-8 rounded-full shrink-0') +
-                    '<div class="min-w-0"><p class="truncate font-black">' + esc(st[0]) + '</p><p class="truncate text-slate-500">' + esc(st[1]) + '</p></div>' +
+              '<div class="grid grid-cols-2 gap-2">' +
+                shopCatalog8.slice(0, 6).map(function (c) {
+                  return '<div class="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-1.5 text-xs shadow-xs">' +
+                    '<div>' +
+                      '<div class="relative">' +
+                        imgTag(c.thumb, c.name, 'h-20 w-full rounded-lg') +
+                        '<span class="absolute top-1 right-1 rounded bg-black/75 px-1.5 py-0.5 text-xs font-bold text-white">' + esc(c.city) + '</span>' +
+                      '</div>' +
+                      '<p class="mt-1 truncate font-black">' + esc(c.name) + '</p>' +
+                      '<p class="truncate text-slate-500">' + esc(c.store) + '</p>' +
+                    '</div>' +
+                    '<div class="mt-1 flex items-center justify-between pt-1 border-t border-slate-100">' +
+                      '<span class="font-black text-[#ea580c]">' + naira(c.price) + '</span>' +
+                      '<button type="button" data-mini-add="' + esc(c.name) + '|' + c.price + '" class="rounded bg-[#0f172a] px-1.5 py-0.5 font-bold text-white">+ Buy</button>' +
+                    '</div>' +
                   '</div>';
                 }).join('') +
               '</div>' +
+            '</div>';
+          return wrapMobilePhone(
+            'https://shop.delivermi.ng',
+            subHtml,
+            shopTop,
+            shopMobBody,
+            renderMobileDock([['home', 'Shop'], ['grid', 'Categories'], ['cart', 'Escrow'], ['chat', 'Orders'], ['store', 'Sell']], 0, '#ea580c'),
+            [pZannie, pTee, pMac, pFriedRice],
+            'More Live Multi-Vendor SKUs on ShopMi'
+          );
+        }
+
+        // Desktop ShopMi: Authentic Header + Compact Hero + 8-Card (4x2) Real Product Photo & Naira Price Grid!
+        const deskShop =
+          '<div class="bg-[#f8fafc] text-slate-900 p-2.5 space-y-2 text-xs">' +
+            '<!-- ShopMi Top Navbar -->' +
+            '<div class="flex items-center justify-between gap-2 rounded-xl bg-white px-3 py-1.5 border border-slate-200">' +
+              '<div class="flex items-center gap-2">' +
+                '<span class="flex h-7 w-7 items-center justify-center rounded-xl bg-[#ea580c] text-white font-black">S</span>' +
+                '<div><p class="font-black leading-none">SHOP<span class="text-[#ea580c]">MI</span></p><p class="text-slate-400 font-semibold">shop.delivermi.ng</p></div>' +
+              '</div>' +
+              '<div class="flex flex-1 max-w-md items-center justify-between rounded-full border border-slate-200 bg-slate-50 pl-3 pr-1 py-0.5">' +
+                '<span class="flex items-center gap-1.5 truncate text-slate-500">' + mIcon('search', 'h-3.5 w-3.5') + ' Search 329 live products across 12 stores...</span>' +
+                '<span class="rounded-full bg-[#528a56] px-2.5 py-0.5 font-bold text-white">Search</span>' +
+              '</div>' +
+              '<div class="flex items-center gap-1.5 font-bold">' +
+                '<span class="rounded-full bg-[#fff7ed] border border-orange-200 px-2.5 py-1 text-[#ea580c]">1.5–3% Merchant Fee</span>' +
+                '<span class="inline-flex items-center gap-1 rounded-full bg-[#0f172a] px-3 py-1 text-white">' + mIcon('cart', 'h-3.5 w-3.5 text-amber-400') + ' ' + naira(MINI_CART_STATE.total) + '</span>' +
+              '</div>' +
+            '</div>' +
+
+            '<!-- Compact Hero + Category Strip -->' +
+            '<div class="flex flex-wrap items-center justify-between gap-2 rounded-2xl px-4 py-2 text-white" style="background:linear-gradient(125deg,#b83b14,#ea580c,#d97706)">' +
+              '<div>' +
+                '<p class="text-sm font-black">Your Everyday Counter-Price Marketplace</p>' +
+                '<p class="text-orange-100">Hot meals, smartphones, 3D luxury hair, bakery &amp; streetwear — protected by PayMi Doorstep PIN</p>' +
+              '</div>' +
+              '<div class="flex flex-wrap gap-1 font-bold text-slate-900">' +
+                '<span class="rounded-lg bg-white/95 px-2 py-0.5">Meals</span>' +
+                '<span class="rounded-lg bg-white/95 px-2 py-0.5">Phones &amp; Tech</span>' +
+                '<span class="rounded-lg bg-white/95 px-2 py-0.5">3D Wigs</span>' +
+                '<span class="rounded-lg bg-white/95 px-2 py-0.5">Bakery</span>' +
+              '</div>' +
+            '</div>' +
+
+            '<!-- 8-Product (4x2) Visual Storefront Grid with Real Photos & Naira Prices -->' +
+            '<div class="grid grid-cols-4 gap-2">' +
+              shopCatalog8.map(function (c) {
+                return '<div class="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-2 shadow-xs hover:border-orange-400 transition">' +
+                  '<div>' +
+                    '<div class="relative overflow-hidden rounded-lg">' +
+                      imgTag(c.thumb, c.name, 'h-20 w-full rounded-lg') +
+                      '<span class="absolute top-1 left-1 rounded bg-black/75 px-1.5 py-0.5 font-black text-amber-300">' + esc(c.city) + '</span>' +
+                    '</div>' +
+                    '<p class="mt-1.5 truncate font-black text-slate-900" title="' + esc(c.name) + '">' + esc(c.name) + '</p>' +
+                    '<p class="truncate text-slate-500">' + esc(c.store) + '</p>' +
+                  '</div>' +
+                  '<div class="mt-1.5 flex items-center justify-between pt-1 border-t border-slate-100">' +
+                    '<span class="font-black text-[#ea580c]">' + naira(c.price) + '</span>' +
+                    '<button type="button" data-mini-add="' + esc(c.name) + '|' + c.price + '" class="rounded-lg bg-[#0f172a] px-2 py-0.5 font-bold text-white hover:bg-[#ea580c] transition">+ Cart</button>' +
+                  '</div>' +
+                '</div>';
+              }).join('') +
             '</div>' +
           '</div>';
-        return wrapDesktopBrowser('https://shop.delivermi.ng', '#ea580c', subHtml, deskShop, '#f8fafc');
+        return wrapDesktopBrowser('https://shop.delivermi.ng/products', '#ea580c', subHtml, deskShop, '#f8fafc');
       }
 
       // ==================== 3. PAYMI ESCROW & MONNIFY SPLIT (auth.delivermi.ng) ====================
       if (appKey === 'paymi') {
         const sub = SUBVIEW_STATE.paymi || 'escrow';
         const tabs = [
-          ['escrow', 'Monnify Split Settlement Drawer'],
-          ['pin', 'Doorstep PIN Handshake']
+          ['escrow', 'Itemized Escrow Checkout & 4-Way Split'],
+          ['pin', 'Doorstep PIN Handover Verifier']
         ];
         const subHtml = renderSubTabs('paymi', tabs, '#10b981');
+        const settled = MINI_CART_STATE.pinSettled;
 
-        if (sub === 'pin') {
-          const pinCard =
-            '<div class="grid h-full gap-3 bg-gray-50 p-3 text-slate-900 lg:grid-cols-12 text-xs">' +
-              '<div class="lg:col-span-6 flex flex-col justify-between rounded-2xl bg-white p-3.5 border border-gray-200">' +
-                '<div class="flex items-center justify-between font-bold"><span class="text-emerald-700">● ESCROW FUNDED &amp; LOCKED</span><span class="font-mono text-slate-500">#ORD-4821</span></div>' +
-                '<div class="my-2 flex items-center gap-2.5 rounded-xl bg-gray-50 p-2 border border-gray-100">' +
-                  imgTag(pPhone.thumb, pPhone.name, 'h-12 w-12 rounded-lg shrink-0') +
-                  '<div class="min-w-0"><p class="truncate font-black">' + esc(pPhone.name) + '</p><p class="text-slate-500">EV Rider #EV-14 waiting at your gate</p></div>' +
-                '</div>' +
-                '<div class="rounded-2xl bg-[#0f172a] p-3 text-center text-white">' +
-                  '<p class="font-bold text-amber-300">Share 4-Digit Handover PIN After Inspecting</p>' +
-                  '<div class="mt-1.5 flex justify-center gap-2 font-mono text-lg font-black"><span class="rounded-lg bg-white/15 px-3 py-1">4</span><span class="rounded-lg bg-white/15 px-3 py-1">9</span><span class="rounded-lg bg-white/15 px-3 py-1">2</span><span class="rounded-lg bg-white/15 px-3 py-1">7</span></div>' +
-                '</div>' +
-              '</div>' +
-              '<div class="lg:col-span-6 flex flex-col justify-between rounded-2xl bg-[#022c22] p-3.5 text-white">' +
-                '<p class="font-black uppercase text-emerald-300">Sub-2-Second Settlement Triggered by PIN</p>' +
-                '<div class="my-2 space-y-1.5">' +
-                  '<div class="flex justify-between rounded-xl bg-white/10 px-3 py-1.5"><span>1. Merchant Wallet Credited</span><span class="font-mono font-black text-emerald-300">✓ Instant</span></div>' +
-                  '<div class="flex justify-between rounded-xl bg-white/10 px-3 py-1.5"><span>2. EV Rider Fare Released</span><span class="font-mono font-black text-sky-300">✓ Instant</span></div>' +
-                  '<div class="flex justify-between rounded-xl bg-white/10 px-3 py-1.5"><span>3. Creator &amp; Mi Card Royalties</span><span class="font-mono font-black text-amber-300">✓ Instant</span></div>' +
-                '</div>' +
-                '<p class="text-emerald-200 font-semibold">Eliminates both buyer prepayment fear and fake bank alerts.</p>' +
-              '</div>' +
-            '</div>';
-          if (deviceMode === 'mobile') {
-            return wrapMobilePhone('https://auth.delivermi.ng/handover', subHtml, pinCard, [
-              ['RideHandoverCode + Escrow Release', 'Funds never move until the buyer inspects the physical item and reads out the 4-digit PIN.']
-            ]);
-          }
-          return wrapDesktopBrowser('https://auth.delivermi.ng/handover', '#10b981', subHtml, pinCard, '#f9fafb');
-        }
+        // Exact math: ₦63,000 (Wave Wig) + ₦23,000 (Food Processor) + ₦4,500 (Fried Rice) + ₦3,500 (Banana Bread) = ₦94,000 items + ₦1,500 EV Delivery = ₦95,500
+        const escrowItems = [
+          [pWave, 1, 63000],
+          [pZannie, 1, 23000],
+          [pFriedRice, 1, 4500],
+          [pBread, 1, 3500]
+        ];
 
         if (deviceMode === 'mobile') {
-          const mobPay =
-            '<div class="p-3 text-white space-y-2.5" style="background:linear-gradient(145deg,#022c22,#0f172a,#020617)">' +
-              '<div class="flex items-center justify-between">' +
-                '<span class="rounded-full bg-emerald-500/20 border border-emerald-400/30 px-2.5 py-0.5 text-xs font-black text-emerald-300">🛡 MONNIFY SPLIT ESCROW</span>' +
-                '<span class="text-xs font-bold text-amber-300">+30 Trust Pts</span>' +
+          const payTop =
+            '<div class="flex items-center justify-between bg-[#022c22] px-3 py-2 text-white text-xs">' +
+              '<span class="flex items-center gap-1 font-black text-emerald-300">' + mIcon('shield', 'h-3.5 w-3.5') + ' PayMi Escrow</span>' +
+              '<span class="rounded-full bg-emerald-500/20 px-2 py-0.5 font-bold text-amber-300">+30 Trust Pts</span>' +
+            '</div>';
+          const payMobBody =
+            '<div class="bg-[#061512] p-2.5 space-y-2 text-white text-xs">' +
+              '<div class="rounded-2xl bg-white/5 border border-emerald-400/25 p-2.5 flex items-center justify-between">' +
+                '<div><p class="text-emerald-200">Escrow Locked · #CHK-4821</p><p class="text-xl font-black">₦95,500</p></div>' +
+                '<span class="rounded-lg ' + (settled ? 'bg-amber-400 text-slate-950' : 'bg-emerald-500 text-slate-950') + ' px-2.5 py-1 font-black">' + (settled ? 'SETTLED ✓' : 'LOCKED') + '</span>' +
               '</div>' +
-              '<div class="rounded-2xl bg-white/5 border border-white/10 p-2.5">' +
-                '<p class="text-xs text-emerald-200">Escrow Locked · Order #CHK-4821</p>' +
-                '<p class="text-2xl font-black text-white">₦95,000</p>' +
-                '<p class="text-xs text-slate-300">HMAC-SHA512 Verified · Zero Fake Alerts</p>' +
+              '<div class="space-y-1.5">' +
+                escrowItems.slice(0, 3).map(function (row) {
+                  return '<div class="flex items-center justify-between rounded-xl bg-white/5 px-2 py-1.5 border border-white/10">' +
+                    '<div class="flex items-center gap-2 min-w-0">' + imgTag(row[0].thumb, row[0].name, 'h-8 w-8 rounded-lg shrink-0') + '<div class="min-w-0"><p class="truncate font-bold">' + esc(row[0].name) + '</p><p class="truncate text-emerald-200/70">' + esc(row[0].store) + '</p></div></div>' +
+                    '<span class="font-mono font-black shrink-0 pl-1">' + naira(row[2]) + '</span>' +
+                  '</div>';
+                }).join('') +
               '</div>' +
-              '<div class="rounded-xl bg-white/5 border border-white/10 p-2.5 space-y-1 text-xs">' +
-                '<div class="flex justify-between"><span class="text-emerald-200">Merchant Net Credit:</span><span class="font-mono font-black">₦87,650</span></div>' +
-                '<div class="flex justify-between"><span class="text-emerald-200">Rider Delivery Escrow:</span><span class="font-mono font-black">₦2,000</span></div>' +
-                '<div class="flex justify-between"><span class="text-emerald-200">ChatMi Creator (5%):</span><span class="font-mono font-black text-amber-300">₦4,500</span></div>' +
-                '<div class="flex justify-between"><span class="text-emerald-200">Mi Card Royalty (15 bps):</span><span class="font-mono font-black text-emerald-300">₦850</span></div>' +
-              '</div>' +
-              '<div class="rounded-xl bg-emerald-500/20 border border-emerald-400/30 p-2 text-center">' +
-                '<p class="text-xs font-bold text-emerald-200">Share 4-Digit Doorstep Handover PIN</p>' +
-                '<p class="mt-0.5 font-mono text-base font-black tracking-widest text-white">4 · 9 · 2 · 7</p>' +
+              '<div class="rounded-2xl bg-emerald-950/90 border border-emerald-400/30 p-2.5 text-center space-y-1.5">' +
+                '<p class="font-bold text-amber-300">4-Digit Doorstep Handover PIN</p>' +
+                '<div class="flex justify-center gap-1.5 font-mono text-sm font-black"><span class="rounded bg-white/15 px-2.5 py-0.5">4</span><span class="rounded bg-white/15 px-2.5 py-0.5">9</span><span class="rounded bg-white/15 px-2.5 py-0.5">2</span><span class="rounded bg-white/15 px-2.5 py-0.5">7</span></div>' +
+                '<button type="button" data-mini-pin="toggle" class="w-full rounded-lg bg-emerald-400 py-1 font-black text-slate-950">' + (settled ? '✓ Released in 1.4s (Reset)' : 'Simulate Buyer PIN Entry →') + '</button>' +
               '</div>' +
             '</div>';
-          return wrapMobilePhone('https://auth.delivermi.ng', subHtml, mobPay, [
-            ['Exact MonnifySplitSettlementDrawer UI', 'Dynamic virtual account auto-verifies via HMAC-SHA512 webhook before merchant dispatches.'],
-            ['Atomic 4-Way Settlement on PIN', 'Splits merchant net credit, EV rider fee, creator commission, and 15 bps coordinator royalty.']
-          ]);
+          return wrapMobilePhone(
+            'https://auth.delivermi.ng',
+            subHtml,
+            payTop,
+            payMobBody,
+            renderMobileDock([['lock', 'Escrow'], ['bag', 'Items'], ['qr', 'PIN'], ['chart', 'Splits'], ['user', 'SSO']], sub === 'pin' ? 2 : 0, '#10b981'),
+            [pWave, pZannie, pFriedRice, pBread],
+            'Escrow-Protected Basket Items (Exact ₦95,500 Split)'
+          );
         }
 
+        // Desktop PayMi: Balanced 2-Column Visual Cart (Left) + Monnify 4-Way Split Ledger (Right) — zero empty space!
         const deskPay =
-          '<div class="grid h-full gap-3 p-3 text-white lg:grid-cols-12" style="background:linear-gradient(135deg,#022c22,#0f172a,#020617)">' +
-            '<div class="lg:col-span-7 flex flex-col justify-between rounded-2xl bg-white/5 border border-emerald-400/25 p-3.5">' +
-              '<div>' +
-                '<span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 px-2.5 py-0.5 text-xs font-extrabold uppercase text-emerald-300">🛡 Monnify Instant Split Settlement</span>' +
-                '<h4 class="mt-1.5 text-base font-black text-white">Dynamic Virtual Account &amp; Auto-Split Ledger</h4>' +
-                '<p class="text-xs text-emerald-100/80">Instant transfer auto-verifies via HMAC-SHA512 webhook, splits royalties &amp; awards <strong class="text-amber-300">+30 Buyer Reliability Units</strong>.</p>' +
+          '<div class="grid gap-3 bg-[#061814] p-3 text-white lg:grid-cols-12 text-xs">' +
+            '<!-- Left: Itemized Escrow Basket with Real Product Photos & Prices -->' +
+            '<div class="lg:col-span-6 rounded-2xl bg-white p-3 text-slate-900 flex flex-col gap-2">' +
+              '<div class="flex items-center justify-between border-b border-slate-100 pb-1.5">' +
+                '<div class="flex items-center gap-1.5"><span class="flex h-6 w-6 items-center justify-center rounded-lg bg-emerald-600 text-white">' + mIcon('lock', 'h-3.5 w-3.5') + '</span><span class="font-black">PayMi Unified Escrow Basket</span></div>' +
+                '<span class="rounded-full bg-emerald-100 px-2.5 py-0.5 font-black text-emerald-800">4 Items + EV Delivery</span>' +
               '</div>' +
-              '<div class="my-2 rounded-xl bg-black/35 border border-white/10 p-2.5 space-y-1 text-xs">' +
-                '<div class="flex justify-between text-emerald-200"><span>Merchant Net Credit (Amazing Pots + Teey Styles):</span><span class="font-mono font-black text-white">₦87,650</span></div>' +
-                '<div class="flex justify-between text-emerald-200"><span>Rider Delivery Escrow (EV Moto #EV-14):</span><span class="font-mono font-black text-white">₦2,000</span></div>' +
-                '<div class="flex justify-between text-emerald-200"><span>ChatMi Creator Performance Split (5%):</span><span class="font-mono font-black text-amber-300">₦4,500</span></div>' +
-                '<div class="flex justify-between text-emerald-200"><span>Coordinator Royalty (15 bps · CP-0001) + OS:</span><span class="font-mono font-black text-emerald-300">₦850</span></div>' +
+              '<div class="space-y-1.5">' +
+                escrowItems.map(function (row) {
+                  const it = row[0];
+                  return '<div class="flex items-center justify-between gap-2 rounded-xl bg-slate-50 px-2.5 py-1.5 border border-slate-200/80">' +
+                    '<div class="flex items-center gap-2 min-w-0">' +
+                      imgTag(it.thumb, it.name, 'h-9 w-9 rounded-lg shrink-0') +
+                      '<div class="min-w-0"><p class="truncate font-black">' + esc(it.name) + '</p><p class="truncate text-slate-500">' + esc(it.store) + ' · ' + esc(it.city) + '</p></div>' +
+                    '</div>' +
+                    '<span class="font-mono font-black text-slate-900 shrink-0">' + naira(row[2]) + '</span>' +
+                  '</div>';
+                }).join('') +
               '</div>' +
-              '<div class="flex items-center justify-between rounded-xl bg-emerald-500/15 border border-emerald-400/30 px-3 py-1.5 text-xs">' +
-                '<span class="font-bold text-emerald-200">Dynamic Account: <strong class="font-mono text-white">8049 218 490 (Moniepoint)</strong></span>' +
-                '<span class="rounded-lg bg-emerald-500 px-2.5 py-0.5 font-black text-slate-950">LOCKED ✓</span>' +
+              '<div class="flex items-center justify-between rounded-xl bg-slate-900 px-3 py-2 text-white">' +
+                '<div><p class="text-slate-300">Items ₦94,000 + EV Moto ₦1,500</p><p class="text-sm font-black text-emerald-400">Total Locked: ₦95,500</p></div>' +
+                '<div class="text-right"><p class="text-amber-300 font-bold">Doorstep PIN</p><p class="font-mono text-sm font-black tracking-widest">4 · 9 · 2 · 7</p></div>' +
               '</div>' +
             '</div>' +
 
-            '<div class="lg:col-span-5 flex flex-col justify-between rounded-2xl bg-white text-slate-900 p-3.5">' +
+            '<!-- Right: Monnify Instant Split Settlement Ledger & Interactive PIN Trigger -->' +
+            '<div class="lg:col-span-6 rounded-2xl bg-white/5 border border-emerald-400/25 p-3 flex flex-col justify-between gap-2">' +
               '<div>' +
-                '<div class="flex items-center justify-between text-xs font-bold"><span class="text-slate-500">ESCROW BASKET</span><span class="rounded-full bg-emerald-100 px-2 py-0.5 text-emerald-800">₦95,000 Paid</span></div>' +
-                '<div class="mt-2 flex items-center gap-2 rounded-xl bg-slate-50 p-2 border border-slate-200">' +
-                  imgTag(pHair.thumb, pHair.name, 'h-11 w-11 rounded-lg shrink-0') +
-                  imgTag(pMeal.thumb, pMeal.name, 'h-11 w-11 rounded-lg shrink-0') +
-                  '<div class="min-w-0 text-xs"><p class="truncate font-black">2 Verified Abuja Stores</p><p class="text-slate-500">EV Rider arriving in 5 mins</p></div>' +
+                '<div class="flex items-center justify-between gap-2">' +
+                  '<span class="inline-flex items-center gap-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 px-2.5 py-0.5 font-black text-emerald-300">' + mIcon('shield', 'h-3.5 w-3.5') + ' MONNIFY SPLIT LEDGER</span>' +
+                  '<span class="font-mono font-bold text-amber-300">8049 218 490 (Moniepoint)</span>' +
+                '</div>' +
+                '<p class="mt-1.5 text-sm font-black">Atomic 4-Way Payout on Buyer 4-Digit PIN</p>' +
+                '<!-- Stacked Proportional Split Bar -->' +
+                '<div class="mt-2 flex h-3 w-full overflow-hidden rounded-full bg-white/10">' +
+                  '<div style="width:89%" class="bg-emerald-400" title="Merchants 89.2%"></div>' +
+                  '<div style="width:5%" class="bg-violet-400" title="Creator 3.5%"></div>' +
+                  '<div style="width:3%" class="bg-sky-400" title="EV Rider"></div>' +
+                  '<div style="width:3%" class="bg-amber-400" title="Mi Card + OS"></div>' +
                 '</div>' +
               '</div>' +
-              '<div class="rounded-2xl bg-slate-900 p-3 text-center text-white">' +
-                '<p class="text-xs font-bold uppercase text-amber-300">Customer Doorstep Handover PIN</p>' +
-                '<div class="mt-1.5 flex justify-center gap-2 font-mono text-lg font-black">' +
-                  '<span class="rounded-lg bg-white/15 px-3 py-1">4</span><span class="rounded-lg bg-white/15 px-3 py-1">9</span><span class="rounded-lg bg-white/15 px-3 py-1">2</span><span class="rounded-lg bg-white/15 px-3 py-1">7</span>' +
-                '</div>' +
-                '<p class="mt-1 text-xs text-slate-300">Funds stay locked until buyer shares PIN at gate</p>' +
+
+              '<div class="space-y-1.5">' +
+                '<div class="flex items-center justify-between rounded-xl bg-black/35 px-3 py-1.5 border border-white/10"><span class="text-emerald-200">1. Merchants Net Credit (97.5% of SKU):</span><span class="font-mono font-black text-emerald-300">₦88,970 ' + (settled ? '✓ Paid' : 'Locked') + '</span></div>' +
+                '<div class="flex items-center justify-between rounded-xl bg-black/35 px-3 py-1.5 border border-white/10"><span class="text-emerald-200">2. ChatMi Creator Split (3.5%):</span><span class="font-mono font-black text-violet-300">₦3,290 ' + (settled ? '✓ Paid' : 'Locked') + '</span></div>' +
+                '<div class="flex items-center justify-between rounded-xl bg-black/35 px-3 py-1.5 border border-white/10"><span class="text-emerald-200">3. DeliverMi EV Rider #EV-14:</span><span class="font-mono font-black text-sky-300">₦1,500 ' + (settled ? '✓ Paid' : 'Locked') + '</span></div>' +
+                '<div class="flex items-center justify-between rounded-xl bg-black/35 px-3 py-1.5 border border-white/10"><span class="text-emerald-200">4. Mi Card 15 bps Royalty + OS Fee:</span><span class="font-mono font-black text-amber-300">₦1,740 ' + (settled ? '✓ Paid' : 'Locked') + '</span></div>' +
+              '</div>' +
+
+              '<div class="flex items-center justify-between gap-2 rounded-xl bg-emerald-500/15 border border-emerald-400/30 p-2">' +
+                '<span class="font-semibold text-emerald-100">' + (settled ? '✓ Webhook settled all 4 wallets in 1.4s!' : 'Zero fake bank alerts · Zero COD risk') + '</span>' +
+                '<button type="button" data-mini-pin="toggle" class="rounded-lg ' + (settled ? 'bg-amber-400 text-slate-950' : 'bg-emerald-400 text-slate-950') + ' px-3 py-1 font-black shrink-0 hover:opacity-90 transition">' + (settled ? 'Reset Escrow Demo' : 'Verify PIN 4927 →') + '</button>' +
               '</div>' +
             '</div>' +
+            '<div class="lg:col-span-12 grid grid-cols-3 gap-2.5">' +
+              '<div class="rounded-xl bg-white/5 border border-white/10 px-3 py-2 flex items-center justify-between"><span class="text-emerald-200">PayMi SSO Session</span><span class="font-black text-white">ChatMi · ShopMi · DeliverMi</span></div>' +
+              '<div class="rounded-xl bg-white/5 border border-white/10 px-3 py-2 flex items-center justify-between"><span class="text-emerald-200">Webhook Verification</span><span class="font-mono font-black text-emerald-300">HMAC-SHA512 ✓</span></div>' +
+              '<div class="rounded-xl bg-white/5 border border-white/10 px-3 py-2 flex items-center justify-between"><span class="text-emerald-200">Buyer Trust Bonus</span><span class="font-black text-amber-300">+30 Reliability Units</span></div>' +
+            '</div>' +
           '</div>';
-        return wrapDesktopBrowser('https://auth.delivermi.ng/escrow-checkout', '#10b981', subHtml, deskPay, '#022c22');
+        return wrapDesktopBrowser('https://auth.delivermi.ng/escrow-checkout', '#10b981', subHtml, deskPay, '#061814');
       }
 
       // ==================== 4. DELIVERMI & RIDERMI (delivermi.ng · rider.delivermi.ng) ====================
       if (appKey === 'delivermi') {
         const sub = SUBVIEW_STATE.delivermi || 'dispatch';
         const tabs = [
-          ['dispatch', 'DeliverMi Unified Map'],
+          ['dispatch', 'DeliverMi Live Map & EV Fleet'],
           ['ridermi', 'RiderMi Courier App (#07a35a)'],
           ['portals', 'Live Production Portals']
         ];
         const subHtml = renderSubTabs('delivermi', tabs, '#0ea5e9');
+
+        // Rich Mapbox-style vector urban map (city blocks, Maitama park, arterial avenues, animated route, EV rider pin)
+        const richMapSvg =
+          '<svg viewBox="0 0 420 205" class="w-full h-full rounded-xl">' +
+            '<rect width="420" height="205" fill="#e8eef3"/>' +
+            '<!-- Green Park & Water Polygons -->' +
+            '<polygon points="18,14 115,14 98,74 18,64" fill="#cdeccd"/>' +
+            '<polygon points="295,120 406,112 406,192 278,192" fill="#d4f0d4"/>' +
+            '<path d="M0 165 Q 145 140, 265 205" fill="none" stroke="#a5d8ff" stroke-width="10"/>' +
+            '<!-- Urban Blocks -->' +
+            '<rect x="132" y="18" width="76" height="44" rx="5" fill="#dde5ec"/>' +
+            '<rect x="224" y="18" width="82" height="44" rx="5" fill="#dde5ec"/>' +
+            '<rect x="132" y="82" width="76" height="52" rx="5" fill="#dde5ec"/>' +
+            '<rect x="224" y="82" width="64" height="52" rx="5" fill="#dde5ec"/>' +
+            '<!-- Secondary & Arterial Road Network -->' +
+            '<path d="M0 72 L420 72 M0 142 L420 142 M122 0 L122 205 M216 0 L216 205 M316 0 L316 205" stroke="#ffffff" stroke-width="6"/>' +
+            '<path d="M18 182 L392 28" stroke="#fde68a" stroke-width="7"/>' +
+            '<!-- Street Labels -->' +
+            '<text x="170" y="68" font-size="12" font-weight="700" fill="#64748b">Aguiyi Ironsi St</text>' +
+            '<text x="232" y="138" font-size="12" font-weight="700" fill="#64748b">Aminu Kano Cres</text>' +
+            '<!-- Active Glowing EV GPS Route -->' +
+            '<path d="M68 156 C 138 148, 195 96, 216 72 C 252 44, 308 44, 356 36" fill="none" stroke="#10b981" stroke-width="5" stroke-dasharray="8 5"/>' +
+            '<!-- Pickup Merchant Pin -->' +
+            '<circle cx="68" cy="156" r="9" fill="#0f172a" stroke="#ffffff" stroke-width="2.5"/>' +
+            '<rect x="18" y="168" width="118" height="22" rx="7" fill="#0f172a"/>' +
+            '<text x="77" y="183" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">Amazing Pots</text>' +
+            '<!-- Live EV Rider Pill -->' +
+            '<circle cx="216" cy="72" r="11" fill="#10b981" stroke="#ffffff" stroke-width="3"/>' +
+            '<rect x="148" y="34" width="138" height="25" rx="9" fill="#0A0A0A"/>' +
+            '<text x="217" y="50" text-anchor="middle" font-size="12" font-weight="900" fill="#FFD100">EV-14 · 5 min (89%)</text>' +
+            '<!-- Customer Dropoff Gate Pin -->' +
+            '<circle cx="356" cy="36" r="9" fill="#ea580c" stroke="#ffffff" stroke-width="2.5"/>' +
+            '<rect x="292" y="8" width="118" height="22" rx="7" fill="#ea580c"/>' +
+            '<text x="351" y="23" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">Wuse 2 · PIN 4927</text>' +
+          '</svg>';
 
         if (sub === 'portals') {
           const portalsHtml =
@@ -1676,109 +1937,133 @@
               '<div class="overflow-hidden rounded-xl border border-white/10 bg-[#07a35a]"><img src="' + REAL_SHOTS.ridermi_auth + '" alt="RiderMi Live Portal" class="h-full w-full object-cover" /></div>' +
             '</div>';
           if (deviceMode === 'mobile') {
-            return wrapMobilePhone('https://delivermi.ng', subHtml,
+            return wrapMobilePhone(
+              'https://delivermi.ng',
+              subHtml,
+              '<div class="bg-[#0A0A0A] px-3 py-2 text-white text-xs font-black flex justify-between"><span>DeliverMi Portal</span><span class="text-[#FFD100]">Live Auth</span></div>',
               '<img src="' + REAL_SHOTS.delivermi_auth + '" alt="DeliverMi Live Portal" class="w-full object-cover" />',
-              [
-                ['DeliverMi (#fae89c Gold) & RiderMi (#07a35a Emerald)', 'Both web & native Android apps are live on delivermi.ng and rider.delivermi.ng.']
-              ]
+              renderMobileDock([['pin', 'Ride'], ['bag', 'Send'], ['moto', 'EV'], ['lock', 'PIN'], ['user', 'SSO']], 0, '#ca8a04'),
+              [pPepper, pJollof, pPhone, pWave],
+              'Escrowed Cargo Dispatched via DeliverMi & RiderMi'
             );
           }
           return wrapDesktopBrowser('https://delivermi.ng · https://rider.delivermi.ng', '#f5b841', subHtml, portalsHtml, '#0f172a');
         }
 
         if (sub === 'ridermi') {
-          const riderBody =
-            '<div class="bg-[#07a35a] p-3 text-white space-y-2.5">' +
-              '<div class="flex items-center justify-between">' +
-                '<div class="flex items-center gap-2"><span class="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#07a35a] font-black">🛵</span><div><p class="text-sm font-black leading-none">RiderMi</p><p class="text-xs text-emerald-100">EV E-Moto #EV-14 · 91% Batt</p></div></div>' +
-                '<span class="rounded-full bg-white px-2.5 py-0.5 text-xs font-black text-[#07a35a]">● ONLINE</span>' +
+          const riderCard =
+            '<div class="bg-[#064e3b] p-3 text-white space-y-2.5 text-xs">' +
+              '<div class="flex items-center justify-between rounded-xl bg-[#07a35a] px-3 py-2">' +
+                '<div class="flex items-center gap-2"><span class="flex h-8 w-8 items-center justify-center rounded-xl bg-white text-[#07a35a]">' + mIcon('moto', 'h-4 w-4') + '</span><div><p class="text-sm font-black leading-none">RiderMi Captain</p><p class="text-emerald-100">Owned EV E-Moto #EV-14 · Solar Swap 91%</p></div></div>' +
+                '<span class="rounded-full bg-white px-2.5 py-0.5 font-black text-[#07a35a]">ONLINE · ABUJA</span>' +
               '</div>' +
-              '<div class="rounded-2xl bg-white p-3 text-slate-900 space-y-2">' +
-                '<div class="flex items-center justify-between text-xs font-bold"><span class="text-emerald-700">ACTIVE ESCROW DISPATCH</span><span class="rounded-full bg-amber-100 px-2 py-0.5 text-amber-900">Earn ₦2,000</span></div>' +
-                '<div class="flex items-center gap-2">' + imgTag(pPhone.thumb, pPhone.name, 'h-10 w-10 rounded-lg shrink-0') + '<div class="min-w-0 text-xs"><p class="truncate font-black">Pickup: 0NiX Gadgets (Wuse 2)</p><p class="truncate text-slate-500">Dropoff: Maitama Close · 4.8 km</p></div></div>' +
-                '<div class="rounded-xl bg-slate-900 p-2 text-center text-white text-xs font-bold">Enter Buyer 4-Digit Handover PIN → Instant Payout</div>' +
+              '<div class="grid gap-2.5 lg:grid-cols-2">' +
+                '<div class="rounded-2xl bg-white p-3 text-slate-900 space-y-2">' +
+                  '<div class="flex items-center justify-between font-black"><span class="text-emerald-700">ACTIVE ESCROW MANIFEST</span><span class="rounded-full bg-amber-100 px-2 py-0.5 text-amber-900">Rider Fare: ₦1,500</span></div>' +
+                  '<div class="flex items-center gap-2 rounded-xl bg-slate-50 p-2 border border-slate-200">' +
+                    imgTag(pPhone.thumb, pPhone.name, 'h-11 w-11 rounded-lg shrink-0') +
+                    '<div class="min-w-0"><p class="truncate font-black">' + esc(pPhone.name) + ' (' + naira(pPhone.price) + ')</p><p class="truncate text-slate-500">0NiX Gadgets → Maitama Close (4.8 km)</p></div>' +
+                  '</div>' +
+                  '<div class="rounded-xl bg-slate-900 p-2 text-center text-white font-bold">Verify Buyer 4-Digit PIN (4927) → Instant Wallet Payout</div>' +
+                '</div>' +
+                '<div class="rounded-2xl bg-black/30 border border-white/15 p-3 flex flex-col justify-between">' +
+                  '<div class="flex justify-between"><span>Today Completed Trips:</span><span class="font-black text-amber-300">14 Trips · ₦22,400</span></div>' +
+                  '<div class="flex justify-between"><span>Fuel Expense (Solar EV Swap):</span><span class="font-black text-emerald-300">₦0 Petrol (Saved ₦9,800)</span></div>' +
+                  '<div class="flex justify-between"><span>Estate Pre-Cleared Badge:</span><span class="font-mono font-black">RM-CAPT-0014 ✓</span></div>' +
+                '</div>' +
               '</div>' +
             '</div>';
           if (deviceMode === 'mobile') {
-            return wrapMobilePhone('https://rider.delivermi.ng', subHtml, riderBody, [
-              ['RiderMi Web + Native Android', 'Used by both DeliverMi EV captains and vetted 36-state 3PL partner couriers.'],
-              ['Instant Rider Wallet Credit', 'Entering the customer PIN credits delivery fare immediately with zero cash handling.']
-            ]);
+            return wrapMobilePhone(
+              'https://rider.delivermi.ng',
+              subHtml,
+              '<div class="bg-[#07a35a] px-3 py-2 text-white text-xs font-black flex justify-between"><span>RiderMi Captain</span><span>91% EV Batt</span></div>',
+              riderCard,
+              renderMobileDock([['pin', 'Jobs'], ['moto', 'Active'], ['lock', 'PIN'], ['chart', 'Earnings'], ['user', 'ID Card']], 1, '#07a35a'),
+              [pPhone, pPepper, pJollof, pBob],
+              'High-Value Escrowed Packages on RiderMi'
+            );
           }
-          return wrapDesktopBrowser('https://rider.delivermi.ng/dashboard', '#07a35a', subHtml, riderBody, '#07a35a');
+          return wrapDesktopBrowser('https://rider.delivermi.ng/dashboard', '#07a35a', subHtml, riderCard, '#064e3b');
         }
 
-        // Default: Authentic DeliverMi UnifiedGatewayHeader (#0A0A0A + #FFD100 DM badge + 4-pillar nav + Mapbox route card)
         if (deviceMode === 'mobile') {
-          const mobDm =
-            '<div class="bg-[#f4f4f0] text-slate-900">' +
-              '<div class="flex items-center justify-between bg-[#0A0A0A] px-3 py-2 text-white">' +
-                '<div class="flex items-center gap-1.5"><span class="flex h-6 w-6 items-center justify-center rounded-md bg-[#FFD100] text-xs font-black text-[#0A0A0A]">DM</span><div><p class="text-xs font-black leading-none">DeliverMi</p><p class="text-xs text-[#FFD100]">ONE NETWORK</p></div></div>' +
-                '<span class="rounded-lg bg-white/10 px-2 py-0.5 text-xs font-bold">● Abuja · Maitama ▾</span>' +
+          const dmTop =
+            '<div class="flex items-center justify-between bg-[#0A0A0A] px-3 py-2 text-white text-xs">' +
+              '<div class="flex items-center gap-1.5"><span class="flex h-6 w-6 items-center justify-center rounded-md bg-[#FFD100] font-black text-[#0A0A0A]">DM</span><span class="font-black">DeliverMi</span></div>' +
+              '<span class="rounded-full bg-white/10 px-2 py-0.5 font-bold text-[#FFD100]">Abuja · Maitama</span>' +
+            '</div>';
+          const dmMobBody =
+            '<div class="bg-[#f4f4f0] p-2 space-y-2 text-slate-900 text-xs">' +
+              '<div class="h-32 overflow-hidden rounded-xl border border-slate-300">' + richMapSvg + '</div>' +
+              '<div class="flex items-center justify-between gap-2 rounded-xl bg-white p-2 border border-slate-200">' +
+                '<div class="flex items-center gap-2 min-w-0">' + imgTag(pPepper.thumb, pPepper.name, 'h-9 w-9 rounded-lg shrink-0') + '<div class="min-w-0"><p class="truncate font-black">Escrow Cargo: ' + esc(pPepper.name) + '</p><p class="text-slate-500">Item ' + naira(pPepper.price) + ' + EV ₦1,500</p></div></div>' +
+                '<span class="rounded bg-emerald-100 px-1.5 py-0.5 font-black text-emerald-800 shrink-0">5 min</span>' +
               '</div>' +
-              '<svg viewBox="0 0 280 115" class="w-full bg-[#e5eef5]">' +
-                '<path d="M0 40 L280 65 M80 0 L120 115 M200 0 L175 115" stroke="#ffffff" stroke-width="5"/>' +
-                '<path d="M38 92 Q 130 28, 238 30" fill="none" stroke="#16a34a" stroke-width="4" stroke-dasharray="6 5"/>' +
-                '<circle cx="38" cy="92" r="6" fill="#16a34a"/><circle cx="238" cy="30" r="7" fill="#ea580c"/>' +
-                '<rect x="92" y="42" width="96" height="22" rx="8" fill="#0A0A0A"/><text x="140" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#FFD100">EV Moto · 5m</text>' +
-              '</svg>' +
-              '<div class="p-2.5 space-y-2 bg-white">' +
-                '<div class="rounded-xl border border-black/10 p-2 text-xs">' +
-                  '<div class="flex justify-between font-bold"><span>ROUTE READY · 4.8 km · 11 min</span><span class="text-[#4f430f] font-black">From ₦1,500</span></div>' +
-                  '<p class="mt-0.5 truncate text-slate-500">Grill Ave, Maitama → Emab Plaza, Wuse 2</p>' +
-                '</div>' +
-                '<div class="grid grid-cols-3 gap-1 text-center text-xs font-bold">' +
-                  '<span class="rounded-lg border border-emerald-500 bg-emerald-50 py-1">🚲 E-Bike ₦900</span>' +
-                  '<span class="rounded-lg bg-[#FFD100] py-1 font-black">🛵 E-Moto ₦1.5K</span>' +
-                  '<span class="rounded-lg border border-slate-200 py-1">🛺 Trike ₦2.8K</span>' +
-                '</div>' +
+              '<div class="grid grid-cols-3 gap-1.5 text-center font-bold">' +
+                '<div class="rounded-xl bg-white border border-slate-200 p-1.5">' + mIcon('bike', 'h-4 w-4 mx-auto text-emerald-600') + '<p class="mt-0.5 font-black">E-Bike</p><p class="text-emerald-700">₦900</p></div>' +
+                '<div class="rounded-xl bg-[#FFD100] border border-amber-500 p-1.5 text-[#0A0A0A]">' + mIcon('moto', 'h-4 w-4 mx-auto') + '<p class="mt-0.5 font-black">E-Moto</p><p class="font-black">₦1,500</p></div>' +
+                '<div class="rounded-xl bg-white border border-slate-200 p-1.5">' + mIcon('truck', 'h-4 w-4 mx-auto text-sky-600') + '<p class="mt-0.5 font-black">EV Van</p><p class="text-sky-700">₦6,500</p></div>' +
               '</div>' +
             '</div>';
-          return wrapMobilePhone('https://delivermi.ng', subHtml, mobDm, [
-            ['UnifiedGatewayHeader + Shared LGA Cookie', 'Exact #0A0A0A + #FFD100 DeliverMi header switching seamlessly between Ride, ShopMi & ChopChop.'],
-            ['Mapbox Live Route & EV Pricing', 'Calculates exact km/min fare across E-Bikes, E-Motorbikes, E-Tricycles & EV Vans.']
-          ]);
+          return wrapMobilePhone(
+            'https://delivermi.ng',
+            subHtml,
+            dmTop,
+            dmMobBody,
+            renderMobileDock([['pin', 'Dispatch'], ['bag', 'ShopMi'], ['moto', 'Track'], ['qr', 'Gate ID'], ['user', 'Wallet']], 0, '#0f172a'),
+            [pPepper, pJollof, pWave, pPhone],
+            'Active Escrowed Packages & EV Dispatch Tiers'
+          );
         }
 
+        // Desktop DeliverMi: Gateway Header + Escrowed Cargo Manifest + 4 EV Tiers + Rich Vector Street Map!
         const deskDm =
-          '<div class="flex h-full flex-col bg-[#f4f4f0] text-slate-900">' +
-            '<!-- Exact UnifiedGatewayHeader.js -->' +
-            '<div class="flex items-center justify-between bg-[#0A0A0A] px-3 py-2 text-white text-xs">' +
+          '<div class="flex flex-col bg-[#f4f4f0] text-slate-900 text-xs">' +
+            '<div class="flex items-center justify-between bg-[#0A0A0A] px-3 py-2 text-white">' +
               '<div class="flex items-center gap-2">' +
                 '<span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#FFD100] font-black text-[#0A0A0A]">DM</span>' +
-                '<div><p class="font-extrabold leading-none">DeliverMi</p><p class="text-[#FFD100] text-xs">ONE NETWORK</p></div>' +
-                '<span class="rounded-xl bg-white/10 border border-white/15 px-2.5 py-1 font-bold">● Abuja · Maitama ▾</span>' +
+                '<div><p class="font-black leading-none">DeliverMi · ONE NETWORK</p><p class="text-[#FFD100]">Owned Solar EV Fleet + 36-State 3PL</p></div>' +
               '</div>' +
-              '<div class="flex items-center gap-1 rounded-xl bg-white/5 p-1 font-bold">' +
-                '<span class="rounded-lg bg-[#FFD100] px-2.5 py-1 text-[#0A0A0A]">1. Ride &amp; Send</span>' +
-                '<span class="px-2 py-1 text-zinc-300">2. ShopMi</span>' +
-                '<span class="px-2 py-1 text-zinc-300">3. ChopChop</span>' +
+              '<div class="flex items-center gap-1.5 font-bold">' +
+                '<span class="rounded-lg bg-[#FFD100] px-2.5 py-1 text-[#0A0A0A]">1. Ride &amp; Dispatch</span>' +
+                '<span class="rounded-lg bg-white/10 px-2.5 py-1">2. ShopMi Cargo</span>' +
+                '<span class="rounded-lg bg-emerald-500/20 border border-emerald-400/40 px-2.5 py-1 text-emerald-300">● Abuja · Maitama</span>' +
               '</div>' +
             '</div>' +
-            '<!-- Map + Booking Card -->' +
-            '<div class="grid flex-1 gap-2.5 p-2.5 lg:grid-cols-12">' +
-              '<div class="lg:col-span-5 flex flex-col justify-between rounded-2xl bg-white p-3 border border-black/10 shadow-xs text-xs">' +
-                '<div class="space-y-1.5">' +
-                  '<div class="flex items-center gap-2 rounded-xl bg-slate-50 px-2.5 py-1.5 border border-slate-200"><span class="h-2.5 w-2.5 rounded-full bg-green-600"></span><span class="truncate font-semibold">Pickup: Amazing Pots, Maitama</span></div>' +
-                  '<div class="flex items-center gap-2 rounded-xl bg-slate-50 px-2.5 py-1.5 border border-slate-200"><span class="h-2.5 w-2.5 rounded-full bg-orange-600"></span><span class="truncate font-semibold">Dropoff: Aminu Kano Cres, Wuse 2</span></div>' +
+
+            '<div class="grid gap-2.5 p-2.5 lg:grid-cols-12">' +
+              '<!-- Left: Active Escrowed Cargo with Product Photos + Vehicle Selector -->' +
+              '<div class="lg:col-span-5 flex flex-col gap-2">' +
+                '<div class="rounded-2xl bg-white p-2.5 border border-slate-200 space-y-1.5">' +
+                  '<div class="flex items-center justify-between font-black"><span>ESCROWED CARGO ON ROUTE</span><span class="text-emerald-600">PIN: 4927</span></div>' +
+                  '<div class="flex items-center justify-between gap-2 rounded-xl bg-slate-50 p-1.5 border border-slate-100">' +
+                    '<div class="flex items-center gap-2 min-w-0">' + imgTag(pPepper.thumb, pPepper.name, 'h-9 w-9 rounded-lg shrink-0') + '<div class="min-w-0"><p class="truncate font-black">' + esc(pPepper.name) + '</p><p class="text-slate-500">Amazing Pots · ' + naira(pPepper.price) + '</p></div></div>' +
+                    '<span class="rounded bg-amber-100 px-1.5 py-0.5 font-black text-amber-900 shrink-0">Hot Box</span>' +
+                  '</div>' +
+                  '<div class="flex items-center justify-between gap-2 rounded-xl bg-slate-50 p-1.5 border border-slate-100">' +
+                    '<div class="flex items-center gap-2 min-w-0">' + imgTag(pJollof.thumb, pJollof.name, 'h-9 w-9 rounded-lg shrink-0') + '<div class="min-w-0"><p class="truncate font-black">' + esc(pJollof.name) + '</p><p class="text-slate-500">3 Star Kitchen · ' + naira(pJollof.price) + '</p></div></div>' +
+                    '<span class="rounded bg-emerald-100 px-1.5 py-0.5 font-black text-emerald-800 shrink-0">Batched</span>' +
+                  '</div>' +
                 '</div>' +
-                '<div class="my-2 rounded-xl border border-black/10 bg-[#fefce8] p-2.5">' +
-                  '<div class="flex justify-between font-black"><span>ROUTE READY</span><span>From ₦1,500</span></div>' +
-                  '<p class="mt-0.5 text-slate-600">Distance: <strong>4.82 km</strong> · Duration: <strong>11 min</strong></p>' +
-                '</div>' +
-                '<div class="grid grid-cols-2 gap-1.5 font-bold">' +
-                  '<span class="rounded-xl bg-[#FFD100] px-2.5 py-1.5 text-center font-black text-[#0A0A0A]">🛵 EV Moto · ₦1,500</span>' +
-                  '<span class="rounded-xl border border-slate-200 px-2.5 py-1.5 text-center">🛺 EV Trike · ₦2,800</span>' +
+
+                '<div class="grid grid-cols-2 gap-1.5">' +
+                  '<div class="rounded-xl bg-white border border-slate-200 p-2 flex items-center justify-between"><div><p class="font-black">EV E-Bike</p><p class="text-slate-500">Estates · 8m</p></div><span class="font-black text-emerald-700">₦900</span></div>' +
+                  '<div class="rounded-xl bg-[#FFD100] border border-amber-500 p-2 flex items-center justify-between text-[#0A0A0A]"><div><p class="font-black">EV E-Moto</p><p class="font-semibold">Express · 5m</p></div><span class="font-black">₦1,500</span></div>' +
+                  '<div class="rounded-xl bg-white border border-slate-200 p-2 flex items-center justify-between"><div><p class="font-black">EV Trike</p><p class="text-slate-500">Multi-Order</p></div><span class="font-black text-slate-900">₦2,800</span></div>' +
+                  '<div class="rounded-xl bg-white border border-slate-200 p-2 flex items-center justify-between"><div><p class="font-black">EV Cargo Van</p><p class="text-slate-500">B2B Restock</p></div><span class="font-black text-sky-700">₦6,500</span></div>' +
                 '</div>' +
               '</div>' +
-              '<div class="lg:col-span-7 overflow-hidden rounded-2xl border border-black/10 bg-[#dde8f0] relative flex flex-col justify-between p-3">' +
-                '<svg viewBox="0 0 360 155" class="w-full h-full">' +
-                  '<path d="M0 35 L360 80 M0 115 L360 55 M95 0 L135 155 M245 0 L210 155" stroke="#ffffff" stroke-width="6"/>' +
-                  '<path d="M45 118 C 130 35, 225 115, 315 36" fill="none" stroke="#16a34a" stroke-width="4.5" stroke-dasharray="7 5"/>' +
-                  '<circle cx="45" cy="118" r="7" fill="#16a34a"/><text x="58" y="123" font-size="12" font-weight="800" fill="#0f172a">Maitama Hub</text>' +
-                  '<circle cx="188" cy="74" r="9" fill="#0A0A0A"/><text x="135" y="56" font-size="12" font-weight="900" fill="#15803d">🛵 Owned EV #EV-14 (89%)</text>' +
-                  '<circle cx="315" cy="36" r="7" fill="#ea580c"/><text x="235" y="28" font-size="12" font-weight="800" fill="#0f172a">Wuse 2 Gate</text>' +
-                '</svg>' +
+
+              '<!-- Right: Styled Vector Mapbox Street Grid + Telemetry Bar -->' +
+              '<div class="lg:col-span-7 flex flex-col gap-2">' +
+                '<div class="flex-1 overflow-hidden rounded-2xl border border-slate-300 bg-[#e8eef3] shadow-inner">' +
+                  richMapSvg +
+                '</div>' +
+                '<div class="flex items-center justify-between rounded-xl bg-white px-3 py-1.5 border border-slate-200 font-semibold">' +
+                  '<span>Route: <strong>4.82 km · 11 mins</strong> · Pre-Cleared Estate Gate ID</span>' +
+                  '<span class="font-black text-emerald-700">65% Lower Energy Cost vs Petrol</span>' +
+                '</div>' +
               '</div>' +
             '</div>' +
           '</div>';
@@ -1788,141 +2073,180 @@
       // ==================== 5. MERCHANT ERP — SHOPMI VENDOR CENTRAL (vendor.delivermi.ng) ====================
       const subErp = SUBVIEW_STATE.erp || 'dashboard';
       const erpTabs = [
-        ['dashboard', 'ShopMi Vendor Central (ERP)'],
-        ['micard', 'Live Stock & QR Mi Card Studio']
+        ['dashboard', 'Cloud POS, Live Stock & Escrow Queue'],
+        ['micard', 'QR Mi Card & Store Standee Studio']
       ];
       const subErpHtml = renderSubTabs('erp', erpTabs, '#ea580c');
 
       if (subErp === 'micard') {
         const miCardBody =
-          '<div class="grid h-full gap-3 bg-gray-50 p-3 text-gray-900 lg:grid-cols-12 text-xs">' +
-            '<div class="lg:col-span-5 flex flex-col justify-between rounded-2xl bg-[#0f172a] p-3.5 text-white border border-amber-400/30">' +
-              '<div class="flex items-center justify-between"><span class="rounded-full bg-amber-400/20 px-2.5 py-0.5 font-black text-amber-300">MI CARD VIRTUAL STUDIO</span><span class="font-mono font-bold text-emerald-400">SM-STORE-0001</span></div>' +
-              '<div class="my-2 flex items-center gap-3 rounded-xl bg-white/10 p-2.5">' +
+          '<div class="grid gap-3 bg-slate-50 p-3 text-slate-900 lg:grid-cols-12 text-xs">' +
+            '<div class="lg:col-span-5 rounded-2xl bg-[#0f172a] p-3.5 text-white border border-amber-400/40 flex flex-col justify-between gap-2.5">' +
+              '<div class="flex items-center justify-between"><span class="rounded-full bg-amber-400/20 px-2.5 py-0.5 font-black text-amber-300">MI CARD STUDIO</span><span class="font-mono font-bold text-emerald-400">SM-STORE-0001</span></div>' +
+              '<div class="flex items-center gap-3 rounded-xl bg-white/10 p-2.5">' +
                 imgTag(logoPots, 'Amazing Pots', 'h-12 w-12 rounded-full border-2 border-amber-400 shrink-0') +
-                '<div class="min-w-0"><p class="truncate font-black text-sm">Amazing Pots Kitchen</p><p class="truncate text-slate-300">Grill Ave, Maitama · Abuja</p><p class="text-emerald-300 font-bold">15 bps Partner Attribution</p></div>' +
+                '<div class="min-w-0"><p class="truncate font-black text-sm">Amazing Pots Kitchen</p><p class="truncate text-slate-300">Grill Ave, Maitama · Abuja</p><p class="text-emerald-300 font-bold">15 bps Coordinator Royalty Linked</p></div>' +
               '</div>' +
-              '<div class="rounded-xl bg-white p-2 text-center text-slate-900 font-black">🖨 Print Store QR Standee &amp; Lanyard Badge</div>' +
+              '<div class="flex items-center justify-between rounded-xl bg-white p-2.5 text-slate-900 font-black"><span>' + mIcon('qr', 'h-4 w-4 text-[#ea580c]') + ' Table QR Menu &amp; Staff PVC</span><span class="rounded bg-[#ea580c] px-2 py-0.5 text-white">Print PDF</span></div>' +
             '</div>' +
-            '<div class="lg:col-span-7 flex flex-col justify-between rounded-2xl bg-white p-3 border border-gray-200">' +
-              '<div class="flex items-center justify-between font-black"><span>Products &amp; Stock (POS + Online Synced)</span><span class="rounded-lg bg-[#ea580c] px-2.5 py-1 text-white">+ Add Product</span></div>' +
-              '<div class="my-2 space-y-1.5">' +
-                [pMeal, pSoup, pBread].map(function (item, idx) {
-                  return '<div class="flex items-center justify-between rounded-xl bg-gray-50 px-2.5 py-1.5 border border-gray-100">' +
-                    '<div class="flex items-center gap-2 min-w-0">' + imgTag(item.thumb, item.name, 'h-9 w-9 rounded-lg shrink-0') + '<div class="min-w-0"><p class="truncate font-black">' + esc(item.name) + '</p><p class="text-gray-500">' + naira(item.price) + '</p></div></div>' +
-                    '<span class="rounded-full bg-emerald-100 px-2.5 py-0.5 font-black text-emerald-800 shrink-0">' + (18 + idx * 7) + ' in stock</span>' +
+            '<div class="lg:col-span-7 rounded-2xl bg-white p-3 border border-slate-200 space-y-2">' +
+              '<div class="flex items-center justify-between font-black"><span>QR Scan Catalog Preview (Counter Parity)</span><span class="text-emerald-600">Synced with POS ✓</span></div>' +
+              '<div class="grid grid-cols-2 gap-2">' +
+                [pPepper, pOkro, pFriedRice, pBread].map(function (it, i) {
+                  return '<div class="flex items-center gap-2 rounded-xl bg-slate-50 p-2 border border-slate-100">' +
+                    imgTag(it.thumb, it.name, 'h-10 w-10 rounded-lg shrink-0') +
+                    '<div class="min-w-0"><p class="truncate font-black">' + esc(it.name) + '</p><p class="font-black text-[#ea580c]">' + naira(it.price) + ' <span class="text-emerald-700 font-semibold">· ' + (16 + i * 5) + ' left</span></p></div>' +
                   '</div>';
                 }).join('') +
               '</div>' +
-              '<p class="text-gray-500 font-semibold">Walk-in sales deduct stock live across ShopMi, ChopChop &amp; ChatMi.</p>' +
             '</div>' +
           '</div>';
         if (deviceMode === 'mobile') {
-          return wrapMobilePhone('https://vendor.delivermi.ng/vendor/listings', subErpHtml, miCardBody, [
-            ['Serialized Store QR & Mi Card Studio', 'Every store prints its own QR menu/catalog card (SM-STORE-0001) straight from Vendor Central.'],
-            ['Real-Time Stock Ceiling Guard', 'Prevents customers from ever paying for an out-of-stock item.']
-          ]);
+          return wrapMobilePhone(
+            'https://vendor.delivermi.ng/vendor/listings',
+            subErpHtml,
+            '<div class="bg-[#0f172a] px-3 py-2 text-white text-xs font-black flex justify-between"><span>Mi Card QR Studio</span><span class="text-amber-300">SM-STORE-0001</span></div>',
+            miCardBody,
+            renderMobileDock([['chart', 'ERP'], ['grid', 'POS'], ['bag', 'Orders'], ['qr', 'Mi Card'], ['store', 'Store']], 3, '#ea580c'),
+            [pPepper, pOkro, pFriedRice, pBread],
+            'Synced Store QR Menu & POS Inventory'
+          );
         }
-        return wrapDesktopBrowser('https://vendor.delivermi.ng/vendor/listings', '#ea580c', subErpHtml, miCardBody, '#f9fafb');
+        return wrapDesktopBrowser('https://vendor.delivermi.ng/vendor/listings', '#ea580c', subErpHtml, miCardBody, '#f8fafc');
       }
 
       if (deviceMode === 'mobile') {
-        const mobErp =
-          '<div class="bg-gray-50 text-gray-900 p-2.5 space-y-2">' +
-            '<!-- Exact VendorLayout.tsx Mobile Top Bar -->' +
-            '<div class="flex items-center justify-between rounded-xl bg-white px-2.5 py-2 border border-gray-100">' +
-              '<div class="flex items-center gap-2 min-w-0">' +
-                imgTag(logoPots, 'Amazing Pots', 'h-8 w-8 rounded-xl shrink-0') +
-                '<div class="truncate"><p class="truncate text-xs font-black">Amazing Pots Kitchen</p><p class="text-xs font-bold text-[#ea580c]">Vendor Central</p></div>' +
-              '</div>' +
-              '<span class="rounded-xl bg-[#ea580c] px-2.5 py-1 text-xs font-black text-white">📦 CATALOG</span>' +
+        const erpTop =
+          '<div class="flex items-center justify-between border-b border-slate-200 bg-white px-3 py-2 text-slate-900 text-xs">' +
+            '<div class="flex items-center gap-1.5">' + imgTag(logoPots, 'Amazing Pots', 'h-6 w-6 rounded-lg') + '<span class="font-black">Vendor Central ERP</span></div>' +
+            '<span class="rounded-full bg-emerald-100 px-2 py-0.5 font-black text-emerald-800">2.0% Tier</span>' +
+          '</div>';
+        const erpMobBody =
+          '<div class="bg-slate-50 p-2.5 space-y-2 text-slate-900 text-xs">' +
+            '<div class="grid grid-cols-2 gap-2">' +
+              '<div class="rounded-xl bg-white p-2 border border-slate-200"><p class="text-slate-500">Today Escrow + POS</p><p class="text-sm font-black text-emerald-600">₦482,500</p></div>' +
+              '<div class="rounded-xl bg-white p-2 border border-slate-200"><p class="text-slate-500">Inventory Sync</p><p class="text-sm font-black text-[#ea580c]">48 SKUs Live</p></div>' +
             '</div>' +
-            '<div class="grid grid-cols-2 gap-2 text-xs">' +
-              '<div class="rounded-xl bg-white p-2 border border-gray-100"><p class="text-gray-500">Escrowed Sales</p><p class="text-sm font-black text-emerald-600">₦482,500</p></div>' +
-              '<div class="rounded-xl bg-white p-2 border border-gray-100"><p class="text-gray-500">Rebate Tier</p><p class="text-sm font-black text-[#ea580c]">SLA Tier 6 · 2.5%</p></div>' +
-            '</div>' +
-            '<div class="space-y-1.5">' +
-              [pMeal, pSoup].map(function (m, idx) {
-                return '<div class="flex items-center justify-between gap-2 rounded-xl bg-white p-2 border border-gray-100 text-xs">' +
-                  '<div class="flex items-center gap-2 min-w-0">' + imgTag(m.thumb, m.name, 'h-9 w-9 rounded-lg shrink-0') + '<div class="min-w-0"><p class="truncate font-black">' + esc(m.name) + '</p><p class="font-bold text-[#ea580c]">' + naira(m.price) + '</p></div></div>' +
-                  '<span class="rounded-lg ' + (idx === 0 ? 'bg-[#ea580c] text-white' : 'bg-emerald-600 text-white') + ' px-2 py-1 font-black shrink-0">' + (idx === 0 ? 'Accept' : 'Mark Ready') + '</span>' +
+            '<p class="font-black text-slate-500">WALK-IN CLOUD POS + ONLINE STOCK</p>' +
+            '<div class="grid grid-cols-2 gap-2">' +
+              [pPepper, pOkro, pFriedRice, pJollof].map(function (m, i) {
+                return '<div class="rounded-xl bg-white p-1.5 border border-slate-200">' +
+                  imgTag(m.thumb, m.name, 'h-16 w-full rounded-lg') +
+                  '<p class="mt-1 truncate font-black">' + esc(m.name) + '</p>' +
+                  '<div class="mt-0.5 flex items-center justify-between"><span class="font-black text-[#ea580c]">' + naira(m.price) + '</span><span class="text-emerald-700 font-bold">' + (14 + i * 4) + ' left</span></div>' +
                 '</div>';
               }).join('') +
             '</div>' +
           '</div>';
-        return wrapMobilePhone('https://vendor.delivermi.ng', subErpHtml, mobErp, [
-          ['One Vendor Surface (ADR-089)', 'Exact ShopMi Vendor Central mobile header: restaurants, fashion & electronics run on one codebase.'],
-          ['Quick Accept & Mark Ready', '1-tap order acceptance dispatches nearby EV riders and syncs live stock across ShopMi & ChatMi.']
-        ]);
+        return wrapMobilePhone(
+          'https://vendor.delivermi.ng',
+          subErpHtml,
+          erpTop,
+          erpMobBody,
+          renderMobileDock([['chart', 'KPIs'], ['grid', 'Cloud POS'], ['bag', 'Orders (4)'], ['qr', 'Mi Card'], ['store', 'B2B']], 1, '#ea580c'),
+          [pPepper, pOkro, pFriedRice, pJollof],
+          'Live Merchant POS & Online Inventory SKUs'
+        );
       }
 
+      // Desktop Merchant ERP: Sidebar + 4 Sparkline KPIs + Visual Cloud POS Product Grid + Live Escrow Order Queue!
       const deskErp =
-        '<div class="grid h-full bg-gray-50 text-gray-900 lg:grid-cols-12 text-xs">' +
-          '<!-- Exact VendorLayout.tsx White Left Sidebar -->' +
-          '<div class="lg:col-span-3 border-r border-gray-200 bg-white p-2.5 flex flex-col justify-between">' +
-            '<div class="space-y-1">' +
-              '<div class="flex items-center gap-2 pb-2 mb-1 border-b border-gray-100">' +
-                '<span class="flex h-8 w-8 items-center justify-center rounded-xl text-white font-black" style="background:linear-gradient(135deg,#f97316,#dc2626)">M</span>' +
-                '<div><p class="text-sm font-black tracking-tight leading-none">SHOP<span class="text-[#ea580c]">MI</span></p><p class="text-xs font-bold text-gray-400">VENDOR CENTRAL</p></div>' +
+        '<div class="grid bg-slate-50 text-slate-900 lg:grid-cols-12 text-xs">' +
+          '<!-- Sidebar -->' +
+          '<div class="lg:col-span-3 border-r border-slate-200 bg-white p-2.5 flex flex-col justify-between gap-2">' +
+            '<div class="space-y-1 font-semibold">' +
+              '<div class="flex items-center gap-2 pb-2 mb-1 border-b border-slate-100">' +
+                '<span class="flex h-7 w-7 items-center justify-center rounded-xl text-white font-black" style="background:linear-gradient(135deg,#f97316,#dc2626)">V</span>' +
+                '<div><p class="font-black leading-none">VENDOR CENTRAL</p><p class="text-slate-400">vendor.delivermi.ng</p></div>' +
               '</div>' +
-              '<div class="rounded-xl bg-orange-50 text-[#ea580c] px-2.5 py-1.5 font-black">📊 Dashboard</div>' +
-              '<div class="rounded-xl px-2.5 py-1 font-semibold text-gray-700">📦 Products &amp; Stock</div>' +
-              '<div class="rounded-xl px-2.5 py-1 font-semibold text-gray-700">🛒 Orders &amp; Sales (3)</div>' +
-              '<div class="rounded-xl px-2.5 py-1 font-semibold text-gray-700">💰 Money &amp; Splits</div>' +
-              '<div class="rounded-xl px-2.5 py-1 font-semibold text-gray-700">💬 Customer Messages</div>' +
-              '<div class="rounded-xl px-2.5 py-1 font-semibold text-gray-700">👑 Subscription &amp; Domain</div>' +
+              '<div class="flex items-center gap-2 rounded-xl bg-orange-50 text-[#ea580c] px-2.5 py-1.5 font-black">' + mIcon('grid') + '<span>POS &amp; Dashboard</span></div>' +
+              '<div class="flex items-center gap-2 rounded-xl px-2.5 py-1 text-slate-700">' + mIcon('bag') + '<span>Escrow Orders (4)</span></div>' +
+              '<div class="flex items-center gap-2 rounded-xl px-2.5 py-1 text-slate-700">' + mIcon('store') + '<span>Stock &amp; Menu (48)</span></div>' +
+              '<div class="flex items-center gap-2 rounded-xl px-2.5 py-1 text-slate-700">' + mIcon('chart') + '<span>Treasury &amp; Credit</span></div>' +
+              '<div class="flex items-center gap-2 rounded-xl px-2.5 py-1 text-slate-700">' + mIcon('qr') + '<span>Mi Card Studio</span></div>' +
             '</div>' +
-            '<div class="rounded-xl bg-gray-50 p-2 border border-gray-200"><p class="font-black truncate">Amazing Pots Kitchen</p><p class="text-emerald-600 font-bold">● SM-STORE-0001 Active</p></div>' +
+            '<div class="rounded-xl bg-emerald-50 border border-emerald-200 p-2">' +
+              '<p class="font-black text-emerald-900">SME Credit Pre-Approved</p>' +
+              '<p class="text-emerald-700 font-bold">₦1,200,000 Working Capital</p>' +
+            '</div>' +
           '</div>' +
 
-          '<!-- Main Vendor Dashboard Workspace -->' +
-          '<div class="lg:col-span-9 p-3 flex flex-col justify-between gap-2">' +
+          '<!-- Main Workspace: KPIs + Visual Cloud POS Grid + Live Escrow Queue -->' +
+          '<div class="lg:col-span-9 p-2.5 space-y-2">' +
             '<div class="grid grid-cols-4 gap-2">' +
-              '<div class="rounded-xl bg-white p-2.5 border border-gray-200"><p class="text-gray-500">Escrowed Sales</p><p class="mt-0.5 text-sm font-black text-emerald-600">₦482,500</p></div>' +
-              '<div class="rounded-xl bg-white p-2.5 border border-gray-200"><p class="text-gray-500">Incoming Orders</p><p class="mt-0.5 text-sm font-black">4 Escrowed</p></div>' +
-              '<div class="rounded-xl bg-white p-2.5 border border-gray-200"><p class="text-gray-500">Live Stock SKUs</p><p class="mt-0.5 text-sm font-black">42 Synced</p></div>' +
-              '<div class="rounded-xl bg-white p-2.5 border border-gray-200"><p class="text-gray-500">Commission Tier</p><p class="mt-0.5 text-sm font-black text-[#ea580c]">2.5% Rebate</p></div>' +
+              '<div class="rounded-xl bg-white p-2 border border-slate-200"><p class="text-slate-500">Today Sales</p><p class="text-sm font-black text-emerald-600">₦482,500 <span class="text-xs">▲18%</span></p></div>' +
+              '<div class="rounded-xl bg-white p-2 border border-slate-200"><p class="text-slate-500">Escrow Queue</p><p class="text-sm font-black">4 Paid Orders</p></div>' +
+              '<div class="rounded-xl bg-white p-2 border border-slate-200"><p class="text-slate-500">Synced SKUs</p><p class="text-sm font-black">48 In Stock</p></div>' +
+              '<div class="rounded-xl bg-white p-2 border border-slate-200"><p class="text-slate-500">SLA Fee Tier</p><p class="text-sm font-black text-[#ea580c]">2.0% Take</p></div>' +
             '</div>' +
 
-            '<div class="rounded-2xl bg-white p-3 border border-gray-200 space-y-2">' +
-              '<div class="flex items-center justify-between font-black"><span>Incoming Escrowed Orders (Quick Actions)</span><span class="rounded-full bg-emerald-50 px-2.5 py-0.5 text-emerald-700">PayMi Locked ✓</span></div>' +
-              [pMeal, pSoup, pBread].map(function (m, i) {
-                return '<div class="flex items-center justify-between gap-2 rounded-xl bg-gray-50 px-2.5 py-2 border border-gray-100">' +
-                  '<div class="flex items-center gap-2.5 min-w-0">' + imgTag(m.thumb, m.name, 'h-10 w-10 rounded-lg shrink-0') + '<div class="min-w-0"><p class="truncate font-black">' + esc(m.name) + ' · Order #SM-80' + (i + 4) + '</p><p class="text-gray-500">' + naira(m.price) + ' · EV Rider 4 mins away · Doorstep PIN Ready</p></div></div>' +
-                  '<div class="flex gap-1.5 shrink-0">' +
-                    '<span class="rounded-lg bg-[#ea580c] px-2.5 py-1 font-black text-white">Accept Order</span>' +
-                    '<span class="rounded-lg bg-emerald-600 px-2.5 py-1 font-black text-white">Mark Ready</span>' +
-                  '</div>' +
-                '</div>';
-              }).join('') +
-            '</div>' +
+            '<div class="grid gap-2.5 lg:grid-cols-12">' +
+              '<!-- Visual Cloud POS & Synced Stock Product Cards (with Photos & Prices) -->' +
+              '<div class="lg:col-span-7 rounded-2xl bg-white p-2.5 border border-slate-200">' +
+                '<div class="flex items-center justify-between mb-1.5"><span class="font-black">Cloud POS &amp; Synced Online Stock</span><span class="text-emerald-600 font-bold">1-Tap Walk-In Sale</span></div>' +
+                '<div class="grid grid-cols-2 gap-2">' +
+                  [pPepper, pOkro, pFriedRice, pBread].map(function (p, i) {
+                    return '<div class="flex items-center gap-2 rounded-xl bg-slate-50 p-1.5 border border-slate-200/80">' +
+                      imgTag(p.thumb, p.name, 'h-12 w-12 rounded-lg shrink-0') +
+                      '<div class="min-w-0 flex-1">' +
+                        '<p class="truncate font-black">' + esc(p.name) + '</p>' +
+                        '<p class="font-black text-[#ea580c]">' + naira(p.price) + '</p>' +
+                        '<div class="flex items-center justify-between mt-0.5"><span class="text-emerald-700 font-bold">' + (19 + i * 6) + ' left</span><button type="button" data-mini-add="' + esc(p.name) + '|' + p.price + '" class="rounded bg-slate-900 px-1.5 py-0.5 text-white font-bold">+ POS</button></div>' +
+                      '</div>' +
+                    '</div>';
+                  }).join('') +
+                '</div>' +
+              '</div>' +
 
-            '<div class="grid grid-cols-3 gap-2">' +
-              '<div class="rounded-xl bg-white p-2.5 border border-gray-200 flex justify-between items-center"><span class="text-gray-500 font-semibold">Restock Bucket (60%)</span><span class="font-black">₦289,500</span></div>' +
-              '<div class="rounded-xl bg-white p-2.5 border border-gray-200 flex justify-between items-center"><span class="text-gray-500 font-semibold">Staff &amp; Ops (20%)</span><span class="font-black">₦96,500</span></div>' +
-              '<div class="rounded-xl bg-white p-2.5 border border-gray-200 flex justify-between items-center"><span class="text-gray-500 font-semibold">Net Profit (20%)</span><span class="font-black text-emerald-600">₦96,500</span></div>' +
-            '</div>' +
-
-            '<div class="flex items-center justify-between rounded-xl bg-[#fff7ed] border border-orange-200 px-3 py-2 font-bold text-[#9a3412]">' +
-              '<span>⚠️ Low Stock (<5 qty): Thermal Packaging Bowls · Synced POS + Online</span>' +
-              '<span class="rounded-lg bg-[#ea580c] px-2.5 py-1 text-white font-black">1-Click B2B Reorder →</span>' +
+              '<!-- Incoming Escrowed Orders + Treasury Split -->' +
+              '<div class="lg:col-span-5 flex flex-col justify-between gap-2">' +
+                '<div class="rounded-2xl bg-white p-2.5 border border-slate-200 space-y-1.5">' +
+                  '<div class="flex items-center justify-between font-black"><span>Escrow Orders</span><span class="rounded-full bg-emerald-100 px-2 py-0.5 text-emerald-800">Funds Locked</span></div>' +
+                  [pPepper, pJollof].map(function (m, idx) {
+                    return '<div class="flex items-center justify-between gap-1.5 rounded-xl bg-slate-50 p-1.5 border border-slate-100">' +
+                      '<div class="flex items-center gap-1.5 min-w-0">' + imgTag(m.thumb, m.name, 'h-8 w-8 rounded-lg shrink-0') + '<div class="min-w-0"><p class="truncate font-black">#SM-80' + (idx + 4) + '</p><p class="font-bold text-[#ea580c]">' + naira(m.price) + '</p></div></div>' +
+                      '<span class="rounded-lg ' + (idx === 0 ? 'bg-[#ea580c]' : 'bg-emerald-600') + ' px-2 py-1 font-black text-white shrink-0">' + (idx === 0 ? 'Accept' : 'Ready') + '</span>' +
+                    '</div>';
+                  }).join('') +
+                '</div>' +
+                '<div class="rounded-2xl bg-[#fff7ed] border border-orange-200 p-2.5">' +
+                  '<p class="font-black text-[#9a3412]">Auto-Treasury Split (60 / 20 / 20)</p>' +
+                  '<p class="text-slate-600 mt-0.5">Restock <strong>₦289.5K</strong> · Ops <strong>₦96.5K</strong> · Profit <strong class="text-emerald-700">₦96.5K</strong></p>' +
+                '</div>' +
+              '</div>' +
             '</div>' +
           '</div>' +
         '</div>';
-      return wrapDesktopBrowser('https://vendor.delivermi.ng/vendor/dashboard', '#ea580c', subErpHtml, deskErp, '#f9fafb');
+      return wrapDesktopBrowser('https://vendor.delivermi.ng/vendor/dashboard', '#ea580c', subErpHtml, deskErp, '#f8fafc');
     }
 
-    // Delegated listener so sub-view tabs work seamlessly inside both Slide 3 and the Explorer Modal!
+    // Delegated listeners for Sub-Tabs, Interactive +Cart Buttons & Doorstep PIN Simulation (works in Slide 3, Modal & 1-Pager!)
     document.addEventListener('click', function (e) {
-      const btn = e.target && e.target.closest ? e.target.closest('[data-app-subview]') : null;
-      if (!btn) return;
-      const parts = (btn.getAttribute('data-app-subview') || '').split(':');
-      if (parts.length === 2) {
-        SUBVIEW_STATE[parts[0]] = parts[1];
-        if (typeof updateAppStudio === 'function') updateAppStudio();
-        if (typeof inspectorDialog !== 'undefined' && inspectorDialog && inspectorDialog.open && typeof renderModal === 'function') {
-          renderModal();
+      const subBtn = e.target && e.target.closest ? e.target.closest('[data-app-subview]') : null;
+      if (subBtn) {
+        const parts = (subBtn.getAttribute('data-app-subview') || '').split(':');
+        if (parts.length === 2) {
+          SUBVIEW_STATE[parts[0]] = parts[1];
+          refreshAllMiniStudios();
         }
+        return;
+      }
+      const addBtn = e.target && e.target.closest ? e.target.closest('[data-mini-add]') : null;
+      if (addBtn) {
+        const raw = (addBtn.getAttribute('data-mini-add') || '').split('|');
+        const itemTitle = raw[0] || 'Product';
+        const itemPrice = Number(raw[1]) || 5000;
+        MINI_CART_STATE.count += 1;
+        MINI_CART_STATE.total += itemPrice;
+        MINI_CART_STATE.lastToast = 'Added ' + itemTitle.slice(0, 22) + ' (' + naira(itemPrice) + ')';
+        refreshAllMiniStudios();
+        return;
+      }
+      const pinBtn = e.target && e.target.closest ? e.target.closest('[data-mini-pin]') : null;
+      if (pinBtn) {
+        MINI_CART_STATE.pinSettled = !MINI_CART_STATE.pinSettled;
+        MINI_CART_STATE.lastToast = MINI_CART_STATE.pinSettled ? 'PIN 4927 Verified · 4-Way Split Paid!' : '';
+        refreshAllMiniStudios();
       }
     });
 
@@ -2027,6 +2351,27 @@
 
     updateAppStudio();
 
+    // Populate Slide 1 Cover Live Product Photos + Naira Pricing Strip
+    const coverMiniProducts = document.getElementById('coverMiniProducts');
+    if (coverMiniProducts && DATA && DATA.snapshot && DATA.snapshot.sampleProducts) {
+      const featured3 = [
+        findProd('Teey Styles', 0),
+        findProd('0NiX Gadgets', 0),
+        findProd('3 Star Kitchen', 0)
+      ];
+      coverMiniProducts.innerHTML = featured3.map(function (p) {
+        return (
+          '<button type="button" onclick="window.__jumpPillar(\'shopmi\')" class="flex items-center gap-2 rounded-2xl border border-[var(--border)] bg-[var(--background)] p-1.5 text-left hover:border-emerald-500 transition">' +
+            imgTag(p.thumb, p.name, 'h-10 w-10 rounded-xl shrink-0') +
+            '<div class="min-w-0">' +
+              '<p class="truncate text-xs font-black">' + esc(p.name) + '</p>' +
+              '<p class="text-xs font-black gold">' + naira(p.price) + '</p>' +
+            '</div>' +
+          '</button>'
+        );
+      }).join('');
+    }
+
     // ---- Slide 6: Live Traction Stage (Real Product Photos + Naira Prices, Merchant Logos, City Map) ----
     let activeTractionTab = 'products';
     let activeCategoryFilter = 'All';
@@ -2072,7 +2417,7 @@
                   '<p class="truncate text-xs text-[var(--muted-foreground)]">@' + esc(v.handle) + ' · ' + esc(v.city) + '</p>' +
                 '</div>' +
               '</div>' +
-              '<span class="chip-emerald shrink-0 rounded-full px-2.5 py-1 text-xs font-black">' + v.products + ' SKUs</span>' +
+              '<span class="chip-emerald shrink-0 rounded-full px-2.5 py-1 text-xs font-black">' + (v.skuCount || v.products || 1) + ' SKUs</span>' +
             '</div>'
           );
         }).join('') +
