@@ -26,6 +26,86 @@
         --primary-foreground: #051b11;
       }
     }
+    .ember { color: #ff5a36; }
+    .sky { color: #0ea5e9; }
+    .violet { color: #8b5cf6; }
+    .chip-slate { background: rgba(148, 163, 184, 0.16); color: var(--muted-foreground); }
+    .mode-btn[aria-pressed="true"] { background: var(--foreground); color: var(--background); }
+    body { color-scheme: light dark; accent-color: #10b981; }
+    input[type="range"].dm-slider {
+      --slider-track-size: 0.5rem;
+      --slider-thumb-size: 1.15rem;
+      --slider-track-radius: 999px;
+      --slider-thumb-radius: 50%;
+      --slider-track-color: rgba(148, 163, 184, 0.28);
+      --slider-fill-color: #10b981;
+      --slider-thumb-color: var(--slider-fill-color);
+      --slider-direction: to right;
+      --attr-min: attr(min type(<number>), 0);
+      --attr-max: attr(max type(<number>), 100);
+      --control-value: attr(value type(<number>), 50);
+      --slider-progress: calc(progress(var(--control-value), var(--attr-min), var(--attr-max)) * 100%);
+      appearance: none;
+      inline-size: 100%;
+      block-size: 1.75rem;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+    input[type="range"].dm-slider:dir(rtl) { --slider-direction: to left; }
+    @supports not (opacity: progress(1, 0, 100)) {
+      input[type="range"].dm-slider {
+        --slider-progress: calc((var(--control-value) - var(--attr-min)) / (var(--attr-max) - var(--attr-min)) * 100%);
+      }
+    }
+    input[type="range"].dm-slider::-webkit-slider-runnable-track {
+      block-size: var(--slider-track-size);
+      border: 0;
+      border-radius: var(--slider-track-radius);
+      background: linear-gradient(
+        var(--slider-direction),
+        var(--slider-fill-color) var(--slider-progress),
+        var(--slider-track-color) var(--slider-progress)
+      );
+    }
+    input[type="range"].dm-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      inline-size: var(--slider-thumb-size);
+      block-size: var(--slider-thumb-size);
+      margin-block-start: calc((var(--slider-track-size) - var(--slider-thumb-size)) / 2);
+      border: 2px solid var(--card);
+      border-radius: var(--slider-thumb-radius);
+      background: var(--slider-thumb-color);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.28);
+    }
+    input[type="range"].dm-slider::-moz-range-track {
+      block-size: var(--slider-track-size);
+      border: 0;
+      border-radius: var(--slider-track-radius);
+      background: var(--slider-track-color);
+    }
+    input[type="range"].dm-slider::-moz-range-progress {
+      block-size: var(--slider-track-size);
+      border-radius: var(--slider-track-radius);
+      background: var(--slider-fill-color);
+    }
+    input[type="range"].dm-slider::-moz-range-thumb {
+      inline-size: var(--slider-thumb-size);
+      block-size: var(--slider-thumb-size);
+      border: 2px solid var(--card);
+      border-radius: var(--slider-thumb-radius);
+      background: var(--slider-thumb-color);
+    }
+    input[type="range"].dm-slider:focus-visible {
+      outline: 2px solid var(--slider-fill-color);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
     .gold { color: #d99a1e; }
     .emerald { color: #10b981; }
     .chip-gold { background: rgba(245, 184, 65, 0.14); color: #d99a1e; }
@@ -88,7 +168,7 @@
 
     <!-- Toolbar -->
     <div class="no-print flex flex-wrap items-center justify-end gap-2">
-      <a href="./" class="inline-flex min-h-10 items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--card)] px-4 text-sm font-semibold hover:opacity-90">← Interactive 10-Slide Deck</a>
+      <a href="./" class="inline-flex min-h-10 items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--card)] px-4 text-sm font-semibold hover:opacity-90">← Interactive 11-Slide Deck</a>
       <button id="editToggle" type="button" aria-pressed="false"
         class="inline-flex min-h-10 items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--card)] px-4 text-sm font-semibold hover:opacity-90">
         <svg class="icon"><use href="#i-edit"/></svg><span id="editLabel">Edit placeholders</span>
@@ -340,51 +420,162 @@
       </div>
     </section>
 
-    <!-- WHY INVEST NOW + ASK -->
-    <section class="grid gap-6 lg:grid-cols-5">
-      <div class="rounded-3xl border border-[var(--border)] bg-[var(--card)] p-6 sm:p-8 lg:col-span-3">
-        <p class="text-xs font-bold uppercase tracking-widest gold">Why invest now</p>
-        <h2 class="mt-2 text-2xl font-black tracking-tight">Post-product, pre-scale.</h2>
-        <ul class="mt-5 space-y-4">
-          <li class="flex gap-3"><svg class="icon emerald mt-0.5"><use href="#i-check"/></svg><p class="text-sm"><strong>De-risked execution</strong>: the full software stack is already built, so funds go to people, fleet and coverage.</p></li>
-          <li class="flex gap-3"><svg class="icon emerald mt-0.5"><use href="#i-check"/></svg><p class="text-sm"><strong>Asset-light reach</strong>: partner carriers cover the country while our own EVs handle the work with the best margins.</p></li>
-          <li class="flex gap-3"><svg class="icon emerald mt-0.5"><use href="#i-check"/></svg><p class="text-sm"><strong>Cheaper to run</strong>: electric vehicles cut fuel and maintenance costs on our busiest routes.</p></li>
-          <li class="flex gap-3"><svg class="icon emerald mt-0.5"><use href="#i-check"/></svg><p class="text-sm"><strong>Hard to copy</strong>: rivals that do only one thing can't match discovery, escrow and delivery in one loop.</p></li>
-          <li class="flex gap-3"><svg class="icon emerald mt-0.5"><use href="#i-check"/></svg><p class="text-sm"><strong>Data moat</strong>: verified stock, delivery speed and cash flow can support future SME credit.</p></li>
-        </ul>
+    <!-- WHERE THE MONEY GOES + RUNWAY PERIOD GAUGE -->
+    <section class="rounded-3xl border border-[var(--border)] bg-[var(--card)] p-6 sm:p-8">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-widest gold">Where the money goes — unit-level deployment</p>
+          <h2 class="mt-1 text-2xl font-black tracking-tight">Acquirable EVs, personnel, state coverage, street campaigns &amp; post-capex runway.</h2>
+        </div>
+        <div class="no-print flex flex-wrap items-center gap-1.5">
+          <button type="button" data-raise-preset="500000000" class="rounded-full border border-[var(--border)] bg-[var(--background)] px-3 py-1 text-xs font-bold">₦500M</button>
+          <button type="button" data-raise-preset="1500000000" class="chip-gold rounded-full border border-amber-500/50 px-3 py-1 text-xs font-black">₦1.5B Target</button>
+          <button type="button" data-raise-preset="3000000000" class="rounded-full border border-[var(--border)] bg-[var(--background)] px-3 py-1 text-xs font-bold">₦3.0B</button>
+          <button type="button" data-raise-preset="5000000000" class="rounded-full border border-[var(--border)] bg-[var(--background)] px-3 py-1 text-xs font-bold">₦5.0B</button>
+          <span id="pctStatus" class="chip-emerald rounded-full px-3 py-1 text-xs font-black" role="status">Total: 100%</span>
+        </div>
       </div>
 
-      <div class="hero-glow rounded-3xl border border-[var(--border)] bg-[var(--card)] p-6 sm:p-8 lg:col-span-2">
-        <p class="text-xs font-bold uppercase tracking-widest emerald">The ask</p>
-        <label for="raiseInput" class="mt-3 block text-xs font-bold uppercase tracking-wider text-[var(--muted-foreground)]">Total raise (₦)</label>
-        <div class="mt-1 flex items-center gap-2 rounded-2xl border border-[var(--border)] bg-[var(--background)] px-4">
-          <span class="text-2xl font-black gold">₦</span>
-          <input id="raiseInput" type="text" inputmode="numeric" autocomplete="off" placeholder="Enter amount"
-            class="min-h-14 w-full bg-transparent text-2xl font-black tracking-tight outline-none placeholder:text-[var(--muted-foreground)]" />
-        </div>
-        <p class="mt-2 text-sm text-[var(--muted-foreground)]"><span class="editable" data-placeholder>Seed / Pre-Series A · Equity or SAFE</span></p>
+      <div class="mt-5 grid gap-5 lg:grid-cols-12">
+        <div class="lg:col-span-8 space-y-4">
+          <div class="grid items-center gap-4 rounded-2xl bg-[var(--background)] p-4 sm:grid-cols-12">
+            <div class="sm:col-span-5">
+              <label for="deckRaiseInput" class="block text-xs font-bold uppercase tracking-wider text-[var(--muted-foreground)]">Total Raise (₦ — Editable)</label>
+              <div class="mt-1 flex items-center gap-2 rounded-xl border border-[var(--border)] bg-[var(--card)] px-3 py-2">
+                <span class="text-xl font-black gold">₦</span>
+                <input id="deckRaiseInput" type="text" inputmode="numeric" value="1,500,000,000"
+                  class="w-full bg-transparent text-xl font-black outline-none" />
+              </div>
+            </div>
+            <div class="sm:col-span-7">
+              <div class="flex items-center justify-between text-xs font-bold">
+                <label for="deckRaiseSlider" class="text-[var(--muted-foreground)]">Dial Capital Raise (₦250M → ₦6.0B)</label>
+                <span id="raiseSummaryTag" class="emerald font-black">All 36 States + FCT</span>
+              </div>
+              <input id="deckRaiseSlider" type="range" min="250000000" max="6000000000" step="50000000" value="1500000000"
+                class="dm-slider" style="--slider-fill-color:#f5b841" />
+            </div>
+          </div>
 
-        <div class="mt-6 rounded-2xl border border-[var(--border)] bg-[var(--background)] p-4">
-          <p class="text-xs font-bold uppercase tracking-wider gold">Founder &amp; Executive Contact (MD-0001)</p>
-          <p class="mt-1 font-black"><span class="editable" data-placeholder>Malcolm Etuk</span></p>
-          <p class="text-xs font-semibold text-[var(--muted-foreground)]"><span class="editable" data-placeholder>Founder &amp; Managing Director, DeliverMi Technologies</span></p>
-          <p class="mt-1.5 text-sm font-semibold"><span class="editable" data-placeholder>malcolm.etuk@delivermi.ng · +234 816 417 7701</span></p>
+          <div id="deckFundsRows" class="grid gap-3 sm:grid-cols-2"></div>
+        </div>
+
+        <div class="lg:col-span-4 flex flex-col justify-between gap-3 rounded-2xl border border-[var(--border)] bg-[var(--background)] p-4">
+          <div class="flex items-center justify-between">
+            <p class="text-xs font-black uppercase tracking-wider emerald">Post-Capex Runway Gauge</p>
+            <div class="no-print inline-flex rounded-full border border-[var(--border)] bg-[var(--card)] p-0.5 text-xs font-bold">
+              <button type="button" data-runway-mode="net" aria-pressed="true" class="mode-btn rounded-full px-2.5 py-0.5">With Rev</button>
+              <button type="button" data-runway-mode="zero" aria-pressed="false" class="mode-btn rounded-full px-2.5 py-0.5">Zero-Rev</button>
+            </div>
+          </div>
+
+          <div class="rounded-2xl bg-[var(--card)] p-3 text-center">
+            <svg id="runwayGaugeSvg" viewBox="0 0 260 158" class="mx-auto w-full max-w-[240px]"></svg>
+            <p id="runwayHeadline" class="text-lg font-black emerald">32.0 Months Runway</p>
+            <p id="runwaySubline" class="text-xs text-[var(--muted-foreground)]">After upfront vehicles, hubs &amp; print collateral are paid</p>
+          </div>
+
+          <div id="runwayWaterfall" class="space-y-1.5 text-xs"></div>
+          <div id="unlockedSummaryBox" class="rounded-2xl border border-emerald-500/35 bg-[var(--card)] p-3 text-xs"></div>
         </div>
       </div>
     </section>
 
-    <!-- USE OF FUNDS -->
+    <!-- CUSTOMER SCALE & PROFIT DIALER GAUGE -->
     <section class="rounded-3xl border border-[var(--border)] bg-[var(--card)] p-6 sm:p-8">
-      <div class="flex flex-wrap items-end justify-between gap-3">
+      <div class="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <p class="text-xs font-bold uppercase tracking-widest gold">Use of funds</p>
-          <h2 class="mt-2 text-2xl font-black tracking-tight">Where the money goes.</h2>
-          <p class="no-print mt-1 text-xs text-[var(--muted-foreground)]">Percentages are suggested starting points. Change them to match your budget; amounts update automatically.</p>
+          <p class="text-xs font-bold uppercase tracking-widest emerald">Customer scale &amp; profitability dialer</p>
+          <h2 class="mt-1 text-2xl font-black tracking-tight">Dial active monthly buyers to inspect GMV, operating margin &amp; net profit.</h2>
         </div>
-        <p id="totalBadge" class="rounded-full px-3 py-1 text-xs font-black chip-emerald" role="status">Total: 100%</p>
+        <div class="no-print flex flex-wrap gap-1.5">
+          <button type="button" data-cust-preset="5000" class="rounded-full border border-[var(--border)] bg-[var(--card)] px-2.5 py-1 text-xs font-bold">5K Pilot</button>
+          <button type="button" data-cust-preset="25000" class="rounded-full border border-[var(--border)] bg-[var(--card)] px-2.5 py-1 text-xs font-bold">25K Seed</button>
+          <button type="button" data-cust-preset="50000" class="chip-emerald rounded-full border border-emerald-500/50 px-2.5 py-1 text-xs font-black">50K Multi-City</button>
+          <button type="button" data-cust-preset="100000" class="rounded-full border border-[var(--border)] bg-[var(--card)] px-2.5 py-1 text-xs font-bold">100K Metro</button>
+          <button type="button" data-cust-preset="250000" class="rounded-full border border-[var(--border)] bg-[var(--card)] px-2.5 py-1 text-xs font-bold">250K National</button>
+          <button type="button" data-cust-preset="1000000" class="rounded-full border border-[var(--border)] bg-[var(--card)] px-2.5 py-1 text-xs font-bold">1M Pan-Africa</button>
+        </div>
       </div>
 
-      <div id="fundsList" class="mt-6 space-y-3"></div>
+      <div class="mt-5 grid gap-4 rounded-2xl bg-[var(--background)] p-4 sm:grid-cols-12">
+        <div class="sm:col-span-6">
+          <div class="flex items-center justify-between text-xs font-bold">
+            <label for="custDialSlider">Active Monthly Buyers</label>
+            <output id="custDialOut" for="custDialSlider" class="font-black emerald text-sm">50,000 Buyers</output>
+          </div>
+          <input id="custDialSlider" type="range" min="0" max="100" step="1" value="56" class="dm-slider" />
+        </div>
+        <div class="sm:col-span-3">
+          <div class="flex items-center justify-between text-xs font-bold">
+            <label for="freqSlider">Orders / Mo</label>
+            <output id="freqOut" for="freqSlider" class="font-black gold">3.5x</output>
+          </div>
+          <input id="freqSlider" type="range" min="1.5" max="8.0" step="0.5" value="3.5" class="dm-slider" style="--slider-fill-color:#f5b841" />
+        </div>
+        <div class="sm:col-span-3">
+          <div class="flex items-center justify-between text-xs font-bold">
+            <label for="aovSlider">Avg Basket</label>
+            <output id="aovOut" for="aovSlider" class="font-black sky">₦14,500</output>
+          </div>
+          <input id="aovSlider" type="range" min="6000" max="40000" step="500" value="14500" class="dm-slider" style="--slider-fill-color:#0ea5e9" />
+        </div>
+      </div>
+
+      <div class="mt-4 grid items-center gap-4 lg:grid-cols-12">
+        <div class="rounded-2xl bg-[var(--background)] p-4 text-center lg:col-span-5">
+          <svg id="profitGaugeSvg" viewBox="0 0 260 158" class="mx-auto w-full max-w-[250px]"></svg>
+          <p id="profitMonthlyLabel" class="text-xl font-black emerald">+₦119.7M / mo Net Profit</p>
+          <p id="profitAnnualLabel" class="text-xs font-bold text-[var(--muted-foreground)]">+₦1.44B / yr Annualized Profit</p>
+        </div>
+        <div id="profitBreakdownCards" class="grid gap-2.5 sm:grid-cols-2 lg:col-span-7 text-xs"></div>
+      </div>
+
+      <div class="mt-4 overflow-x-auto rounded-2xl border border-[var(--border)] bg-[var(--background)] px-4 py-3">
+        <table class="w-full text-left text-xs">
+          <thead>
+            <tr class="border-b border-[var(--border)] text-[var(--muted-foreground)]">
+              <th class="py-1.5 pr-2 font-black">Customer Level</th>
+              <th class="py-1.5 px-2 font-bold">Monthly Orders</th>
+              <th class="py-1.5 px-2 font-bold">Monthly GMV</th>
+              <th class="py-1.5 px-2 font-bold">Platform Revenue</th>
+              <th class="py-1.5 px-2 font-black emerald">Monthly Net Profit</th>
+              <th class="py-1.5 pl-2 font-black gold">Annual Net Profit</th>
+            </tr>
+          </thead>
+          <tbody id="profitTiersBody" class="divide-y divide-[var(--border)] font-semibold"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- WHY INVEST NOW + FOUNDER CONTACT -->
+    <section class="grid gap-6 lg:grid-cols-5">
+      <div class="rounded-3xl border border-[var(--border)] bg-[var(--card)] p-6 sm:p-8 lg:col-span-3">
+        <p class="text-xs font-bold uppercase tracking-widest gold">Why invest now</p>
+        <h2 class="mt-2 text-2xl font-black tracking-tight">Post-product, pre-scale.</h2>
+        <ul class="mt-5 space-y-3.5 text-sm">
+          <li class="flex gap-3"><svg class="icon emerald mt-0.5"><use href="#i-check"/></svg><p><strong>De-risked execution</strong>: all 5 modular APIs &amp; web/Android apps are already built and guarded by 540+ automated tests.</p></li>
+          <li class="flex gap-3"><svg class="icon emerald mt-0.5"><use href="#i-check"/></svg><p><strong>Tangible unit economics</strong>: EV fleet + solar swap cuts last-mile energy costs 60–70% while 3PL carriers unlock all 36 states + FCT.</p></li>
+          <li class="flex gap-3"><svg class="icon emerald mt-0.5"><use href="#i-check"/></svg><p><strong>Zero-waste growth</strong>: ChatMi creators and 15 bps QR Mi Card community partners get paid out of settled doorstep-PIN escrow.</p></li>
+          <li class="flex gap-3"><svg class="icon emerald mt-0.5"><use href="#i-check"/></svg><p><strong>Early break-even (~8,000 buyers)</strong>: compounding software, ads, logistics &amp; SME credit layers drive 50–70%+ operating margins at scale.</p></li>
+        </ul>
+      </div>
+
+      <div class="hero-glow rounded-3xl border border-[var(--border)] bg-[var(--card)] p-6 sm:p-8 lg:col-span-2 flex flex-col justify-between">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-widest emerald">Executive Contact &amp; Terms</p>
+          <p class="mt-2 text-lg font-black"><span class="editable" data-placeholder>Seed / Pre-Series A · Equity or SAFE</span></p>
+          <p class="mt-1 text-xs text-[var(--muted-foreground)]">Data room, live walkthroughs &amp; financial model ready for diligence.</p>
+        </div>
+
+        <div class="mt-5 rounded-2xl border border-[var(--border)] bg-[var(--background)] p-4">
+          <p class="text-xs font-bold uppercase tracking-wider gold">Founder &amp; Managing Director (MD-0001)</p>
+          <p class="mt-1 text-lg font-black"><span class="editable" data-placeholder>Malcolm Etuk</span></p>
+          <p class="text-xs font-semibold text-[var(--muted-foreground)]"><span class="editable" data-placeholder>Founder &amp; Managing Director, DeliverMi Technologies</span></p>
+          <p class="mt-2 text-xs font-bold"><span class="editable" data-placeholder>malcolm.etuk@delivermi.ng · +234 816 417 7701</span></p>
+          <p class="mt-1 text-xs font-semibold text-[var(--muted-foreground)]">info.delivermi.ng · delivermi.ng · chat.delivermi.ng</p>
+        </div>
+      </div>
     </section>
 
     <p class="pb-4 text-center text-xs text-[var(--muted-foreground)]">
@@ -393,94 +584,466 @@
   </main>
 
   <script>
-    (function () {
-      // Edit-placeholder toggle
-      const btn = document.getElementById('editToggle');
-      const label = document.getElementById('editLabel');
-      const fields = document.querySelectorAll('.editable');
-      btn.addEventListener('click', function () {
-        const on = btn.getAttribute('aria-pressed') !== 'true';
-        btn.setAttribute('aria-pressed', String(on));
-        label.textContent = on ? 'Done editing' : 'Edit placeholders';
-        fields.forEach(function (el) { el.setAttribute('contenteditable', on ? 'true' : 'false'); });
-        if (on && fields[0]) fields[0].focus();
+  (function () {
+    const fmtNaira = new Intl.NumberFormat('en-NG', { maximumFractionDigits: 0 });
+    function esc(s) {
+      return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    // Edit-placeholder toggle
+    const btn = document.getElementById('editToggle');
+    const label = document.getElementById('editLabel');
+    const fields = document.querySelectorAll('.editable');
+    btn.addEventListener('click', function () {
+      const on = btn.getAttribute('aria-pressed') !== 'true';
+      btn.setAttribute('aria-pressed', String(on));
+      label.textContent = on ? 'Done editing' : 'Edit placeholders';
+      fields.forEach(function (el) { el.setAttribute('contenteditable', on ? 'true' : 'false'); });
+      if (on && fields[0]) fields[0].focus();
+    });
+
+    
+    // ---- Helper Formatters & Semicircular SVG Dial Gauge Renderer ----
+    function syncSliderProps(el) {
+      if (!el) return;
+      el.style.setProperty('--attr-min', el.min || 0);
+      el.style.setProperty('--attr-max', el.max || 100);
+      el.style.setProperty('--control-value', el.value);
+    }
+
+    function shortNaira(n) {
+      const abs = Math.abs(Number(n) || 0);
+      const sign = n < 0 ? '-' : '';
+      if (abs >= 1e9) return sign + '₦' + (abs / 1e9).toFixed(2) + 'B';
+      if (abs >= 1e6) return sign + '₦' + (abs / 1e6).toFixed(1) + 'M';
+      if (abs >= 1e3) return sign + '₦' + Math.round(abs / 1e3) + 'K';
+      return sign + '₦' + Math.round(abs);
+    }
+
+    function buildDialGaugeSvg(ratio01, accentColor, centerTop, centerBottom, leftTick, midTick, rightTick) {
+      const clamped = Math.max(0, Math.min(1, Number(ratio01) || 0));
+      const angleDeg = -90 + clamped * 180; // -90 left to +90 right
+      const cx = 130, cy = 104, r = 82;
+      const arcLen = Math.PI * r;
+      const fillLen = clamped * arcLen;
+      return (
+        '<path d="M ' + (cx - r) + ' ' + cy + ' A ' + r + ' ' + r + ' 0 0 1 ' + (cx + r) + ' ' + cy + '" fill="none" stroke="currentColor" stroke-opacity="0.12" stroke-width="15" stroke-linecap="round"/>' +
+        '<path d="M ' + (cx - r) + ' ' + cy + ' A ' + r + ' ' + r + ' 0 0 1 ' + (cx + r) + ' ' + cy + '" fill="none" stroke="' + accentColor + '" stroke-width="15" stroke-linecap="round" stroke-dasharray="' + fillLen.toFixed(1) + ' ' + arcLen.toFixed(1) + '"/>' +
+        '<g transform="translate(' + cx + ',' + cy + ') rotate(' + angleDeg.toFixed(1) + ')">' +
+          '<line x1="0" y1="0" x2="0" y2="-66" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>' +
+          '<circle cx="0" cy="0" r="6.5" fill="' + accentColor + '" stroke="currentColor" stroke-width="2"/>' +
+        '</g>' +
+        '<text x="' + (cx - r) + '" y="122" text-anchor="start" font-size="12" font-weight="700" fill="currentColor" opacity="0.65">' + esc(leftTick) + '</text>' +
+        '<text x="' + cx + '" y="14" text-anchor="middle" font-size="12" font-weight="800" fill="currentColor" opacity="0.75">' + esc(midTick) + '</text>' +
+        '<text x="' + (cx + r) + '" y="122" text-anchor="end" font-size="12" font-weight="700" fill="currentColor" opacity="0.65">' + esc(rightTick) + '</text>' +
+        '<text x="' + cx + '" y="136" text-anchor="middle" font-size="16" font-weight="900" fill="' + accentColor + '">' + esc(centerTop) + '</text>' +
+        '<text x="' + cx + '" y="152" text-anchor="middle" font-size="12" font-weight="700" fill="currentColor" opacity="0.78">' + esc(centerBottom) + '</text>'
+      );
+    }
+
+    // ---- Slide 10: Detailed Capital Deployment & Post-Expense Runway Gauge ----
+    const funds = [
+      { key: 'fleet', name: 'EV Fleet & Swap Stations', color: '#10b981', chip: 'chip-emerald', pct: 30 },
+      { key: 'ops', name: 'State & Hub Operations', color: '#0ea5e9', chip: 'chip-sky', pct: 18 },
+      { key: 'hr', name: 'Human Resources & Payroll', color: '#f5b841', chip: 'chip-gold', pct: 18 },
+      { key: 'mkt', name: 'Billboards, Street, Partners & Kits', color: '#8b5cf6', chip: 'chip-violet', pct: 14 },
+      { key: 'tech', name: 'Engineering & Cloud/Escrow Infra', color: '#ff5a36', chip: 'chip-ember', pct: 12 },
+      { key: 'res', name: 'Working Capital & Runway Buffer', color: '#94a3b8', chip: 'chip-slate', pct: 8 }
+    ];
+
+    const deckFundsRows = document.getElementById('deckFundsRows');
+    const deckRaiseInput = document.getElementById('deckRaiseInput');
+    const deckRaiseSlider = document.getElementById('deckRaiseSlider');
+    const raiseSummaryTag = document.getElementById('raiseSummaryTag');
+    const pctStatus = document.getElementById('pctStatus');
+    const runwayGaugeSvg = document.getElementById('runwayGaugeSvg');
+    const runwayHeadline = document.getElementById('runwayHeadline');
+    const runwaySubline = document.getElementById('runwaySubline');
+    const runwayWaterfall = document.getElementById('runwayWaterfall');
+    const unlockedSummaryBox = document.getElementById('unlockedSummaryBox');
+    let runwayMode = 'net'; // 'net' (revenue-extended) or 'zero' (strict zero-revenue burn)
+
+    function computeUnitsForRaise(raiseAmount, pctMap) {
+      const fleetAmt = (raiseAmount * pctMap.fleet) / 100;
+      const opsAmt = (raiseAmount * pctMap.ops) / 100;
+      const hrAmt = (raiseAmount * pctMap.hr) / 100;
+      const mktAmt = (raiseAmount * pctMap.mkt) / 100;
+      const techAmt = (raiseAmount * pctMap.tech) / 100;
+      const resAmt = (raiseAmount * pctMap.res) / 100;
+
+      // 1. Acquirable EV Vehicles & Solar Swap Stations
+      const ebikes = Math.max(1, Math.floor((fleetAmt * 0.18) / 850000));
+      const emotos = Math.max(1, Math.floor((fleetAmt * 0.40) / 2600000));
+      const etrikes = Math.max(0, Math.floor((fleetAmt * 0.18) / 5500000));
+      const evans = Math.max(0, Math.floor((fleetAmt * 0.14) / 24000000));
+      const swapStations = Math.max(1, Math.floor((fleetAmt * 0.10) / 7200000));
+      const totalVehicles = ebikes + emotos + etrikes + evans;
+
+      // 2. Operations across States (out of 36 States + FCT = 37 territories)
+      // Metro EV Hub setup + 18m lease/insurance ~ ₦18M; Partner 3PL State Hub ~ ₦4.2M
+      const evHubStates = Math.min(18, Math.max(2, Math.floor((opsAmt * 0.52) / 18000000)));
+      const remainingOps = Math.max(0, opsAmt - evHubStates * 18000000);
+      const partnerStatesRaw = Math.floor(remainingOps / 4200000);
+      const totalTerritories = Math.min(37, Math.max(4, evHubStates + partnerStatesRaw));
+      const partnerStates = Math.max(0, totalTerritories - evHubStates);
+      const ecowasCorridors = (evHubStates + partnerStatesRaw) > 37 ? Math.min(4, Math.floor(((evHubStates + partnerStatesRaw) - 37) / 4)) : 0;
+
+      // 3. Human Resources Personnel (18-month fully loaded compensation)
+      const ridersCaptains = Math.max(4, Math.round((hrAmt * 0.44) / 2200000));
+      const hubManagers = Math.max(2, Math.round((hrAmt * 0.24) / 5200000));
+      const supportOpsStaff = Math.max(2, Math.round((hrAmt * 0.20) / 3800000));
+      const growthLeads = Math.max(1, Math.round((hrAmt * 0.12) / 5500000));
+      const engineers = Math.max(3, Math.round((techAmt * 0.58) / 9500000));
+      const totalPeople = ridersCaptains + hubManagers + supportOpsStaff + growthLeads + engineers;
+
+      // 4. Billboards, Street Campaigns, Community Partners, QR Mi Cards & Lanyards
+      const billboards = Math.max(2, Math.floor((mktAmt * 0.26) / 3500000));
+      const streetCampaigns = Math.max(3, Math.floor((mktAmt * 0.22) / 1800000));
+      const communityPartners = Math.max(20, Math.floor((mktAmt * 0.20) / 160000));
+      const miCards = Math.max(1500, Math.round(((mktAmt * 0.12) / 1400) / 100) * 100);
+      const lanyardsBadges = Math.max(1000, Math.round(((mktAmt * 0.10) / 1900) / 100) * 100);
+      const creatorCampaigns = Math.max(15, Math.floor((mktAmt * 0.10) / 450000));
+
+      // 5. Post-Capex Runway Calculation
+      // Upfront Capex = 100% of EV Fleet & Swap + 45% of Hub fit-out + 45% of initial Billboards/Mi Cards/Lanyards print run + 15% Infra hardware
+      const upfrontCapex = fleetAmt + (opsAmt * 0.45) + (mktAmt * 0.45) + (techAmt * 0.15);
+      // Liquid Operating Pool remaining after upfront Capex is paid in full:
+      const liquidOpPool = Math.max(0, raiseAmount - upfrontCapex);
+      // Monthly Gross Operating Burn across 18-month staffing/ops plan (HR + ongoing Hub OpEx + ongoing Street/Creator Mkt + Cloud/Engineers)
+      const planned18mOpex = hrAmt + (opsAmt * 0.55) + (mktAmt * 0.55) + (techAmt * 0.85);
+      const monthlyGrossBurn = Math.max(4500000, planned18mOpex / 18);
+      // Zero-revenue runway (months liquidOpPool covers monthlyGrossBurn including Working Capital Reserve):
+      const zeroRevMonths = liquidOpPool / monthlyGrossBurn;
+      // With organic platform + EV fleet contribution ramping to cover ~34% of burn across months 1-24:
+      const netBurn = monthlyGrossBurn * 0.66;
+      const netRevMonths = Math.min(36, liquidOpPool / netBurn);
+
+      return {
+        fleetAmt: fleetAmt, opsAmt: opsAmt, hrAmt: hrAmt, mktAmt: mktAmt, techAmt: techAmt, resAmt: resAmt,
+        ebikes: ebikes, emotos: emotos, etrikes: etrikes, evans: evans, swapStations: swapStations, totalVehicles: totalVehicles,
+        totalTerritories: totalTerritories, evHubStates: evHubStates, partnerStates: partnerStates, ecowasCorridors: ecowasCorridors,
+        ridersCaptains: ridersCaptains, hubManagers: hubManagers, supportOpsStaff: supportOpsStaff, engineers: engineers, totalPeople: totalPeople,
+        billboards: billboards, streetCampaigns: streetCampaigns, communityPartners: communityPartners,
+        miCards: miCards, lanyardsBadges: lanyardsBadges, creatorCampaigns: creatorCampaigns,
+        upfrontCapex: upfrontCapex, liquidOpPool: liquidOpPool, monthlyGrossBurn: monthlyGrossBurn,
+        zeroRevMonths: zeroRevMonths, netRevMonths: netRevMonths
+      };
+    }
+
+    deckFundsRows.innerHTML = funds.map(function (f) {
+      return (
+        '<div class="flex flex-col justify-between rounded-2xl border border-[var(--border)] bg-[var(--background)] p-2.5 text-xs">' +
+          '<div class="flex items-center justify-between gap-1.5">' +
+            '<div class="flex items-center gap-1.5 min-w-0">' +
+              '<span class="h-2.5 w-2.5 rounded-full shrink-0" style="background:' + f.color + '"></span>' +
+              '<span class="truncate font-black">' + esc(f.name) + '</span>' +
+            '</div>' +
+            '<div class="flex items-center gap-1 shrink-0">' +
+              '<span class="font-black" style="color:' + f.color + '" data-f-amt="' + f.key + '">—</span>' +
+              '<input type="number" min="0" max="100" value="' + f.pct + '" aria-label="' + esc(f.name) + ' percentage" data-f-pct="' + f.key + '" class="w-11 rounded-lg border border-[var(--border)] bg-[var(--card)] px-1 py-0.5 text-right font-black outline-none" />' +
+              '<span class="font-bold text-[var(--muted-foreground)]">%</span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="mt-1.5 flex flex-wrap gap-1" data-f-units="' + f.key + '"></div>' +
+        '</div>'
+      );
+    }).join('');
+
+    function renderDeckFunds() {
+      const raw = Number((deckRaiseInput.value || '').replace(/[^0-9]/g, '')) || 0;
+      let total = 0;
+      const pctMap = {};
+      funds.forEach(function (f) {
+        const inp = deckFundsRows.querySelector('[data-f-pct="' + f.key + '"]');
+        f.pct = Math.max(0, Math.min(100, Number(inp.value) || 0));
+        pctMap[f.key] = f.pct;
+        total += f.pct;
+        deckFundsRows.querySelector('[data-f-amt="' + f.key + '"]').textContent = raw > 0 ? shortNaira((raw * f.pct) / 100) : '—';
       });
 
-      // Use-of-funds allocation (suggested defaults, fully editable)
-      const funds = [
-        { key: 'fleet', icon: 'i-zap', chip: 'chip-emerald', color: '#10b981', name: 'EV fleet & mobility assets',
-          desc: 'Bicycles, e-bikes, e-motorcycles, e-tricycles, EV vans, charging and battery swap points.', pct: 35 },
-        { key: 'ops', icon: 'i-map', chip: 'chip-sky', color: '#0ea5e9', name: 'Operations across 36 states + FCT',
-          desc: 'State hubs, partner carrier contracts, insurance, neighbourhood and estate rollout.', pct: 20 },
-        { key: 'hr', icon: 'i-users', chip: 'chip-gold', color: '#d99a1e', name: 'Human resources',
-          desc: 'Riders, hub managers, field partners, customer support, recruitment and training.', pct: 18 },
-        { key: 'dev', icon: 'i-code', chip: 'chip-violet', color: '#8b5cf6', name: 'Development team',
-          desc: 'Engineers, product and design for the ChatMi, ShopMi, PayMi, DeliverMi and RiderMi apps.', pct: 12 },
-        { key: 'infra', icon: 'i-server', chip: 'chip-ember', color: '#ff5a36', name: 'Technology infrastructure',
-          desc: 'Cloud hosting, automated escrow and payments, security, mapping and dispatch systems.', pct: 10 },
-        { key: 'reserve', icon: 'i-safe', chip: 'chip-gold', color: '#94a3b8', name: 'Working capital reserve',
-          desc: 'Runway buffer for the unexpected and for seasonal demand peaks.', pct: 5 },
-      ];
+      pctStatus.textContent = total === 100 ? 'Total: 100%' : 'Total: ' + total + '% (set to 100%)';
+      pctStatus.className = 'rounded-full px-3 py-1 text-xs font-black ' + (total === 100 ? 'chip-emerald' : 'chip-ember');
 
-      const list = document.getElementById('fundsList');
-      const totalBadge = document.getElementById('totalBadge');
-      const raiseInput = document.getElementById('raiseInput');
-      const fmt = new Intl.NumberFormat('en-NG', { maximumFractionDigits: 0 });
+      const u = computeUnitsForRaise(raw, pctMap);
 
-      list.innerHTML = funds.map(function (f) {
+      const territoryLabel = u.totalTerritories >= 37
+        ? 'All 36 States + FCT' + (u.ecowasCorridors > 0 ? ' + ' + u.ecowasCorridors + ' ECOWAS' : '')
+        : u.totalTerritories + ' / 37 States + FCT';
+      raiseSummaryTag.textContent = territoryLabel + ' · ' + u.totalVehicles + ' EVs · ' + u.totalPeople + ' Staff';
+
+      const rowLine = function (lbl, val) {
+        return '<div class="flex items-center justify-between text-xs"><span class="text-[var(--muted-foreground)]">' + esc(lbl) + '</span><span class="font-bold">' + esc(val) + '</span></div>';
+      };
+      const pill = function (txt, cls) { return '<span class="' + (cls || 'bg-[var(--card)] border border-[var(--border)]') + ' rounded-md px-1.5 py-0.5 text-xs font-semibold">' + esc(txt) + '</span>'; };
+
+      deckFundsRows.querySelector('[data-f-units="fleet"]').innerHTML =
+        '<div class="w-full space-y-0.5 my-1 border-y border-[var(--border)] py-1">' +
+          rowLine('Cargo E-Bikes (@ ₦850K)', u.ebikes + ' units') +
+          rowLine('E-Motorbikes + 2x Batt (@ ₦2.6M)', u.emotos + ' units') +
+          rowLine('E-Tricycles + EV Vans', u.etrikes + ' trikes · ' + u.evans + ' vans') +
+        '</div>' +
+        pill(u.totalVehicles + ' Total EVs', 'chip-emerald') +
+        pill(u.swapStations + ' Solar Swap Stations', 'chip-emerald');
+
+      deckFundsRows.querySelector('[data-f-units="ops"]').innerHTML =
+        '<div class="w-full space-y-0.5 my-1 border-y border-[var(--border)] py-1">' +
+          rowLine('Owned EV Metro Hubs (@ ₦18M)', u.evHubStates + ' states') +
+          rowLine('3PL Partner State Hubs (@ ₦4.2M)', u.partnerStates + ' states') +
+          rowLine('Insurance, Leases & Gate IDs', '18m covered') +
+        '</div>' +
+        pill(territoryLabel, 'chip-sky');
+
+      deckFundsRows.querySelector('[data-f-units="hr"]').innerHTML =
+        '<div class="w-full space-y-0.5 my-1 border-y border-[var(--border)] py-1">' +
+          rowLine('EV Riders & Fleet Captains', u.ridersCaptains + ' captains') +
+          rowLine('State Hub & Dispatch Leads', u.hubManagers + ' managers') +
+          rowLine('Merchant KYC, Support & Growth', (u.supportOpsStaff + Math.max(1, u.totalPeople - u.ridersCaptains - u.hubManagers - u.supportOpsStaff - u.engineers)) + ' specialists') +
+        '</div>' +
+        pill(u.totalPeople + ' Total Funded Personnel (18m)', 'chip-gold');
+
+      deckFundsRows.querySelector('[data-f-units="mkt"]').innerHTML =
+        '<div class="w-full space-y-0.5 my-1 border-y border-[var(--border)] py-1">' +
+          rowLine('Billboards & Street Activations', u.billboards + ' boards · ' + u.streetCampaigns + ' waves') +
+          rowLine('Community Partners (15 bps)', u.communityPartners + ' partners') +
+          rowLine('Smart QR Mi Cards + Lanyards', fmtNaira.format(u.miCards) + ' cards · ' + fmtNaira.format(u.lanyardsBadges) + ' kits') +
+        '</div>' +
+        pill(u.creatorCampaigns + ' ChatMi Creator Drops', 'chip-violet');
+
+      deckFundsRows.querySelector('[data-f-units="tech"]').innerHTML =
+        '<div class="w-full space-y-0.5 my-1 border-y border-[var(--border)] py-1">' +
+          rowLine('Core Product & Infra Engineers', u.engineers + ' engineers') +
+          rowLine('PayMi Escrow, BVN/KYC & Mapbox', 'Auto-scaling') +
+          rowLine('3D Storefronts & Guard CI', '540+ tests') +
+        '</div>' +
+        pill('Zero Legacy Tech Debt', 'chip-ember');
+
+      deckFundsRows.querySelector('[data-f-units="res"]').innerHTML =
+        '<div class="w-full space-y-0.5 my-1 border-y border-[var(--border)] py-1">' +
+          rowLine('Treasury Liquidity Buffer', shortNaira(u.resAmt)) +
+          rowLine('Seasonal Escrow Float', 'Protected') +
+          rowLine('FX & Hardware Spares Hedge', 'Included') +
+        '</div>' +
+        pill(shortNaira(u.resAmt) + ' Untouched Cash Buffer', 'chip-emerald');
+
+      // Runway Gauge Update
+      const months = runwayMode === 'net' ? u.netRevMonths : u.zeroRevMonths;
+      const gaugeColor = months >= 18 ? '#10b981' : (months >= 12 ? '#f5b841' : '#ff5a36');
+      runwayGaugeSvg.innerHTML = buildDialGaugeSvg(
+        Math.min(1, months / 36),
+        gaugeColor,
+        months.toFixed(1) + ' mos',
+        runwayMode === 'net' ? 'Net Operating Runway' : 'Strict Zero-Rev Runway',
+        '0m',
+        '18m Target',
+        '36m+'
+      );
+      runwayHeadline.textContent = months.toFixed(1) + ' Months Post-Capex Runway';
+      runwayHeadline.style.color = gaugeColor;
+      runwaySubline.textContent = runwayMode === 'net'
+        ? 'Includes revenue ramp · Self-sustaining break-even by ~Month 14'
+        : 'Strict worst-case burn assuming ₦0 revenue after buying all fleet & kits';
+
+      runwayWaterfall.innerHTML =
+        '<div class="flex justify-between rounded-xl bg-[var(--background)] px-2.5 py-1.5"><span>Upfront Vehicles, Hubs &amp; Print Paid</span><span class="font-black gold">' + shortNaira(u.upfrontCapex) + '</span></div>' +
+        '<div class="flex justify-between rounded-xl bg-[var(--background)] px-2.5 py-1.5"><span>Remaining Liquid Operating Pool</span><span class="font-black emerald">' + shortNaira(u.liquidOpPool) + '</span></div>' +
+        '<div class="flex justify-between rounded-xl bg-[var(--background)] px-2.5 py-1.5"><span>Monthly Post-Capex OpEx Burn</span><span class="font-black">' + shortNaira(u.monthlyGrossBurn) + '/mo</span></div>';
+
+      unlockedSummaryBox.innerHTML =
+        '<p class="font-black emerald">Immediate Physical Deployment Summary</p>' +
+        '<p class="mt-0.5 text-[var(--muted-foreground)]"><strong class="text-[var(--foreground)]">' + u.totalVehicles + ' EVs</strong> + <strong class="text-[var(--foreground)]">' + u.swapStations + ' Swap Stations</strong> across <strong class="text-[var(--foreground)]">' + territoryLabel + '</strong>, staffed by <strong class="text-[var(--foreground)]">' + u.totalPeople + ' personnel</strong>, backed by <strong class="text-[var(--foreground)]">' + u.billboards + ' billboards</strong>, <strong class="text-[var(--foreground)]">' + u.communityPartners + ' partners</strong> &amp; <strong class="text-[var(--foreground)]">' + fmtNaira.format(u.miCards + u.lanyardsBadges) + ' Mi Cards/lanyards</strong>.</p>';
+    }
+
+    deckFundsRows.addEventListener('input', renderDeckFunds);
+    deckRaiseInput.addEventListener('input', function () {
+      const n = Number((deckRaiseInput.value || '').replace(/[^0-9]/g, '')) || 0;
+      deckRaiseInput.value = n > 0 ? fmtNaira.format(n) : '';
+      deckRaiseSlider.value = String(Math.max(250000000, Math.min(6000000000, n)));
+      syncSliderProps(deckRaiseSlider);
+      renderDeckFunds();
+    });
+    deckRaiseSlider.addEventListener('input', function () {
+      const n = Number(deckRaiseSlider.value) || 1500000000;
+      deckRaiseInput.value = fmtNaira.format(n);
+      syncSliderProps(deckRaiseSlider);
+      renderDeckFunds();
+    });
+    document.querySelectorAll('[data-raise-preset]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const n = Number(btn.getAttribute('data-raise-preset')) || 1500000000;
+        deckRaiseInput.value = fmtNaira.format(n);
+        deckRaiseSlider.value = String(n);
+        syncSliderProps(deckRaiseSlider);
+        document.querySelectorAll('[data-raise-preset]').forEach(function (b) {
+          b.className = b === btn
+            ? 'chip-gold rounded-full border border-amber-500/50 px-2.5 py-1 text-xs font-black'
+            : 'rounded-full border border-[var(--border)] bg-[var(--card)] px-2.5 py-1 text-xs font-bold hover:border-amber-500';
+        });
+        renderDeckFunds();
+      });
+    });
+    document.querySelectorAll('[data-runway-mode]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        runwayMode = btn.getAttribute('data-runway-mode') || 'net';
+        document.querySelectorAll('[data-runway-mode]').forEach(function (b) {
+          b.setAttribute('aria-pressed', String(b.getAttribute('data-runway-mode') === runwayMode));
+        });
+        renderDeckFunds();
+      });
+    });
+    syncSliderProps(deckRaiseSlider);
+    renderDeckFunds();
+
+    // ---- Slide 11: Customer-Level Revenue & Net Profit Dialer Gauge ----
+    const custDialSlider = document.getElementById('custDialSlider');
+    const freqSlider = document.getElementById('freqSlider');
+    const aovSlider = document.getElementById('aovSlider');
+    const custDialOut = document.getElementById('custDialOut');
+    const freqOut = document.getElementById('freqOut');
+    const aovOut = document.getElementById('aovOut');
+    const profitGaugeSvg = document.getElementById('profitGaugeSvg');
+    const profitMonthlyLabel = document.getElementById('profitMonthlyLabel');
+    const profitAnnualLabel = document.getElementById('profitAnnualLabel');
+    const profitBreakdownCards = document.getElementById('profitBreakdownCards');
+    const profitTiersBody = document.getElementById('profitTiersBody');
+
+    // Logarithmic slider 0..100 -> 1,000 .. 1,000,000 customers
+    function sliderToCustomers(val) {
+      const pct = Math.max(0, Math.min(100, Number(val) || 0)) / 100;
+      const raw = 1000 * Math.pow(1000, pct);
+      if (raw < 10000) return Math.round(raw / 500) * 500;
+      if (raw < 100000) return Math.round(raw / 2500) * 2500;
+      return Math.round(raw / 10000) * 10000;
+    }
+    function customersToSlider(cust) {
+      const c = Math.max(1000, Math.min(1000000, Number(cust) || 50000));
+      return Math.round((Math.log(c / 1000) / Math.log(1000)) * 100);
+    }
+
+    function computeCustomerProfit(customers, freq, aov) {
+      const monthlyOrders = customers * freq;
+      const gmv = monthlyOrders * aov;
+      // 1. Marketplace Escrow Take-Rate (~2.35% net after 15 bps Mi Card partner royalty)
+      const revTakeRate = gmv * 0.0235;
+      // 2. Net EV + 3PL Logistics Margin (~₦520 net margin per order after rider payout & solar/grid charge)
+      const revLogistics = monthlyOrders * 520;
+      // 3. ChatMi Ads, Sponsored Reels & Creator Platform Split (~1.15% of GMV)
+      const revAdsCreators = gmv * 0.0115;
+      // 4. Hosted Custom Domains/3D SaaS, B2B Restock Fee & SME Working Capital Yield (~0.85% of GMV)
+      const revSaasCredit = gmv * 0.0085;
+
+      const grossPlatformRev = revTakeRate + revLogistics + revAdsCreators + revSaasCredit;
+      // Operating Expenses: ₦16.5M core platform/hub base + ₦165/order support/dispatch + 0.65% gateway/cloud + regional hub scaling
+      const opex = 16500000 + (monthlyOrders * 165) + (gmv * 0.0065) + (Math.sqrt(customers / 1000) * 2800000);
+      const netProfit = grossPlatformRev - opex;
+      const netMarginPct = grossPlatformRev > 0 ? (netProfit / grossPlatformRev) * 100 : 0;
+
+      return {
+        customers: customers,
+        monthlyOrders: monthlyOrders,
+        gmv: gmv,
+        revTakeRate: revTakeRate,
+        revLogistics: revLogistics,
+        revAdsCreators: revAdsCreators,
+        revSaasCredit: revSaasCredit,
+        grossPlatformRev: grossPlatformRev,
+        opex: opex,
+        netProfit: netProfit,
+        annualProfit: netProfit * 12,
+        netMarginPct: netMarginPct
+      };
+    }
+
+    let currentCustomers = 50000;
+
+    function updateProfitDialer() {
+      const freq = Number(freqSlider.value) || 3.5;
+      const aov = Number(aovSlider.value) || 14500;
+      syncSliderProps(custDialSlider);
+      syncSliderProps(freqSlider);
+      syncSliderProps(aovSlider);
+
+      custDialOut.textContent = fmtNaira.format(currentCustomers) + ' Buyers';
+      custDialSlider.setAttribute('aria-valuetext', fmtNaira.format(currentCustomers) + ' active monthly buyers');
+      freqOut.textContent = freq.toFixed(1) + 'x';
+      aovOut.textContent = '₦' + fmtNaira.format(aov);
+
+      const m = computeCustomerProfit(currentCustomers, freq, aov);
+      const positive = m.netProfit >= 0;
+      const dialColor = positive ? (m.netMarginPct >= 45 ? '#10b981' : '#f5b841') : '#ff5a36';
+      // Map margin from -20% .. +75% onto 0..1 gauge arc
+      const gaugeRatio = Math.max(0.03, Math.min(1, (m.netMarginPct + 20) / 95));
+
+      profitGaugeSvg.innerHTML = buildDialGaugeSvg(
+        gaugeRatio,
+        dialColor,
+        (m.netMarginPct >= 0 ? '+' : '') + m.netMarginPct.toFixed(1) + '%',
+        'Operating EBITDA Margin',
+        'Break-Even',
+        '40% Margin',
+        '75%+'
+      );
+
+      profitMonthlyLabel.textContent = (m.netProfit >= 0 ? '+' : '') + shortNaira(m.netProfit) + ' / mo Net Profit';
+      profitMonthlyLabel.style.color = dialColor;
+      profitAnnualLabel.textContent = (m.annualProfit >= 0 ? '+' : '') + shortNaira(m.annualProfit) + ' / yr Annualized Profit · GMV ' + shortNaira(m.gmv) + '/mo';
+
+      profitBreakdownCards.innerHTML =
+        '<div class="rounded-xl bg-[var(--background)] p-2.5 border border-[var(--border)]"><p class="text-[var(--muted-foreground)]">1. Escrow Take-Rate (2.35%)</p><p class="mt-0.5 text-sm font-black gold">' + shortNaira(m.revTakeRate) + '/mo</p></div>' +
+        '<div class="rounded-xl bg-[var(--background)] p-2.5 border border-[var(--border)]"><p class="text-[var(--muted-foreground)]">2. EV + 3PL Net Margin</p><p class="mt-0.5 text-sm font-black sky">' + shortNaira(m.revLogistics) + '/mo</p></div>' +
+        '<div class="rounded-xl bg-[var(--background)] p-2.5 border border-[var(--border)]"><p class="text-[var(--muted-foreground)]">3. ChatMi Ads &amp; Creators</p><p class="mt-0.5 text-sm font-black violet">' + shortNaira(m.revAdsCreators) + '/mo</p></div>' +
+        '<div class="rounded-xl bg-[var(--background)] p-2.5 border border-[var(--border)]"><p class="text-[var(--muted-foreground)]">4. SaaS, B2B &amp; SME Credit</p><p class="mt-0.5 text-sm font-black emerald">' + shortNaira(m.revSaasCredit) + '/mo</p></div>' +
+        '<div class="rounded-xl bg-[var(--background)] p-2.5 border border-[var(--border)]"><p class="text-[var(--muted-foreground)]">Gross Platform Revenue</p><p class="mt-0.5 text-sm font-black">' + shortNaira(m.grossPlatformRev) + '/mo</p></div>' +
+        '<div class="rounded-xl bg-[var(--background)] p-2.5 border border-[var(--border)]"><p class="text-[var(--muted-foreground)]">Platform &amp; Hub OpEx</p><p class="mt-0.5 text-sm font-black ember">-' + shortNaira(m.opex) + '/mo</p></div>';
+
+      const tiers = [5000, 25000, 50000, 100000, 250000, 1000000];
+      profitTiersBody.innerHTML = tiers.map(function (t) {
+        const row = computeCustomerProfit(t, freq, aov);
+        const active = Math.abs(currentCustomers - t) < 1200;
         return (
-          '<div class="rounded-2xl bg-[var(--background)] p-4">' +
-            '<div class="flex flex-wrap items-center gap-3 sm:flex-nowrap">' +
-              '<span class="' + f.chip + ' inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl"><svg class="icon"><use href="#' + f.icon + '"/></svg></span>' +
-              '<div class="min-w-0 flex-1">' +
-                '<p class="font-bold">' + f.name + '</p>' +
-                '<p class="text-xs text-[var(--muted-foreground)]">' + f.desc + '</p>' +
-              '</div>' +
-              '<div class="flex shrink-0 items-center gap-3">' +
-                '<p class="min-w-[7rem] text-right text-sm font-black" data-amount="' + f.key + '">—</p>' +
-                '<label class="flex items-center gap-1 rounded-xl border border-[var(--border)] bg-[var(--card)] px-2">' +
-                  '<span class="sr-only">' + f.name + ' percentage</span>' +
-                  '<input data-pct="' + f.key + '" type="number" min="0" max="100" step="1" value="' + f.pct + '" class="min-h-10 w-14 bg-transparent text-right text-sm font-black outline-none" />' +
-                  '<span class="text-sm font-bold text-[var(--muted-foreground)]">%</span>' +
-                '</label>' +
-              '</div>' +
-            '</div>' +
-            '<div class="mt-3 h-2 w-full overflow-hidden rounded-full bg-[var(--card)]">' +
-              '<div data-bar="' + f.key + '" class="h-full rounded-full" style="background:' + f.color + ';width:' + f.pct + '%"></div>' +
-            '</div>' +
-          '</div>'
+          '<tr data-dial-tier="' + t + '" class="cursor-pointer transition hover:bg-emerald-500/10 ' + (active ? 'bg-emerald-500/15 font-black' : '') + '">' +
+            '<td class="py-1.5 pr-2">' + fmtNaira.format(t) + ' buyers</td>' +
+            '<td class="py-1.5 px-2">' + fmtNaira.format(Math.round(row.monthlyOrders)) + '</td>' +
+            '<td class="py-1.5 px-2">' + shortNaira(row.gmv) + '</td>' +
+            '<td class="py-1.5 px-2">' + shortNaira(row.grossPlatformRev) + '</td>' +
+            '<td class="py-1.5 px-2 ' + (row.netProfit >= 0 ? 'emerald' : 'ember') + '">' + (row.netProfit >= 0 ? '+' : '') + shortNaira(row.netProfit) + '</td>' +
+            '<td class="py-1.5 pl-2 gold">' + (row.annualProfit >= 0 ? '+' : '') + shortNaira(row.annualProfit) + '/yr</td>' +
+          '</tr>'
         );
       }).join('');
 
-      function raiseValue() {
-        return Number((raiseInput.value || '').replace(/[^0-9]/g, '')) || 0;
-      }
-
-      function render() {
-        const raise = raiseValue();
-        let total = 0;
-        funds.forEach(function (f) {
-          const input = list.querySelector('[data-pct="' + f.key + '"]');
-          const pct = Math.max(0, Math.min(100, Number(input.value) || 0));
-          f.pct = pct;
-          total += pct;
-          list.querySelector('[data-bar="' + f.key + '"]').style.width = pct + '%';
-          list.querySelector('[data-amount="' + f.key + '"]').textContent =
-            raise > 0 ? '₦' + fmt.format(Math.round((raise * pct) / 100)) : '—';
+      profitTiersBody.querySelectorAll('[data-dial-tier]').forEach(function (tr) {
+        tr.addEventListener('click', function () {
+          currentCustomers = Number(tr.getAttribute('data-dial-tier')) || 50000;
+          custDialSlider.value = String(customersToSlider(currentCustomers));
+          updateProfitDialer();
         });
-        const ok = total === 100;
-        totalBadge.textContent = ok ? 'Total: 100%' : 'Total: ' + total + '% (should be 100%)';
-        totalBadge.className = 'rounded-full px-3 py-1 text-xs font-black ' + (ok ? 'chip-emerald' : 'chip-ember');
-      }
-
-      list.addEventListener('input', render);
-      raiseInput.addEventListener('input', function () {
-        const n = raiseValue();
-        raiseInput.value = n > 0 ? fmt.format(n) : '';
-        render();
       });
-      render();
-    })();
+    }
+
+    custDialSlider.addEventListener('input', function () {
+      currentCustomers = sliderToCustomers(custDialSlider.value);
+      updateProfitDialer();
+    });
+    freqSlider.addEventListener('input', updateProfitDialer);
+    aovSlider.addEventListener('input', updateProfitDialer);
+
+    document.querySelectorAll('[data-cust-preset]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        currentCustomers = Number(btn.getAttribute('data-cust-preset')) || 50000;
+        custDialSlider.value = String(customersToSlider(currentCustomers));
+        document.querySelectorAll('[data-cust-preset]').forEach(function (b) {
+          b.className = b === btn
+            ? 'chip-emerald rounded-full border border-emerald-500/50 px-2.5 py-1 text-xs font-black'
+            : 'rounded-full border border-[var(--border)] bg-[var(--card)] px-2.5 py-1 text-xs font-bold';
+        });
+        updateProfitDialer();
+      });
+    });
+
+    custDialSlider.value = String(customersToSlider(50000));
+    updateProfitDialer();
+
+  })();
   </script>
 </body>
 </html>
